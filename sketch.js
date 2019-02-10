@@ -33,8 +33,8 @@ function mousePressed() {
     strokeWeight(random(20));
 }
 
-function mouseWheel() {
-       
+function touchStarted() {
+    remove();
 }
 
 function windowResized() {
