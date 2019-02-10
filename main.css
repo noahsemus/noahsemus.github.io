@@ -54,6 +54,10 @@ p {
     margin-bottom: 5vh;
 }
 
+.HomeLinks {
+    margin-bottom: 10vh;
+}
+
 .HomeLinks a:link {
     display: inline-block;
     color: white;
