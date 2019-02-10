@@ -7,7 +7,7 @@ var deltaX = 0.0, deltaY = 0.0;
 var springing = 0.0009, damping = 0.98;
 
 //corner nodes
-var nodes = 5;
+var nodes = 4;
 
 //zero fill arrays
 var nodeStartX = [];
