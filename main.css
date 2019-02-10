@@ -66,12 +66,12 @@ p {
     margin-bottom: 20px;
 }
 
-.HomeLinks a:hover {
-    color: yellow;
+.HomeLinks a:visited {
+    color: white;
 }
 
-.HomeLinks a:visited {
-    color: chartreuse;
+.HomeLinks a:hover {
+    color: yellow;
 }
 
 a.coolLink:hover .coolImg {
@@ -81,7 +81,7 @@ a.coolLink:hover .coolImg {
 .coolImg {
     display: none;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     bottom: 10vh;
     right: 10vw;
 }
@@ -93,7 +93,7 @@ a.neatLink:hover .neatImg {
 .neatImg {
     display: none;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     top: 10vh;
     left: 10vw;
 }
@@ -105,7 +105,7 @@ a.thingLink:hover .thingImg {
 .thingImg {
     display: none;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     top: 30vh;
     right: 30vw;
 }
@@ -117,7 +117,7 @@ a.niceLink:hover .niceImg {
 .niceImg {
     display: none;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     bottom: 5vh;
     left: 10vw;
 }
@@ -129,7 +129,7 @@ a.prettyLink:hover .prettyImg {
 .prettyImg {
     display: none;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     top: 10vh;
     right: 5vw;
 }
@@ -141,7 +141,7 @@ a.snazzyLink:hover .snazzyImg {
 .snazzyImg {
     display: none;
     position: fixed;
-    z-index: 0;
+    z-index: -1;
     bottom: 30vh;
     left: 40vw;
 }
@@ -166,14 +166,13 @@ a.snazzyLink:hover .snazzyImg {
     margin-bottom: 20px;
 }
 
-.bottomSheet a:hover {
-    color: yellow;
-}
-
 .bottomSheet a:visited {
-    color: firebrick;
+    color: white;
 }
 
+.bottomSheet a:hover {
+    color: chartreuse;
+}
 
 .backButton {
     width: 150;
