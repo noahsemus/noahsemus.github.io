@@ -235,39 +235,16 @@ a.snazzyLink:hover .snazzyImg {
 }
 
 .contentImg01:hover {
-    position: absolute;
+    position: relative;
     width: 90vw;
     height: auto;
     max-height: none;
     margin-left: 0;
 }
 
-@media (max-width: 480px) {
-    .contentImg01:hover {
-        width: auto;
-        height: auto;
-        max-height: 400;
-        max-width: 100%;
-        object-fit: contain;
-        align-self: flex-start;
-    }
-}
-
 .contentImg02:hover {
-    position: absolute;
+    position: relative;
     width: 90vw;
     max-height: none;
     margin-right: 0;
-}
-
-@media (max-width:480px) {
-    .contentImg02:hover {
-        width: auto;
-        height: auto;
-        max-height: 400;
-        max-width: 100%;
-        object-fit: contain;
-        align-self: flex-start;
-        margin-right: 20;
-    }
 }
