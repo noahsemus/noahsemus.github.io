@@ -55,7 +55,7 @@ p {
 }
 
 .HomeLinks {
-    padding-bottom: 125;
+    padding-bottom: 200;
 }
 
 .HomeLinks a:link {
@@ -163,6 +163,7 @@ a.snazzyLink:hover .snazzyImg {
     color: white;
     font-size: 14px;
     margin-right: 20px;
+    margin-bottom: 20px;
 }
 
 .bottomSheet a:hover {
