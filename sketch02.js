@@ -7,7 +7,7 @@ var deltaX = 0.0, deltaY = 0.0;
 var springing = 0.0009, damping = 0.98;
 
 //corner nodes
-var nodes = 100;
+var nodes = 5;
 
 //zero fill arrays
 var nodeStartX = [];
@@ -63,7 +63,7 @@ function drawShape() {
 
   // draw polygon
   curveTightness(organicConstant);
-  fill(255, 0, 255);
+  fill(255, 0, 200);
   beginShape();
   for (var i=0; i<nodes; i++){
     curveVertex(nodeX[i], nodeY[i]);
