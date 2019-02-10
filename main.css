@@ -1,0 +1,256 @@
+canvas {
+    position: fixed; top: 0; left: 0; z-index: 1; 
+} 
+
+#content {
+    position: relative; z-index: 2; 
+}
+
+body {
+    font-family: 'IBM Plex Mono', monospace;
+    background: blue;
+    color: white;
+    padding-top: 5vh;
+    padding-left: 5vw;
+    padding-right: 5vw;
+}
+
+h1 {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+h1 a:link {
+    color: white;
+    z-index: 5;
+}
+
+h1 a:hover + .meImg {
+    display: block;
+}
+
+p {
+    font-size: 14px;
+}
+
+.meImg{
+    display: none;
+    position: fixed;
+    top: 5vh;
+    right: 20;
+    z-index: -1;
+}
+
+.meUhImg {
+    display: block;
+    max-width: 90vw;
+    max-height: 90vh;
+}
+
+.HeadInfo {
+    max-width: 510px;
+    margin-bottom: 5vh;
+}
+
+.HomeLinks a:link {
+    display: inline-block;
+    color: white;
+    width: auto;
+    font-size: 23px;
+    margin-bottom: 20px;
+}
+
+.HomeLinks a:hover {
+    color: yellow;
+}
+
+.HomeLinks a:visited {
+    color: chartreuse;
+}
+
+a.coolLink:hover .coolImg {
+    display: block;
+}
+
+.coolImg {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    bottom: 10vh;
+    right: 10vw;
+}
+
+a.neatLink:hover .neatImg {
+    display: block;
+}
+
+.neatImg {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    top: 10vh;
+    left: 10vw;
+}
+
+a.thingLink:hover .thingImg {
+    display: block;
+}
+
+.thingImg {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    top: 30vh;
+    right: 30vw;
+}
+
+a.niceLink:hover .niceImg {
+    display: block;
+}
+
+.niceImg {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    bottom: 5vh;
+    left: 10vw;
+}
+
+a.prettyLink:hover .prettyImg {
+    display: block;
+}
+
+.prettyImg {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    top: 10vh;
+    right: 5vw;
+}
+
+a.snazzyLink:hover .snazzyImg {
+    display: block;
+}
+
+.snazzyImg {
+    display: none;
+    position: fixed;
+    z-index: 0;
+    bottom: 30vh;
+    left: 40vw;
+}
+
+.linkImg {
+    display: block;
+    max-width: 40vw;
+    max-height: 40vh;
+}
+
+.bottomSheet {
+    position: fixed;
+    width: auto;
+    bottom: 0px;
+    padding-bottom: 20px;
+}
+
+.bottomSheet a:link {
+    color: white;
+    font-size: 14px;
+    margin-right: 20px;
+}
+
+.bottomSheet a:hover {
+    color: yellow;
+}
+
+.bottomSheet a:visited {
+    color: firebrick;
+}
+
+
+.backButton {
+    width: 150;
+    position: fixed;
+    right: 5vw;
+    text-align: right;
+    font-size: 14px;
+    z-index: 99999;
+}
+
+.backButton a:link {
+    color: white;
+}
+
+.backButton a:visited {
+    color: white;
+}
+
+.projectContent {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.projectDesc01 {
+    width: 400;
+    height: auto;
+}
+
+.contentImg01 {
+    width: auto;
+    height: auto;
+    max-height: 400;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+}
+
+.contentImg02 {
+    width: auto;
+    height: auto;
+    max-height: 400;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-right: 20;
+}
+
+.contentImg01:hover {
+    position: absolute;
+    width: 90vw;
+    height: auto;
+    max-height: none;
+    margin-left: 0;
+}
+
+@media handheld {
+    .contentImg01:hover {
+        width: auto;
+        height: auto;
+        max-height: 400;
+        max-width: 100%;
+        object-fit: contain;
+        align-self: flex-start;
+    }
+}
+
+.contentImg02:hover {
+    position: absolute;
+    width: 90vw;
+    max-height: none;
+    margin-right: 0;
+}
+
+@media handheld {
+    .contentImg02:hover {
+        width: auto;
+        height: auto;
+        max-height: 400;
+        max-width: 100%;
+        object-fit: contain;
+        align-self: flex-start;
+        margin-right: 20;
+    }
+}
