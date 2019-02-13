@@ -71,6 +71,33 @@
             <a href="somewhere" target="_blank">site index</a>
         </div>
     </div>
+    
+    <script>
+        var content = document.querySelector("body");
+
+        var cursorArray = ['url("/Cursor/cursorTickle00.png"), auto',
+                           'url("/Cursor/cursorTickle01.png"), auto',
+                           'url("/Cursor/cursorTickle02.png"), auto',
+                           'url("/Cursor/cursorTickle03.png"), auto',
+                           'url("/Cursor/cursorTickle04.png"), auto',
+                           'url("/Cursor/cursorTickle05.png"), auto',
+                           'url("/Cursor/cursorTickle06.png"), auto',
+                           'url("/Cursor/cursorTickle07.png"), auto',
+                           'url("/Cursor/cursorTickle08.png"), auto',
+                           'url("/Cursor/cursorTickle09.png"), auto',
+                           'url("/Cursor/cursorTickle10.png"), auto',
+                          ];
+        i = 0;
+        (function cursor(){
+          content.style.cursor  = cursorArray[i];
+          i++;
+          if(i == cursorArray.length){
+            i = 0; 
+          }
+           setTimeout(cursor, 50);
+        })();
+    
+    </script>
 </body>
 
 </html>
