@@ -332,22 +332,24 @@ a.snazzyLink:hover .snazzyImg {
     position: relative;
     transform: scale(1.4);
     transform-origin: right;
+    cursor: zoom-in;
 }
 
 .contentImg02:hover {
     position: relative;
     transform: scale(1.4);
     transform-origin: left;
+    cursor: zoom-in;
 }
 
 .contentImg04:hover {
     position: relative;
     transform: scale(1.4);
     transform-origin: left;
+    cursor: zoom-in;
 }
 
 video {
-    margin-right: 60px;
     max-width: 100%;
     max-height: 350px;
 }
@@ -357,17 +359,20 @@ video {
         position: relative;
         transform: scale(1);
         transform-origin: right;
+        cursor: auto;
     }
     
     .contentImg02:hover {
         position: relative;
         transform: scale(1);
         transform-origin: left;
+        cursor: auto;
     }
     
     .contentImg04:hover {
         position: relative;
         transform: scale(1);
         transform-origin: left;
+        cursor: auto;
     }
 }
