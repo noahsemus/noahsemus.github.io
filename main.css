@@ -26,6 +26,10 @@ a:link {
     color: white;
 }
 
+a:visited {
+    color: white;
+}
+
 h1 a:link {
     color: white;
     z-index: 5;
@@ -202,6 +206,13 @@ a.snazzyLink:hover .snazzyImg {
 
 
 
+#contentProject {
+    position: relative; 
+    z-index: 2; 
+    min-height: 90vh;
+    max-width: 80vw;
+}
+
 .HeadInfo2 {
     max-width: 510px;
     margin-bottom: 50px;;
@@ -261,6 +272,11 @@ a.snazzyLink:hover .snazzyImg {
     width: 400;
     height: auto;
     margin-right: 20;
+}
+
+.projectDesc01 a:link {
+    font-size: 60px;
+    font-weight: 600;
 }
 
 .projectDesc02 {
