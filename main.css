@@ -30,6 +30,10 @@ a:visited {
     color: white;
 }
 
+a:hover {
+    cursor: url(Cursor/Link/cursorLink00.png), auto;
+}
+
 h1 a:link {
     color: white;
     z-index: 5;
