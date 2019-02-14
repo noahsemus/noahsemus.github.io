@@ -20,6 +20,9 @@ var frequency = [];
 // soft-body dynamics
 var organicConstant = 1.0;
 
+var button;
+var start = false;
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
@@ -43,14 +46,36 @@ function setup() {
 
   noStroke();
   frameRate(30);
+    
+  drawButton();   
+  
 }
 
 function draw() {
-  //fade background
-  fill(0, 0, 255, 100);
-  rect(0,0,width, height);
-  drawShape();
-  moveShape();
+    
+    if(start) { 
+    
+      //fade background
+        fill(0, 0, 255, 100);
+        rect(0,0,width, height);
+
+        drawShape();
+        moveShape();   
+        
+    }
+}
+
+function friendLoop(){
+    start = true;
+    loop();
+    button.hide();
+}
+
+function drawButton(){
+  button = createButton('id like a friend');
+  button.position(0,0);
+  button.parent('friend');
+  button.mousePressed(friendLoop);  
 }
 
 function drawShape() {

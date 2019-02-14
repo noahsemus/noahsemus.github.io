@@ -17,6 +17,11 @@ body {
     padding-right: 5vw;
 }
 
+button {
+    cursor: url(Cursor/Link/cursorLink00.png), auto;
+    z-index: 999999999;
+}
+
 h1 {
     font-size: 60px;
     margin-bottom: 10px;
@@ -98,7 +103,7 @@ a.coolLink:hover .coolImg {
     display: none;
     position: fixed;
     z-index: -1;
-    bottom: 10vh;
+    top: 5vh;
     right: 10vw;
 }
 
@@ -110,8 +115,8 @@ a.neatLink:hover .neatImg {
     display: none;
     position: fixed;
     z-index: -1;
-    top: 10vh;
-    left: 10vw;
+    top: 15vh;
+    right: 10vw;
 }
 
 a.thingLink:hover .thingImg {
@@ -122,8 +127,8 @@ a.thingLink:hover .thingImg {
     display: none;
     position: fixed;
     z-index: -1;
-    top: 30vh;
-    right: 30vw;
+    top: 25vh;
+    right: 10vw;
 }
 
 a.niceLink:hover .niceImg {
@@ -134,8 +139,8 @@ a.niceLink:hover .niceImg {
     display: none;
     position: fixed;
     z-index: -1;
-    bottom: 5vh;
-    left: 10vw;
+    top: 35vh;
+    right: 10vw;
 }
 
 a.prettyLink:hover .prettyImg {
@@ -146,8 +151,8 @@ a.prettyLink:hover .prettyImg {
     display: none;
     position: fixed;
     z-index: -1;
-    top: 10vh;
-    right: 5vw;
+    top: 45vh;
+    right: 10vw;
 }
 
 a.snazzyLink:hover .snazzyImg {
@@ -158,8 +163,8 @@ a.snazzyLink:hover .snazzyImg {
     display: none;
     position: fixed;
     z-index: -1;
-    bottom: 30vh;
-    left: 40vw;
+    top: 55vh;
+    right: 10vw;
 }
 
 .linkImg {
