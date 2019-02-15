@@ -21,10 +21,12 @@ var frequency = [];
 var organicConstant = 1.0;
 
 var button;
-var start = false;
+var start = sessionStorage.getItem('start');
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
+    
+  background(0,0,255);
 
   //center shape in window
   centerX = width/2;
@@ -53,11 +55,13 @@ function setup() {
 
 function draw() {
     
-    if(start) { 
+    if(sessionStorage.getItem('start')) { 
     
       //fade background
         fill(0, 0, 255, 100);
         rect(0,0,width, height);
+        
+        button.hide();
 
         drawShape();
         moveShape();   
@@ -66,9 +70,8 @@ function draw() {
 }
 
 function friendLoop(){
-    start = true;
+    sessionStorage.setItem('start', 'true');
     loop();
-    button.hide();
 }
 
 function drawButton(){

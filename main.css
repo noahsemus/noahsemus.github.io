@@ -2,6 +2,15 @@ canvas {
     position: fixed; top: 0; left: 0; z-index: 1; 
 } 
 
+iframe {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+
 #content {
     position: relative; 
     z-index: 2; 
@@ -10,11 +19,11 @@ canvas {
 
 body {
     font-family: 'IBM Plex Mono', monospace;
-    background: blue;
     color: white;
     padding-top: 5vh;
     padding-left: 5vw;
     padding-right: 5vw;
+    background: blue;
 }
 
 button {
@@ -341,26 +350,27 @@ a.snazzyLink:hover .snazzyImg {
     position: relative;
     transform: scale(1.4);
     transform-origin: right;
-    cursor: zoom-in;
+    cursor: url(Cursor/Link/cursorLink05.png) 16 16, auto;
 }
 
 .contentImg02:hover {
     position: relative;
     transform: scale(1.4);
     transform-origin: left;
-    cursor: zoom-in;
+    cursor: url(Cursor/Link/cursorLink06.png) 16 16, auto;
 }
 
 .contentImg04:hover {
     position: relative;
     transform: scale(1.4);
     transform-origin: left;
-    cursor: zoom-in;
+    cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
 }
 
 video {
     max-width: 100%;
     max-height: 350px;
+    cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
 }
 
 @media (max-width: 1050px) {
