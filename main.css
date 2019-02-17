@@ -264,6 +264,15 @@ a.snazzyLink:hover .snazzyImg {
     justify-content: space-between;
 }
 
+.projectContentGallery {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    height: auto;
+    margin-bottom: 5vh;
+    align-items: center;
+}
+
 .projectContentEnd {
     display: flex;
     flex-wrap: wrap;
@@ -306,6 +315,12 @@ a.snazzyLink:hover .snazzyImg {
     align-self: center;
 }
 
+.projectDesc02 a:link {
+    font-size: 60px;
+    font-weight: 600;
+    line-height: 80px;
+}
+
 .contentImg01 {
     width: auto;
     height: auto;
@@ -330,7 +345,7 @@ a.snazzyLink:hover .snazzyImg {
 .contentImg03 {
     width: auto;
     height: auto;
-    max-height: 350;
+    max-height: 70vh;
     max-width: 100%;
     object-fit: contain;
 }
@@ -344,6 +359,17 @@ a.snazzyLink:hover .snazzyImg {
     align-self: flex-start;
     margin-right: 10px;
     margin-bottom: 20px;
+}
+
+.contentImg05 {
+    width: auto;
+    height: auto;
+    max-height: 350;
+    max-width: 100%;
+    object-fit: contain;
+    align-self: flex-start;
+    margin-bottom: 20px;
+    margin-right: 20px;
 }
 
 .contentImg01:hover {
@@ -378,20 +404,20 @@ video {
         position: relative;
         transform: scale(1);
         transform-origin: right;
-        cursor: auto;
+        cursor: url(Cursor/Link/cursorLink05.png) 16 16, auto;
     }
     
     .contentImg02:hover {
         position: relative;
         transform: scale(1);
         transform-origin: left;
-        cursor: auto;
+        cursor: url(Cursor/Link/cursorLink06.png) 16 16, auto;
     }
     
     .contentImg04:hover {
         position: relative;
         transform: scale(1);
         transform-origin: left;
-        cursor: auto;
+        cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
     }
 }
