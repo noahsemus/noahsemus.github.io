@@ -3,12 +3,10 @@ canvas {
 } 
 
 iframe {
-    width: 100vw;
-    height: 100vh;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 5;
+    width: 100%;
+    max-width: 800px;
+    height: 100%;
+    border: none;
 }
 
 #content {
@@ -264,6 +262,13 @@ a.snazzyLink:hover .snazzyImg {
     justify-content: space-between;
 }
 
+.projectContentFrame {
+    width: 100%;
+    max-height: 500px;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
 .projectContentGallery {
     display: flex;
     flex-wrap: wrap;
@@ -319,6 +324,27 @@ a.snazzyLink:hover .snazzyImg {
     font-size: 60px;
     font-weight: 600;
     line-height: 80px;
+}
+
+.projectDesc03 {
+    max-width: 400;
+    height: auto;
+    margin-bottom: 5vh;
+}
+
+.projectDesc03 a:link {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+.projectDescDivider {
+    width: 100%;
+    height: auto;
+    margin-top: 125px;
+    margin-bottom: 125px;;
+    align-content: center;
+    justify-content: center;
+    text-align: center;
 }
 
 .contentImg01 {
