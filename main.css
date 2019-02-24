@@ -356,6 +356,8 @@ a.snazzyLink:hover .snazzyImg {
     object-fit: contain;
     align-self: flex-start;
     margin-bottom: 20px;
+    transform-origin: right;
+    transition: transform .2s ease;
 }
 
 .contentImg02 {
@@ -367,6 +369,8 @@ a.snazzyLink:hover .snazzyImg {
     align-self: flex-start;
     margin-right: 60;
     margin-bottom: 20px;
+    transform-origin: left;
+    transition: transform .2s ease;
 }
 
 .contentImg03 {
@@ -375,6 +379,7 @@ a.snazzyLink:hover .snazzyImg {
     max-height: 70vh;
     max-width: 100%;
     object-fit: contain;
+    cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
 }
 
 .contentImg04 {
@@ -386,6 +391,8 @@ a.snazzyLink:hover .snazzyImg {
     align-self: flex-start;
     margin-right: 10px;
     margin-bottom: 20px;
+    transform-origin: left;
+    transition: transform .2s ease;
 }
 
 .contentImg05 {
@@ -397,6 +404,7 @@ a.snazzyLink:hover .snazzyImg {
     align-self: flex-start;
     margin-bottom: 20px;
     margin-right: 20px;
+    cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
 }
 
 .contentImg01:hover {
@@ -414,11 +422,11 @@ a.snazzyLink:hover .snazzyImg {
 }
 
 .contentImg04:hover {
-    position: relative;
-    transform: scale(1.4);
-    transform-origin: left;
-    cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
-}
+        position: relative;
+        transform: scale(1.4);
+        transform-origin: left;
+        cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
+    }
 
 video {
     max-width: 100%;
