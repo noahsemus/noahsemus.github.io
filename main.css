@@ -485,12 +485,12 @@ video {
 
 @media (max-width: 600px) {
     .HomeLinks {
-        padding-bottom: 150px;
+        padding-bottom: 175px;
     }
 }
 
-@media (max-height: 850px) {
+@media (max-height: 800px) {
     .HomeLinks {
-        padding-bottom: 100px;
+        padding-bottom: 150px;
     }
 }
