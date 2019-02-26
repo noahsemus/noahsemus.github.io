@@ -187,6 +187,18 @@ a.snazzyLink:hover .snazzyImg {
     right: 10vw;
 }
 
+a.chillLink:hover .chillImg {
+    display: block;
+}
+
+.chillImg {
+    display: none;
+    position: fixed;
+    z-index: -1;
+    top: 50vh;
+    right: 10vw;
+}
+
 .linkImg {
     display: block;
     max-width: 40vw;
