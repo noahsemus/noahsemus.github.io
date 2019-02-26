@@ -83,10 +83,6 @@ p {
     margin-bottom: 5vh;
 }
 
-.HomeLinks {
-    padding-bottom: 200;
-}
-
 .HomeLinks a:link {
     display: inline-block;
     color: white;
@@ -484,5 +480,17 @@ video {
         transform: scale(1);
         transform-origin: left;
         cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .HomeLinks {
+        padding-bottom: 150px;
+    }
+}
+
+@media (max-height: 850px) {
+    .HomeLinks {
+        padding-bottom: 100px;
     }
 }
