@@ -450,6 +450,14 @@ a.chillLink:hover .chillImg {
     cursor: url(Cursor/Link/cursorLink06.png) 16 16, auto;
 }
 
+.contentImg03:hover {
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform-origin: center;
+}
+
 .contentImg04:hover {
     position: relative;
     transform: scale(.95);
