@@ -241,6 +241,7 @@ a.chillLink:hover .chillImg {
     height: 40vw;
     background-size: cover;
     background-position: center;
+    margin: 5px;
 }
 
 .mobileHome a:hover{
@@ -249,6 +250,7 @@ a.chillLink:hover .chillImg {
     outline: solid;
     outline-color: white;
     outline-width: 2px;
+    opacity: .8;
 }
 
 #img01 {
