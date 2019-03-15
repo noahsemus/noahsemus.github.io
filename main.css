@@ -74,8 +74,8 @@ p {
 
 .meUhImg {
     display: block;
-    max-width: 90vw;
-    max-height: 90vh;
+    max-width: 300px;
+    max-height: 300px;
 }
 
 .HeadInfo {
@@ -202,9 +202,9 @@ a.chillLink:hover .chillImg {
 }
 
 .bottomSheet {
-    position: absolute;
+    margin-top: 50px;
+    position: relative;
     width: auto;
-    bottom: 0px;
 }
 
 .bottomSheet a:link {
@@ -223,7 +223,13 @@ a.chillLink:hover .chillImg {
     color: chartreuse;
 }
 
-
+.scrollingImg:hover {
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform: scale(.95);
+    opacity: .8;
+}
 
 
 
@@ -377,7 +383,6 @@ a.chillLink:hover .chillImg {
     align-self: flex-start;
     margin-bottom: 20px;
     transform-origin: right;
-    transition: transform .2s ease;
 }
 
 .contentImg02 {
@@ -390,7 +395,6 @@ a.chillLink:hover .chillImg {
     margin-right: 60;
     margin-bottom: 20px;
     transform-origin: left;
-    transition: transform .2s ease;
 }
 
 .contentImg03 {
@@ -412,7 +416,6 @@ a.chillLink:hover .chillImg {
     margin-right: 10px;
     margin-bottom: 20px;
     transform-origin: left;
-    transition: transform .2s ease;
 }
 
 .contentImg05 {
@@ -429,23 +432,32 @@ a.chillLink:hover .chillImg {
 
 .contentImg01:hover {
     position: relative;
-    transform: scale(1.4);
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
     transform-origin: right;
     cursor: url(Cursor/Link/cursorLink05.png) 16 16, auto;
 }
 
 .contentImg02:hover {
     position: relative;
-    transform: scale(1.4);
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
     transform-origin: left;
     cursor: url(Cursor/Link/cursorLink06.png) 16 16, auto;
 }
 
 .contentImg04:hover {
-        position: relative;
-        transform: scale(1.4);
-        transform-origin: left;
-        cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
+    position: relative;
+    transform: scale(.95);
+    outline: solid;
+    outline-color: white;
+    outline-width: 2px;
+    transform-origin: left;
+    cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
     }
 
 video {
