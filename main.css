@@ -258,6 +258,10 @@ a.chillLink:hover .chillImg {
     font-style: italic;
 }
 
+#img00 {
+    background-image: url(Images/dopeImg.jpg);
+}
+
 #img01 {
     background-image: url(Images/coolImg.jpg);
 }
@@ -489,6 +493,13 @@ a.chillLink:hover .chillImg {
     cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
 }
 
+.contentImg06 {
+    width: 100%;
+    height: auto;
+    position: relative;
+    margin: none;
+}
+
 .contentImg01:hover {
     position: relative;
     transform: scale(.95);
@@ -533,6 +544,14 @@ video {
     cursor: url(Cursor/Link/cursorLink08.png) 21 16, auto;
 }
 
+.mobileVid{
+    width: auto;
+    min-height: 600px;
+    border: none;
+    outline: none;
+    margin-bottom: 20px;
+}
+
 .bigVid{
     width: 100%;
     min-height: 50vh;
@@ -540,6 +559,13 @@ video {
 }
 
 @media (max-width: 1050px) {
+    
+    .contentImg01{
+        width: 100%;
+        height: auto;
+        max-height: 50vh;;
+    }
+    
     .contentImg01:hover {
         position: relative;
         transform: scale(1);
