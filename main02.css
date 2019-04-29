@@ -13,16 +13,20 @@ iframe {
 #content {
     position: relative; 
     z-index: 2; 
-    min-height: 90vh;
+    height: 100vh;
+    padding: 1vw;
+    overflow: none;
+    margin: 0px;
 }
 
 body {
-    font-family: 'IBM Plex Mono', monospace;
+    font-family: acumin-pro,sans-serif;
+    font-weight: 600;
+    font-style: normal;
+    padding: 0px;
+    margin: 0px;
     color: white;
-    padding-top: 5vh;
-    padding-left: 5vw;
-    padding-right: 5vw;
-    background: blue;
+    background: black;
 }
 
 button {
@@ -33,6 +37,7 @@ button {
 h1 {
     font-size: 60px;
     margin-bottom: 10px;
+    color: white;
 }
 
 a:link {
@@ -64,23 +69,21 @@ p {
     font-size: 14px;
 }
 
-.meImg{
-    display: none;
-    position: fixed;
-    top: 5vh;
-    right: 20;
-    z-index: -1;
-}
-
-.meUhImg {
-    display: block;
-    max-width: 300px;
-    max-height: 300px;
-}
-
 .HeadInfo {
-    max-width: 510px;
-    margin-bottom: 5vh;
+    position: fixed;
+    bottom: 80px;
+    z-index: 2;
+}
+
+.HeadInfo h1{
+    font-size: 200px;
+    line-height: 100px;
+    letter-spacing: -23px;
+    font-weight: 600;
+    margin: 0px;
+    width: 80vw;
+    height: auto;
+    /*text-shadow: 5px 0px 50px black;*/
 }
 
 .HomeLinks a:link {
@@ -88,7 +91,7 @@ p {
     color: white;
     width: auto;
     font-size: 23px;
-    margin-bottom: 20px;
+    line-height: 23px;
 }
 
 .HomeLinks a:visited {
@@ -99,163 +102,98 @@ p {
     color: yellow;
 }
 
-a.coolLink:hover .coolImg {
-    display: block;
-}
-
-.coolImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 15vh;
-    right: 10vw;
-}
-
-a.neatLink:hover .neatImg {
-    display: block;
-}
-
-.neatImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 20vh;
-    right: 10vw;
-}
-
-.niftyImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 25vh;
-    right: 10vw;
-}
-
-a.niftyLink:hover .niftyImg {
-    display: block;
-}
-
-a.thingLink:hover .thingImg {
-    display: block;
-}
-
-.thingImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 30vh;
-    right: 10vw;
-}
-
-a.niceLink:hover .niceImg {
-    display: block;
-}
-
-.niceImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 35vh;
-    right: 10vw;
-}
-
-a.prettyLink:hover .prettyImg {
-    display: block;
-}
-
-.prettyImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 40vh;
-    right: 10vw;
-}
-
-a.snazzyLink:hover .snazzyImg {
-    display: block;
-}
-
-.snazzyImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 45vh;
-    right: 10vw;
-}
-
-a.chillLink:hover .chillImg {
-    display: block;
-}
-
-.chillImg {
-    display: none;
-    position: fixed;
-    z-index: -1;
-    top: 50vh;
-    right: 10vw;
-}
-
-.linkImg {
-    display: block;
-    max-width: 40vw;
-    max-height: 40vh;
-}
-
-.bottomSheet {
-    margin-top: 50px;
-    position: relative;
-    width: auto;
-}
-
-.bottomSheet a:link {
+#projectsLabel{
     display: inline-block;
-    color: white;
-    font-size: 14px;
-    margin-right: 20px;
-    margin-bottom: 20px;
+    position: absolute;
+    right: 0px;
+    top: -150px;
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: -6px;
+    z-index: -1;
 }
 
-.bottomSheet a:visited {
-    color: white;
-}
-
-.bottomSheet a:hover {
-    color: chartreuse;
-}
-
-.scrollingImg:hover {
-    outline: solid;
+nav {
+    width: 100vw;
+    height: 60px;
+    background: black;
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 9999999;
+    outline: 1px solid white;
     outline-color: white;
-    outline-width: 2px;
-    transform: scale(.95);
-    opacity: .8;
 }
 
-.mobileHome {
-    flex-wrap: wrap;  
-    display: none;
+nav a{
+    margin: none;
+    text-decoration: none;
 }
 
-.mobileHome a {
+#homeLink{
+    position: absolute;
+    top: 22px;
+    left: 30px;
+    font-size: 20px;
+    line-height: 18px;
+}
+
+.navLinks {
+    position: absolute;
+    width: auto;
+    top: 22px;
+    right: 30px;
+}
+
+.navLinks a:link {
+    display: inline-block;
+    position: relative;
+    color: white;
+    font-size: 15px;
+    margin-right: 20px;
+    font-weight: 100;
+    bottom: 4px;
+}
+
+.navLinks a:visited {
+    color: white;
+}
+
+.navLinks a:hover {
+    text-decoration: line-through;
+}
+
+.homeProjects {
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    width: 85vw;
+    height: 70vh;
+    right: 30px;
+    top: 100px;
+    max-width: 1000px;
+    opacity: .2;
+}
+
+.homeProjects:hover {
+    z-index: 99;
+    opacity: 1;
+}
+
+.homeProjects:hover + .HeadInfo {
+    opacity: .15;
+}
+
+.projectLink{
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    height: 40vw;
     background-size: cover;
     background-position: center;
-    margin: 5px;
-    box-shadow:inset 0 0 0 2000px rgba(0,0,0,0.4);
-}
-
-.mobileHome a:hover{
-    transform: scale(.95);
-    transform-origin: center;
-    outline: solid;
-    outline-color: white;
-    outline-width: 2px;
-    opacity: .8;
-    font-style: italic;
+    overflow: hidden;
 }
 
 #img00 {
@@ -293,15 +231,125 @@ a.chillLink:hover .chillImg {
 }
 
 #img08 {
-    background-image: url(projectImages/chill/zorp.png);
+    background-image: url(projectImages/chill/zeroTwo.png);
     background-position: left;
 }
+
+.projectText{
+    text-decoration: none;
+    font-size: 45px;
+    line-height: 35px;
+    position: absolute;
+    bottom: 10px;
+    left: 5px;
+    margin: 0px;
+    width: 95%;
+    letter-spacing: -3px;
+    z-index: 1;
+    transition-property: opacity;
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier();
+    opacity: 0;
+}
+
+.projectColourBlock{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    transform-origin: bottom;
+    transform: scaleY(0);
+    background: black;
+    transition-property: scaleY();
+    transition-duration: .3s;
+    transition-timing-function: cubic-bezier();
+}
+
+.projectLink:hover .projectColourBlock{
+    transform: scaleY(1);
+}
+
+.projectLink:hover .projectText{
+    opacity: 1;
+}
+
+/*
+#redBlock{
+    background: red;
+}
+
+#blueBlock{
+    background: blue;
+}
+
+#orangeBlock{
+    background: orange;
+}
+
+#yellowBlock{
+    background: yellow;
+}
+
+#pinkBlock{
+    background: pink;
+}
+
+#greenBlock{
+    background: green;
+}
+
+#purpleBlock {
+    background: purple;
+}
+
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
 
 
 /* Project page stuff */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -585,23 +633,5 @@ video {
         transform: scale(1);
         transform-origin: left;
         cursor: url(Cursor/Link/cursorLink07.png) 23 16, auto;
-    }
-    .mobileHome{
-        display: flex;
-    }
-    #makeMeScrollable{
-        display: none;
-    }
-}
-
-@media (max-width: 600px) {
-    .HomeLinks {
-        padding-bottom: 175px;
-    }
-}
-
-@media (max-height: 800px) {
-    .HomeLinks {
-        padding-bottom: 150px;
     }
 }
