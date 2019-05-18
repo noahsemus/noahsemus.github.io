@@ -383,6 +383,8 @@ barba.hooks.before(data => {
             
             $( ".thingTitle" ).html('Things');
             
+            /*
+            
             class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
               static pluginName = 'horizontalScroll';
 
@@ -410,6 +412,8 @@ barba.hooks.before(data => {
             /*--------------------
             Wheel Option
             -------------------*/
+            
+            /*
             let option = {
               x: 0,
               speed: 1.5,
@@ -437,4 +441,6 @@ barba.hooks.before(data => {
             
             
         });
+        
+        */
 });
