@@ -347,6 +347,7 @@ nav a:hover {
 
 #projectBigTitle {
     text-shadow: 0 0 50px #000000;
+    white-space: nowrap;
 }
 
 #projectContentContain {
