@@ -387,7 +387,7 @@ barba.hooks.before(data => {
             
             class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
                 
-              //static pluginName = 'horizontalScroll';
+              static pluginName = 'horizontalScroll';
 
               transformDelta(delta, fromEvent) {
                 if (!/wheel/.test(fromEvent.type)) {

@@ -25,7 +25,7 @@
 
   <!-- Add your site or application content here -->
     <nav>
-        <a href='../index.html' class="navLink">things</a>
+        <a href='/index.html' class="navLink">things</a>
         <a href='/about.html' class="navLink">about</a>
         <a href='https://medium.com/@noahsemus' target="_blank" class="navLink">writing</a>
         <a href='https://vimeo.com/noahsemus' target="_blank" class="navLink">film</a>
@@ -35,7 +35,7 @@
         <div class="globalContainer" id="leftBG">
             <div class="title">
                 <h1 class="thingTitle">Things</h1>
-                <img id="face04" class="face" src="./img/face/face04.png">
+                <img id="face04" class="face" src="/img/face/face04.png">
             </div>
         </div>
     </div>
@@ -51,16 +51,16 @@
             
             <div class='globalContainer' id="leftPage">
                 <div id="projectContainer">
-                    <a href="somewhere" class="project" id="projectEmpty"></a>
-                    <a href="projects/gmessage.html" class="project" id="pr01"></a>
-                    <a href="projects/efe.html" class="project" id="pr02"></a>
-                    <a href="projects/prattler.html" class="project" id="pr03"></a>
-                    <a href="projects/funStuff.html" class="project" id="pr04"></a>
-                    <a href="projects/print.html" class="project" id="pr05"></a>
-                    <a href="projects/columbia.html" class="project" id="pr06"></a>
-                    <a href="projects/omniscience.html" class="project" id="pr07"></a>
-                    <a href="projects/posters.html" class="project" id="pr08"></a>
-                    <a href="projects/crane.html" class="project" id="pr09"></a>
+                    <a class="project" id="projectEmpty"></a>
+                    <a href="/projects/gmessage.html" class="project" id="pr01"></a>
+                    <a href="/projects/efe.html" class="project" id="pr02"></a>
+                    <a href="/projects/prattler.html" class="project" id="pr03"></a>
+                    <a href="/projects/funStuff.html" class="project" id="pr04"></a>
+                    <a href="/projects/print.html" class="project" id="pr05"></a>
+                    <a href="/projects/columbia.html" class="project" id="pr06"></a>
+                    <a href="/projects/omniscience.html" class="project" id="pr07"></a>
+                    <a href="/projects/posters.html" class="project" id="pr08"></a>
+                    <a href="/projects/crane.html" class="project" id="pr09"></a>
                 </div>
             </div>
 
@@ -207,7 +207,7 @@
             
             
             class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
-             // static pluginName = 'horizontalScroll';
+              static pluginName = 'horizontalScroll';
 
               transformDelta(delta, fromEvent) {
                 if (!/wheel/.test(fromEvent.type)) {
