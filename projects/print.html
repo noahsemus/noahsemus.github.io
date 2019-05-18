@@ -251,9 +251,6 @@
             );
             
             class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
-               static pluginName(){
-                  'horizontalScroll';
-              } 
 
               transformDelta(delta, fromEvent) {
                 if (!/wheel/.test(fromEvent.type)) {
@@ -271,6 +268,8 @@
                 };
               }
             }
+            
+            HorizontalScrollPlugin.pluginName = 'horizontalScroll';
 
             Scrollbar.use(HorizontalScrollPlugin /* you forgot this */);
 
