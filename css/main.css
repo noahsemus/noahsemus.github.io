@@ -597,6 +597,10 @@ nav a:hover {
         flex-direction: row;
     }
     
+    .thingTitle {
+        display: none;
+    }
+    
     #leftPage {
         width: 100vw;
         order: 2;
