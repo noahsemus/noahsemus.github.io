@@ -155,7 +155,9 @@ function homeLoad() {
         } 
 }
 
-barba.init({
+$(document).ready(function(){
+    
+    barba.init({
   transitions: [{
     name: 'homeOut',
     sync: true,
@@ -290,6 +292,11 @@ barba.init({
                
   ],
 });
+    
+});
+
+
+
 
 barba.hooks.before(data => {
   // this hook will be called after each transitions
