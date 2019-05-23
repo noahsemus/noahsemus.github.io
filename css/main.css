@@ -602,6 +602,11 @@ nav a:hover {
         background: black;
     }
     
+    .globalContainer {
+        min-height: 100vh;
+        min-height: calc(var(--vh, 1vh) * 100);
+    }
+    
     #bgContain {
         position: fixed;
         height: 200vh;
@@ -645,6 +650,11 @@ nav a:hover {
     
     #projectEmpty:hover {
         border: none;
+    }
+    
+    #face02 {
+        margin-bottom: 1.5vh;
+        margin-left: -11vh;
     }
     
     nav {
@@ -764,7 +774,7 @@ nav a:hover {
         padding-bottom: 40px;
         display: flex;
         justify-content: center;
-        height: 100vh;
+        height: calc(var(--vh, 1vh) * 100);
     }
     
     #aboutHead {
