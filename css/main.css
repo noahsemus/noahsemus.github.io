@@ -622,6 +622,11 @@ nav a:hover {
         display: none;
     }
     
+    #face02 {
+        margin-bottom: 1vh;
+        margin-left: -19vw;
+    }
+    
     #leftPage {
         width: 100vw;
         order: 2;
