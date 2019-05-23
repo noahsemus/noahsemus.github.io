@@ -543,6 +543,11 @@ nav a:hover {
     
 }
 
+
+.funHead {
+    margin-bottom: 0px;
+}
+
 #aboutBGVid {
     position: fixed;
     bottom: 0;
