@@ -598,6 +598,10 @@ nav a:hover {
         background: black;
     }
     
+    #cover {
+        background: black;
+    }
+    
     #bgContain {
         position: fixed;
         height: 200vh;
