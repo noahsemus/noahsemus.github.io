@@ -628,6 +628,8 @@ nav a:hover {
         background: none;
         position: absolute;
         z-index: 20;
+        overflow-y: hidden;
+        height: -webkit-fill-available;
     }
     
     #rightPage {
@@ -635,7 +637,9 @@ nav a:hover {
         order: 1;
         width: 100vw;
         padding-top: 7vh;
-        color: white
+        color: white;
+        overflow-y: hidden;
+        height: -webkit-fill-available;
     }
     
     #fontSuck {
