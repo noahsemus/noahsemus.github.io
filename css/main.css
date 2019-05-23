@@ -604,7 +604,7 @@ nav a:hover {
     
     .globalContainer {
         min-height: 100vh;
-        min-height: calc(var(--vh, 1vh) * 100);
+        min-height: -webkit-fill-available;
     }
     
     #bgContain {
@@ -624,7 +624,6 @@ nav a:hover {
     
     #leftPage {
         width: 100vw;
-        height: calc(var(--vh, 1vh) * 100);
         order: 2;
         background: none;
         position: absolute;
@@ -633,7 +632,6 @@ nav a:hover {
     
     #rightPage {
         background: black;
-        height: calc(var(--vh, 1vh) * 100);
         order: 1;
         width: 100vw;
         padding-top: 7vh;
@@ -771,7 +769,7 @@ nav a:hover {
         padding-bottom: 40px;
         display: flex;
         justify-content: center;
-        height: calc(var(--vh, 1vh) * 100);
+        height: -webkit-fill-available;
     }
     
     #aboutHead {
