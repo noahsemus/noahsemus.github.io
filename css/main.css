@@ -589,6 +589,10 @@ nav a:hover {
     min-height: 50vh;
 }
 
+.desktopDisable {
+    display: none;
+}
+
 
 
 
@@ -602,9 +606,12 @@ nav a:hover {
         background: black;
     }
     
+    .desktopDisable {
+        display: block;
+    }
+    
     .globalContainer {
         min-height: 100vh;
-        min-height: -webkit-fill-available;
     }
     
     #bgContain {
@@ -625,6 +632,15 @@ nav a:hover {
     #face02 {
         margin-bottom: 1vh;
         margin-left: -19vw;
+    }
+    
+    #face69 {
+        position: absolute;
+        bottom: 3vh;
+        margin-left: auto;
+        margin-right: auto;
+        left: 0;
+        right: 0;
     }
     
     #leftPage {
