@@ -393,7 +393,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
     margin-left: 10px;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
 }
 
@@ -420,7 +420,7 @@ nav a:hover {
     width: 100%;
     overflow: hidden;
     box-sizing: border-box;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     padding-bottom: 20px;
 }
 
@@ -508,6 +508,7 @@ nav a:hover {
 
 .nextProject {
     margin-top: 100px;
+    margin-bottom: 200px;
     overflow: visible;
     align-self: flex-start;
 }
