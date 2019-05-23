@@ -624,6 +624,7 @@ nav a:hover {
     
     #leftPage {
         width: 100vw;
+        height: calc(var(--vh, 1vh) * 100);
         order: 2;
         background: none;
         position: absolute;
@@ -632,6 +633,7 @@ nav a:hover {
     
     #rightPage {
         background: black;
+        height: calc(var(--vh, 1vh) * 100);
         order: 1;
         width: 100vw;
         padding-top: 7vh;
@@ -650,11 +652,6 @@ nav a:hover {
     
     #projectEmpty:hover {
         border: none;
-    }
-    
-    #face02 {
-        margin-bottom: 1.5vh;
-        margin-left: -11vh;
     }
     
     nav {
