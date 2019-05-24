@@ -306,8 +306,6 @@ barba.hooks.before(data => {
   // this hook will be called after each transitions
         $(document).ready(function(){
             
-            $('#cover').hide();
-            
             $("#fontSuck").click(function(){
                 
                  if($('body').css('font-family') == "acumin-pro")
@@ -466,6 +464,8 @@ barba.hooks.before(data => {
               },
             });
             
+            
+            $('#cover').hide();
             
         });
         
