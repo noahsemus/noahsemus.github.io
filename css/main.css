@@ -389,7 +389,7 @@ nav a:hover {
     line-height: 1.3;
     color: #FFFFFF;
     letter-spacing: 0.58px;
-    text-align: justify;
+    text-align: left;
     display: flex;
     flex-direction: column;
     margin-left: 10px;
@@ -433,7 +433,7 @@ nav a:hover {
 }
 
 .projectDesc {
-    hyphens: auto;
+    hyphens: none;
 }
 
 .projectDesc + .projectDesc {
