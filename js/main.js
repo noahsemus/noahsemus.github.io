@@ -189,15 +189,21 @@ $(document).ready(function(){
     sync: true,
     from: { namespace: 'project' },
     to: { namespace: 'home' },
+      
+    beforeLeave(data) {
+        data.next.container.style.display = 'none';
+    },  
+      
     leave: ({ data }) => projectLeave(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
         data.current.container.style.display = 'none';
+        data.next.container.style.display = 'block';
     },  
       
     beforeEnter(next){
-
+        
     },
       
     afterEnter: ({ next }) => homeEnter(),
@@ -229,11 +235,17 @@ $(document).ready(function(){
     sync: true,
     from: { namespace: 'about' },
     to: { namespace: 'home' },
+      
+    beforeLeave(data) {
+        data.next.container.style.display = 'none';
+    },  
+      
     leave: ({ data }) => aboutLeave(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
         data.current.container.style.display = 'none';
+        data.next.container.style.display = 'block';
     },  
       
       
