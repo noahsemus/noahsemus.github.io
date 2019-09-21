@@ -257,11 +257,17 @@ $(document).ready(function(){
     sync: true,
     from: { namespace: 'project' },
     to: { namespace: 'about' },
+      
+    beforeLeave(data) {
+        data.next.container.style.display = 'none';
+    },  
+      
     leave: ({ data }) => projectLeave02(),
     // Same as above but we get destructured `next` directly from `data`
     
     afterLeave(data) {
         data.current.container.style.display = 'none';
+        data.next.container.style.display = 'block';
     },  
       
       
