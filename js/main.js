@@ -25,14 +25,14 @@ function projectEnter() {
         return new Promise(resolve => {
             TweenMax.from('#projectPageTitle', 1.8, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut });
             TweenMax.set('body', { background: '#000000', ease: Power4.easeInOut });
-            TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
-            TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+            TweenMax.from('#projectTransitioner', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+            //TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
         });
     } else if($('body').width() >= 800){
         return new Promise(resolve => {
             TweenMax.to('body', .5, { css:{background:"#000000"}});
-            TweenMax.from('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
-            TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+            TweenMax.from('#projectTransitioner', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+            //TweenMax.from('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
         });
     }
 }
@@ -77,13 +77,13 @@ function projectLeave() {
     if($('body').width() <= 800){
               return new Promise(resolve => {
                 TweenMax.to('#projectPageTitle', 2.2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
-                TweenMax.to('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
-                TweenMax.to('#projectText', 2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+                TweenMax.to('#projectTransitioner', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+                //TweenMax.to('#projectText', 2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
               });
     } else if($('body').width() >= 800){
               return new Promise(resolve => {
-                TweenMax.to('#projectImages', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
-                TweenMax.to('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
+                TweenMax.to('#projectTransitioner', 2, { opacity: 0, marginTop: '5vh', ease: Power4.easeInOut, onComplete: resolve });
+                //TweenMax.to('#projectText', 2.2, { opacity: 0, marginTop: '10vh', ease: Power4.easeInOut, onComplete: resolve });
               });
     }
 }
@@ -308,7 +308,7 @@ $(document).ready(function(){
         data.current.container.style.display = 'block';
     },
       
-    afterAppear: ({ data }) => homeLoad(),
+    once: ({ data }) => homeLoad(),
       
   },
                
@@ -470,7 +470,9 @@ barba.hooks.before(data => {
               },
             });
 
-            Scrollbar.init(document.querySelector('#projectTextContain'), {
+           
+            
+           /* Scrollbar.init(document.querySelector('#projectContentContain'), {
               plugins: {
                 horizontalScroll: false,
               },
@@ -481,7 +483,8 @@ barba.hooks.before(data => {
                 horizontalScroll: false,
               },
             });
-            
+      
+            */
             
             $('#cover').hide();
             

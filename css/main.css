@@ -146,6 +146,12 @@ body {
     background: white;
 }
 
+::-webkit-scrollbar {
+width: 0px;
+height: 0px;
+background: transparent;
+}
+
 #cover {
     position: fixed;
     height: 200vh;
@@ -362,21 +368,39 @@ nav a:hover {
 }
 
 #projectContentContain {
-    display: grid;
-    grid-template-columns: 285px 1fr;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    flex-wrap: nowrap;
     padding-right: 55px;
-    height: 100vh;
-    overflow: hidden;
+    padding-bottom: 40px;
+    width: 100vw;
+    height: auto;
+    overflow-y: scroll;
     margin-top: -5vh;
     position: relative;
     box-sizing: border-box;
 }
 
 #projectTextContain {
-    grid-column-start: 1;
-    grid-row-start: 1;
-    overflow: scroll;
-    height: 100vh;
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+    order: 1;
+    overflow: hidden;
+    height: auto;
+    padding-top: 40px;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+#projectTextContainTop {
+    display: block;
+    min-width: 300px;
+    max-width: 300px;
+    order: 1;
+    overflow: hidden;
+    height: auto;
     padding-top: 17vh;
     box-sizing: border-box;
     z-index: 0;
@@ -398,14 +422,28 @@ nav a:hover {
 }
 
 #projectImagesContain {
-    height: 100vh;
-    overflow-y: scroll;
+    display: block;
+    flex-grow: 1;
+    order: 2;
+    height: auto;
+    overflow-y: hidden;
     overflow-x: hidden;
-    grid-column-start: 2;
-    grid-row-start: 1;
     padding-top: 7vh;
     z-index: 2;
-    width: 100%;
+    width: auto;
+    box-sizing: border-box;
+}
+
+#projectImagesContainEnd {
+    display: block;
+    flex-grow: 1;
+    order: 2;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 7vh;
+    z-index: 2;
+    width: auto;
     box-sizing: border-box;
     padding-bottom: 200px;
 }
@@ -546,6 +584,7 @@ nav a:hover {
 
 .funHead {
     margin-bottom: 0px;
+    margin-top: 0px;
 }
 
 #aboutBGVid {
