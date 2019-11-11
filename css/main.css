@@ -772,6 +772,7 @@ nav a:hover {
     
     #projectContentContain {
         display: flex;
+        width: 100%;
         align-items: center;
         flex-direction: column;
         padding-right: 0px;
@@ -790,11 +791,19 @@ nav a:hover {
     }
     
     #projectTextContain {
-        order: 2;
+        order: 1;
         height: auto;
-        max-width: 400px;
+        min-width: 100%;
         margin-top: 0px;
-        padding-top: 20px;
+        padding-top: 100px;
+    }
+    
+    #projectTextContainTop {
+        order: 1;
+        height: auto;
+        min-width: 100%;
+        margin-top: 0px;
+        padding-top: 140px;
     }
     
     #projectText {
@@ -802,9 +811,9 @@ nav a:hover {
     }
     
     #projectImagesContain {
-        order: 1;
+        order: 2;
         overflow: hidden;
-        padding-top: 150px;
+        padding-top: 20px;
         height: auto;
     }
     
