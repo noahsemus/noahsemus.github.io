@@ -346,6 +346,14 @@ barba.hooks.before(data => {
                 }
             );
             
+            $( "#pr10" ).hover(function() {
+                $( ".thingTitle" ).html('Ambient CIT');
+                $('body').css('background', '#FF2D68')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
             $( "#pr02" ).hover(function() {
                 $( ".thingTitle" ).html('EFE');
                 $('body').css('background', 'orange')}, function(){

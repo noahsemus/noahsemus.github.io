@@ -56,6 +56,7 @@
                 <div id="projectContainer">
                     <a class="project" id="projectEmpty"></a>
                     <a href="/projects/gmessage.html" class="project" id="pr01"></a>
+                    <a href="/projects/acit.html" class="project" id="pr10"></a>
                     <a href="/projects/efe.html" class="project" id="pr02"></a>
                     <a href="/projects/prattler.html" class="project" id="pr03"></a>
                     <a href="/projects/funStuff.html" class="project" id="pr04"></a>
@@ -137,6 +138,14 @@
 	        $( "#pr01" ).hover(function() {
                 $( ".thingTitle" ).html('GMessage');
                 $('body').css('background', 'aquamarine')}, function(){
+                    $( ".thingTitle" ).html('Things');
+                    $('body').css('background', 'none');
+                }
+            );
+            
+            $( "#pr10" ).hover(function() {
+                $( ".thingTitle" ).html('Ambient CIT');
+                $('body').css('background', '#FF2D68')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
                 }

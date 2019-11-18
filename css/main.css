@@ -317,6 +317,10 @@ nav a:hover {
     background-image: url(../img/projectImages/pr01/frontImg.jpg);
 }
 
+#pr10 {
+    background-image: url(../img/projectImages/pr10/heroMach.jpg);
+}
+
 #pr02 {
     background-image: url(../img/projectImages/pr02/coolImg.jpg);
 }
