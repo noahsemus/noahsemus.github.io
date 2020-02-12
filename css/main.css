@@ -376,7 +376,7 @@ nav a:hover {
     flex-direction: row;
     align-items: flex-start;
     flex-wrap: nowrap;
-    padding-right: 55px;
+    padding-right: 75px;
     padding-bottom: 40px;
     width: 100vw;
     height: auto;
@@ -410,6 +410,30 @@ nav a:hover {
     z-index: 0;
 }
 
+#projectTextContainTopShort {
+    display: block;
+    position: fixed;
+    min-width: 300px;
+    max-width: 300px;
+    order: 1;
+    overflow: hidden;
+    height: auto;
+    padding-top: 17vh;
+    box-sizing: border-box;
+    z-index: 0;
+}
+
+.imageDivideText {
+    margin-top: 60px;
+    background: #4000ff;
+    margin-bottom: 20px;
+    font-size: 40px;
+    line-height: 42px;
+    text-align-last: left;
+    align-self: flex-start;
+    width: auto;
+}
+
 #projectText {
     font-weight: 400;
     font-style: normal;
@@ -435,6 +459,22 @@ nav a:hover {
     padding-top: 7vh;
     z-index: 2;
     width: auto;
+    box-sizing: border-box;
+}
+
+#projectImagesContainShort {
+    display: block;
+    position: relative;
+    left: 300px;
+    flex-grow: 0;
+    order: 2;
+    height: auto;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    padding-top: 7vh;
+    padding-right: 80px;
+    z-index: 2;
+    width: calc(100vw - 300px);
     box-sizing: border-box;
 }
 
@@ -478,6 +518,7 @@ nav a:hover {
     hyphens: none;
 }
 
+
 .projectDesc + .projectDesc {
     margin-top: 100px;
 }
@@ -493,7 +534,7 @@ nav a:hover {
 }
 
 .projectDesc a {
-    color: cornflowerblue;
+    color: #4000ff;
 }
 
 .projectFrame {
@@ -550,14 +591,26 @@ nav a:hover {
 
 .nextProject {
     margin-top: 100px;
-    margin-bottom: 200px;
+    margin-bottom: 20px;
     overflow: visible;
     align-self: flex-start;
 }
 
+.shortDesc {
+    color: white; 
+    width: 100%; 
+    position: relative;
+    left: 0px;
+    max-width: 500px;
+    font-weight: 500;
+    align-self: flex-start;
+    box-sizing: border-box;
+    filter: drop-shadow(0 0 6px #000000);
+}
+
 .nextProHead {
     display: inline;
-    color: cornflowerblue;
+    color: #4000ff;
     text-shadow:
         -4px -4px black,
         -4px 4px black,
@@ -565,7 +618,7 @@ nav a:hover {
         4px 4px black;
     box-shadow:
         inset 0 -0.16em 0 black,
-        inset 0 -0.22em 0 cornflowerblue;
+        inset 0 -0.22em 0 #4000ff;
     text-decoration: none;
     font-size: 100px;
     line-height: 1;
@@ -810,6 +863,22 @@ nav a:hover {
         padding-top: 140px;
     }
     
+    #projectTextContainTopShort {
+        order: 1;
+        height: auto;
+        width: 100%;
+        max-width: 500px;
+        margin-top: 0px;
+        padding-top: 23vw;
+        
+        display: block;
+        position: relative;
+        overflow: hidden;
+        height: auto;
+        box-sizing: border-box;
+        z-index: 0;
+    }
+    
     #projectText {
         margin-left: 0;
     }
@@ -819,6 +888,57 @@ nav a:hover {
         overflow: hidden;
         padding-top: 20px;
         height: auto;
+    }
+    
+    #projectImagesContainShort {
+        order: 2;
+        overflow: hidden;
+        padding-top: 20px;
+        height: auto;
+        
+        display: block;
+        flex-grow: 1;
+        order: 2;
+        height: auto;
+        overflow-y: hidden;
+        overflow-x: hidden;
+        z-index: 2;
+        width: 100vw;
+        left: 0;
+        padding-right: 0px;
+        box-sizing: border-box;
+    }
+    
+    .nextProject {
+        position: relative;
+        left: 0;
+        margin-left: 20px;
+        margin-top: 100px;
+        margin-bottom: 20px;
+        overflow: visible;
+        align-self: flex-start;
+    }
+    
+    .shortDesc {
+        color: white; 
+        width: 100%; 
+        max-width: 100%;
+        padding-left: 20px; 
+        padding-right: 20px; 
+        align-self: center;
+        box-sizing: border-box;
+    }
+    
+    .imageDivideText {
+        margin-top: 60px;
+        padding-left: 20px;
+        padding-right: 20px;
+        margin-bottom: 20px;
+        box-sizing: border-box;
+        font-size: 40px;
+        line-height: 42px;
+        text-align-last: left;
+        align-self: flex-start;
     }
     
     #projectImages {

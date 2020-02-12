@@ -123,7 +123,7 @@ function homeEnter() {
         } else if($('body').width() >= 800){
               return new Promise(resolve => {
                 TweenMax.from('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
-                TweenMax.to('.navLink', 2, { css:{color:"#000000"}});
+                TweenMax.to('.navLink', 2, { css:{color:"black"}});
                 TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
                 TweenMax.from('#bigName', 2, { marginLeft: '60vw', opacity: 0, ease: Power4.easeInOut});
                 TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
