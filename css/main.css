@@ -424,14 +424,14 @@ nav a:hover {
 }
 
 .imageDivideText {
+    align-self: flex-start;
     margin-top: 60px;
-    background: #4000ff;
     margin-bottom: 20px;
     font-size: 40px;
-    line-height: 42px;
-    text-align-last: left;
-    align-self: flex-start;
-    width: auto;
+}
+
+.highlight {
+    background: #4000ff;
 }
 
 #projectText {
@@ -869,9 +869,8 @@ nav a:hover {
         width: 100%;
         max-width: 500px;
         margin-top: 0px;
-        padding-top: 23vw;
+        padding-top: 30vw;
         
-        display: block;
         position: relative;
         overflow: hidden;
         height: auto;
@@ -934,11 +933,11 @@ nav a:hover {
         padding-left: 20px;
         padding-right: 20px;
         margin-bottom: 20px;
-        box-sizing: border-box;
         font-size: 40px;
-        line-height: 42px;
-        text-align-last: left;
-        align-self: flex-start;
+    }
+    
+    .highlight {
+        background: #4000ff;
     }
     
     #projectImages {
