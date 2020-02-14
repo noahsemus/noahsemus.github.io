@@ -195,6 +195,12 @@ nav a:hover {
     text-decoration: line-through;
 }
 
+#github {
+    position: absolute;
+    left: 250px;
+    width: 300px;
+}
+
 .projectNavLink {
     color: white;
 }

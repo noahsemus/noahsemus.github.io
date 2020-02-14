@@ -377,7 +377,7 @@ barba.hooks.before(data => {
             $( "#pr03" ).hover(function() {
                 $( ".thingTitle" ).html('Prattler');
                 $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> sort of<br> a big<br> film snob.');
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> sort of<br> huge<br> film snob.');
                 $('body').css('background', 'dodgerblue')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
