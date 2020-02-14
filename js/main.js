@@ -12,7 +12,8 @@ function homeLeave() {
                 TweenMax.to('.navLink', 2, { css:{color:"#FFFFFF"}});
                 TweenMax.to('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
                 TweenMax.to('#bigName', 2, { marginLeft: '60vw', ease: Power4.easeInOut});
-                TweenMax.to('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.to('.button', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.to('.button02', 2, { right: '-70vw', ease: Power4.easeInOut});
                 TweenMax.to('#leftBG', 2, { width: '100vw', ease: Power4.easeInOut, onComplete: resolve });
                 TweenMax.to('#leftBG', 2, { width: '100vw', ease: Power4.easeInOut, onComplete: resolve });
               });
@@ -52,7 +53,8 @@ function homeLeave02() {
             TweenMax.to('.navLink', 2, { css:{color:"#FFFFFF"}});
             TweenMax.to('#projectContainer', 2, { marginLeft: '-2200px', ease: Power4.easeInOut});
             TweenMax.to('#bigName', 2, { marginLeft: '60vw', ease: Power4.easeInOut});
-            TweenMax.to('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
+            TweenMax.to('.button', 2, { right: '-70vw', ease: Power4.easeInOut});
+            TweenMax.to('.button02', 2, { right: '-70vw', ease: Power4.easeInOut});
             TweenMax.to('#leftBG', 2, { width: '100vw', ease: Power4.easeInOut, onComplete: resolve });
             TweenMax.to('.title', 2.2, { opacity: 0, ease: Power4.easeInOut, onComplete: resolve });
         });
@@ -127,7 +129,8 @@ function homeEnter() {
                 TweenMax.to('.navLink', 2, { css:{color:"black"}});
                 TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
                 TweenMax.from('#bigName', 2, { marginLeft: '60vw', opacity: 0, ease: Power4.easeInOut});
-                TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.from('.button', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.from('.button02', 2, { right: '-70vw', ease: Power4.easeInOut});
                 TweenMax.to('#leftBG', 2, { width: '50vw', paddingLeft: '2vw', ease: Power4.easeInOut, onComplete: resolve });
                 TweenMax.to('.title', 2.2, { opacity: 1, ease: Power4.easeInOut, onComplete: resolve });
               });
