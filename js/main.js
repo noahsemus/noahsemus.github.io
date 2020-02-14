@@ -351,7 +351,7 @@ barba.hooks.before(data => {
             );
             
             $( "#pr10" ).hover(function() {
-                $( ".thingTitle" ).html('Ambient CIT');
+                $( ".thingTitle" ).html('ACIT');
                 $( "#face02" ).hide();
                 $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is an<br> okay<br> guy<br> I guess?');
                 $('body').css('background', '#FF2D68')}, function(){
