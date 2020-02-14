@@ -340,49 +340,73 @@ barba.hooks.before(data => {
             
 	        $( "#pr01" ).hover(function() {
                 $( ".thingTitle" ).html('GMessage');
+                $( "#face02" ).hide();
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> youtuber<br> without<br> a youtube<br> channel.');
                 $('body').css('background', 'aquamarine')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
+                    $( "#face02" ).show();
+                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
                 }
             );
             
             $( "#pr10" ).hover(function() {
                 $( ".thingTitle" ).html('Ambient CIT');
+                $( "#face02" ).hide();
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is an<br> okay<br> guy<br> I guess?');
                 $('body').css('background', '#FF2D68')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
+                    $( "#face02" ).show();
+                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
                 }
             );
             
             $( "#pr02" ).hover(function() {
                 $( ".thingTitle" ).html('EFE');
+                $( "#face02" ).hide();
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> pretentious<br> poopy<br> head!');
                 $('body').css('background', 'orange')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
+                    $( "#face02" ).show();
+                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
                 }
             );
             
             $( "#pr03" ).hover(function() {
                 $( ".thingTitle" ).html('Prattler');
+                $( "#face02" ).hide();
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> sort of<br> a big<br> film snob.');
                 $('body').css('background', 'dodgerblue')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
+                    $( "#face02" ).show();
+                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
                 }
             );
             
             $( "#pr04" ).hover(function() {
                 $( ".thingTitle" ).html('Fun Stuff :>)');
+                $( "#face02" ).hide();
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> man<br> without<br> knees!');
                 $('body').css('background', 'springgreen')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
+                    $( "#face02" ).show();
+                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
                 }
             );
             
             $( "#pr05" ).hover(function() {
                 $( ".thingTitle" ).html('Print');
+                $( "#face02" ).hide();
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> vessel<br> for the <br> story.');
                 $('body').css('background', 'fuchsia')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
+                    $( "#face02" ).show();
+                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
                 }
             );
             
