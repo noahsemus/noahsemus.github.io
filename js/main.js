@@ -116,7 +116,8 @@ function homeEnter() {
                 TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
                 TweenMax.from('#bigName', 2, { marginLeft: '-60vw', opacity: 0, ease: Power4.easeInOut});
                 TweenMax.from('#face69', 2, { bottom: '0', opacity: 0, ease: Power4.easeInOut});
-                TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.from('.button', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.from('.button02', 2, { right: '-70vw', ease: Power4.easeInOut});
                 TweenMax.to('#leftBG', 2, { width: '50vw', paddingLeft: '2vw', ease: Power4.easeInOut, onComplete: resolve });
                 TweenMax.to('.title', 2.2, { opacity: 1, ease: Power4.easeInOut, onComplete: resolve });
               });
@@ -152,7 +153,8 @@ function homeLoad() {
                 TweenMax.from('.navLink', 2, { css:{color:"#FFFFFF"}, delay: 1});
                 TweenMax.to('body', .5, { css:{background:"#FFFFFF"}});
                 TweenMax.from('#bigName', 2, { marginLeft: '60vw', opacity: 0, ease: Power4.easeInOut});
-                TweenMax.from('#fontSuck', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.from('.button', 2, { right: '-70vw', ease: Power4.easeInOut});
+                TweenMax.from('.button02', 2, { right: '-70vw', ease: Power4.easeInOut});
                 TweenMax.from('#leftBG', 2, { width: '0vw', paddingLeft: '0vw', ease: Power4.easeInOut, onComplete: resolve });
                 TweenMax.to('.title', 2.2, { opacity: 1, ease: Power4.easeInOut, onComplete: resolve });
               });
