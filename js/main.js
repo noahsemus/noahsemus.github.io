@@ -358,7 +358,7 @@ barba.hooks.before(data => {
             $( "#pr10" ).hover(function() {
                 $( ".thingTitle" ).html('ACIT');
                 $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is an<br> okay<br> guy<br> I guess?');
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br>pretty<br> okay<br> guy<br> I guess?');
                 $('body').css('background', '#FF2D68')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
@@ -370,7 +370,7 @@ barba.hooks.before(data => {
             $( "#pr02" ).hover(function() {
                 $( ".thingTitle" ).html('EFE');
                 $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> pretentious<br> poopy<br> head!');
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br>big<br> pretentious<br> poopy<br> head!');
                 $('body').css('background', 'orange')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
@@ -382,7 +382,7 @@ barba.hooks.before(data => {
             $( "#pr03" ).hover(function() {
                 $( ".thingTitle" ).html('Prattler');
                 $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> sort of<br> huge<br> film snob.');
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> sort of<br> huge<br> film<br> snob.');
                 $('body').css('background', 'dodgerblue')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
@@ -394,7 +394,7 @@ barba.hooks.before(data => {
             $( "#pr04" ).hover(function() {
                 $( ".thingTitle" ).html('Fun Stuff :>)');
                 $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> man<br> without<br> knees!');
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br>human<br> man<br> without<br> knees!');
                 $('body').css('background', 'springgreen')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
@@ -406,7 +406,7 @@ barba.hooks.before(data => {
             $( "#pr05" ).hover(function() {
                 $( ".thingTitle" ).html('Print');
                 $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> vessel<br> for the <br> story.');
+                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> vessel<br> for the <br> story<br>????');
                 $('body').css('background', 'fuchsia')}, function(){
                     $( ".thingTitle" ).html('Things');
                     $('body').css('background', 'none');
