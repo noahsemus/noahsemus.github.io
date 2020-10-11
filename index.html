@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="stylesheet" href="main.css">
     <title>Noah (!!!)</title>
 </head>
@@ -19,9 +19,10 @@
     </nav>
 
     <main data-barba="container" data-barba-namespace="home">
-        <div id="scrollingDiv"></div>
+        <div class="phoneHide" id="scrollingDiv"></div>
         <div id="homeContain">
-            <p id="shouldScroll">Psst. You should scroll to see stuff 👈</p>
+            <p class="mobileHide" id="shouldScroll">Psst. You should scroll to see stuff 👈</p>
+            <p class="mobileShow" id="shouldScroll">Psst. You should drag to see stuff 👈</p>
             <div id="projectsContainer">
                 <a href="somewhere" class="project" id="p-01">
                     <div class="projectTitleContainer">
@@ -74,18 +75,22 @@
                 </a>
                 <div id="homeButtonContainer">
                     <div id="homeButtonContainerHacky">
-                        <button class="homeButton" id="githubButton" type="button"
+                        <button class="homeButton mobileHide" id="githubButton" type="button"
                             onclick=" window.open('http://github.com/noahsemus','_blank')"">I code!
                             Checkout my Github :)</button>
                         <div class=" spacer sixteen"></div>
-                    <button class="homeButton" id="coolButton">I'll put something cool here eventually</button>
+                    <button class="homeButton mobileHide" id="coolButton">I'll put something cool here
+                        eventually</button>
                 </div>
             </div>
         </div>
         </div>
     </main>
 
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="./index.js"></script>

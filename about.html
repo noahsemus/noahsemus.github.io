@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="stylesheet" href="main.css">
     <title>Noah is cool</title>
 </head>
@@ -42,9 +42,9 @@
                     Design/Branding
                 </p>
             </div>
-            <div id="rightInfo">
+            <div id="aboutInfo">
                 <a href="https://linkedin.com/in/noahsemus" target="_blank" id="heroLink">
-                    <h1 id="heroText" style="color: white;">
+                    <h1 class="aboutHeroText" id="heroText" style="color: white;">
                         Noah Semus<br>is really really<br>really cool.<br>(really)
                         <img class="face" src="./img/face/face03.png">
                     </h1>
@@ -63,7 +63,10 @@
         </video>
     </main>
 
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+    <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
     <script src=" https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"> </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/Draggable.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="./index.js"></script>

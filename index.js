@@ -1,3 +1,5 @@
+const body = document.querySelector('body');
+
 const playVideos = () => {
     let videos = document.querySelectorAll('video');
 
@@ -7,6 +9,19 @@ const playVideos = () => {
 }
 
 const homescreenFunction = () => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
+        let vw = body.clientWidth;
+
+        Draggable.create("#projectsContainer", {
+            type: "x",
+            throwProps: true,
+            bounds: {
+                minX: vw * -4,
+                maxX: 0
+            }
+        });
+    }
+
     let tl = gsap.timeline({
         scrollTrigger: {
             trigger: "#scrollingDiv",
@@ -116,6 +131,38 @@ const homeEnter = (data) => {
     })
 }
 
+const homeLoad = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .4,
+                opacity: 0,
+                ease: "power1.out"
+            }
+        });
+
+        tl.from('#rightInfo', {
+                x: 100,
+                duration: .6
+            })
+            .from('#shouldScroll', {
+                x: -100,
+            }, '<')
+            .from('nav', {
+                opacity: 0,
+            }, '<')
+            .from('#homeContain', {
+                opacity: 1,
+                backgroundColor: 'rgb(255,255,255)'
+            }, '<')
+            .from('#projectsContainer', {
+                left: -300,
+                duration: .6,
+                onComplete: resolve
+            }, '<.2');
+    })
+}
+
 const projectEnter = (data) => {
     return new Promise(resolve => {
         let tl = gsap.timeline({
@@ -166,7 +213,7 @@ const aboutEnter = (data) => {
             }
         });
 
-        tl.from('#rightInfo', {
+        tl.from('#aboutInfo', {
                 x: 100,
                 duration: .6
             })
@@ -191,7 +238,7 @@ const aboutLeave = (data) => {
             }
         });
 
-        tl.to('#rightInfo', {
+        tl.to('#aboutInfo', {
                 x: 100,
                 duration: .6
             })
@@ -339,6 +386,11 @@ barba.init({
         enter: ({
             data
         }) => projectEnter()
+    }, {
+        name: 'homeLoad',
+        once: ({
+            data
+        }) => homeLoad(data)
     }],
     views: [{
         namespace: 'home',

@@ -33,6 +33,15 @@ span {
     width: 16px;
 }
 
+iframe {
+    border: solid 5px black;
+    outline: none;
+}
+
+.mobileShow {
+    display: none;
+}
+
 nav {
     position: fixed;
     z-index: 99;
@@ -95,6 +104,18 @@ nav {
 /* Right Info */
 
 #rightInfo {
+    width: 50vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+#aboutInfo {
     width: 50vw;
     height: 100vh;
     position: absolute;
@@ -313,7 +334,7 @@ footer {
 }
 
 .bodyText {
-    font-size: 24px;
+    font-size: 20px;
     max-width: 400px;
 }
 
@@ -374,7 +395,7 @@ mark {
     line-height: 0em;
     padding-top: .8em;
     padding-bottom: .15em;
-    background-color: rgb(97, 97, 255);
+    background-color: rgb(173, 173, 255);
 }
 
 .mosaicContainer {
@@ -461,6 +482,10 @@ mark {
     font-variation-settings: 'wght'900;
 }
 
+.projectVideoControls {
+    height: 100%;
+}
+
 /* GMessage Images */
 
 #gMImg-01 {
@@ -516,4 +541,315 @@ mark {
     background-size: cover;
     background-color: rgb(255, 240, 218);
     background-origin: border-box;
+}
+
+/* ACIT Images */
+
+#acitHeroImage {
+    background-image: url('./img/projectImages/pr10/earphones/earpodsMan01.png');
+}
+
+#acitIMG-01 {
+    background-image: url('./img/projectImages/pr10/interface/roomRender02.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-02 {
+    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging02.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-03 {
+    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging04.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-04 {
+    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging03.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-05 {
+    background-image: url('./img/projectImages/pr10/newspaper/Photos/IMG_20191118_151402.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-06 {
+    background-image: url('./img/projectImages/pr10/interface/roomRender02.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-07 {
+    background-image: url('./img/projectImages/pr10/interface/remoteRender04.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#acitIMG-08 {
+    background-image: url('./img/projectImages/pr10/personification/currentFlow.jpg');
+}
+
+#acitIMG-09 {
+    background-image: url('./img/projectImages/pr10/personification/newFlow.jpg');
+}
+
+#acitIMG-10 {
+    background-image: url('./img/projectImages/pr10/personification/3DInterface01.gif');
+    background-color: #d6cdff;
+}
+
+#acitIMG-11 {
+    background-image: url('./img/projectImages/pr10/personification/3DInterface02.gif');
+    background-color: #d6cdff;
+}
+
+#acitIMG-12 {
+    background-image: url('./img/projectImages/pr10/personification/3DInterface03.gif');
+    background-color: #d6cdff;
+}
+
+#acitIMG-13 {
+    background-image: url('./img/projectImages/pr10/personification/3DInterface04.gif');
+    background-color: #d6cdff;
+}
+
+/* Mobile */
+
+@media(max-width: 920px) {
+    nav {
+        top: auto;
+        bottom: 20px;
+    }
+
+    .mobileHide {
+        display: none;
+    }
+
+    .mobileShow {
+        display: block;
+    }
+
+    #rightInfo {
+        width: 100vw;
+        align-items: flex-end;
+        padding-right: 20px;
+        padding-top: 0px;
+    }
+
+    h1 {
+        font-size: 8vh;
+        line-height: 9vh;
+        text-align: right;
+    }
+
+    #projectsContainer {
+        transform: translateX(-400vw);
+        width: 100vw;
+        padding-bottom: 20px;
+    }
+
+    .project {
+        height: 75vh;
+        min-width: 88vw;
+    }
+
+    .project:hover {
+        height: 70vh;
+    }
+
+    .projectTitleContainer {
+        font-size: 200%;
+    }
+
+    #shouldScroll {
+        font-size: 14px;
+        width: 100vw;
+        top: 45px;
+        bottom: auto;
+        left: 0;
+        text-align: center;
+    }
+
+    #aboutContain {
+        display: flex;
+        flex-direction: column-reverse;
+        height: auto;
+        position: relative;
+        padding-top: 40px;
+    }
+
+    #leftInfo {
+        position: relative;
+        width: 100%;
+        height: auto;
+    }
+
+    #aboutText {
+        position: relative;
+        min-width: 0px;
+        width: 100%;
+        margin-top: 40px;
+        padding-left: 40px;
+        padding-right: 40px;
+        margin-bottom: 200px;
+    }
+
+    #aboutInfo {
+        position: relative;
+        width: 100%;
+        height: auto;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        padding-right: 40px;
+        padding-left: 40px;
+    }
+
+    .aboutHeroText {
+        text-align: left;
+        font-size: 5.5vh;
+        line-height: 7vh;
+    }
+
+    .heroSection {
+        flex-direction: column-reverse;
+        justify-content: flex-end;
+        align-items: flex-start;
+        height: auto;
+        padding-bottom: 40px;
+        padding-top: 40px;
+    }
+
+    .heroProjectTitleContainer {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .heroProjectTitle {
+        font-size: 5vh;
+        text-align: left;
+        line-height: 6.5vh;
+        width: 100%;
+    }
+
+    #projectDescriptionSmall {
+        width: auto;
+    }
+
+    .heroProjectImage {
+        height: 30vh;
+    }
+
+    .sectionTitleContainer {
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .sectionTitleContainerHack {
+        flex-direction: column-reverse;
+    }
+
+    .sectionTitle {
+        margin-left: 0;
+        text-align: left;
+        font-size: 4vh;
+        line-height: 5vh;
+        margin-bottom: 16px;
+    }
+
+    .mosaicContainer {
+        flex-direction: column;
+        margin-top: 100px;
+        height: auto;
+        min-height: 0px;
+    }
+
+    .mosaicImg {
+        width: auto;
+        height: 30vh;
+        margin-bottom: 16px;
+    }
+
+    .mosaicImg.static {
+        width: auto;
+    }
+
+    .mosaicText {
+        margin-bottom: 16px;
+        height: auto;
+        flex-grow: 0;
+    }
+
+    .imagesColumn {
+        width: auto;
+    }
+
+    .heroProjectImage {
+        position: relative;
+    }
+
+    #gMImg-03a {
+        background-image: url('./img/projectImages/pr01/mockUps/mdpi/mocks02.jpg');
+        background-color: rgba(218, 228, 255, 0);
+        background-size: contain;
+        margin-top: auto;
+        margin-bottom: auto;
+    }
+
+    #gMImg-09 {
+        height: 30vh;
+        background-image: url('./img/projectImages/pr01/mockUps/mdpi/heroMock02.jpg');
+        background-size: cover;
+        background-color: rgb(255, 240, 218);
+        background-origin: border-box;
+    }
+
+    .moreSection {
+        height: auto;
+        margin-top: 100px;
+    }
+
+    .extraProjects {
+        margin-top: 16px;
+        flex-direction: column;
+        height: auto;
+    }
+
+    .extraProjectCard {
+        height: 30vh;
+        width: 100%;
+        border-radius: 1vh;
+        margin-bottom: 16px;
+    }
+
+    .extraProjectCard:hover {
+        height: 28vh;
+    }
+
+    footer {
+        height: 200px;
+        padding-top: 0px;
+        padding-bottom: 80px;
+    }
+
+    .face {
+        max-width: 80px;
+    }
+
+    .projectVideoControls {
+        height: auto;
+        width: 100%;
+    }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) {
+    .phoneHide {
+        display: none;
+    }
 }
