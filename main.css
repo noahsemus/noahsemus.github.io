@@ -76,6 +76,7 @@ nav {
     position: fixed;
     top: 0;
     left: 0;
+    background-color: white;
 }
 
 #scrollingDiv {
@@ -397,9 +398,11 @@ mark {
     position: relative;
     overflow: hidden;
     background: rgb(207, 207, 207);
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     background-repeat: no-repeat;
+    background-origin: content-box;
+    padding: 3%;
     flex-grow: 1;
 }
 
@@ -462,7 +465,6 @@ mark {
 
 #gMImg-01 {
     background-image: url('./img/projectImages/pr01/mdpi/chromeCond.png');
-    background-size: 80%;
     background-color: rgb(218, 228, 255);
 }
 
@@ -472,45 +474,39 @@ mark {
 
 #gMImg-03 {
     background-image: url('./img/projectImages/pr01/mdpi/mobile/home02/04.png');
-    background-size: auto 90%;
     background-color: rgb(218, 255, 252);
 }
 
 #gMImg-03a {
     background-image: url('./img/projectImages/pr01/mockUps/mdpi/mocks02.jpg');
-    background-size: 100%;
     background-color: rgba(218, 228, 255, 0);
+    background-size: contain;
     margin-top: 0vh;
     margin-bottom: -40vh;
 }
 
 #gMImg-04 {
     background-image: url('./img/projectImages/pr01/mdpi/pinning.jpg');
-    background-size: auto 90%;
     background-color: rgb(255, 218, 253);
 }
 
 #gMImg-05 {
     background-image: url('./img/projectImages/pr01/dark/chromeCond.png');
-    background-size: auto 90%;
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-06 {
     background-image: url('./img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.jpg');
-    background-size: auto 80%;
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-07 {
     background-image: url('./img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.jpg');
-    background-size: auto 80%;
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-08 {
     background-image: url('./img/projectImages/pr01/mdpi/onboardingAll.png');
-    background-size: auto 80%;
     background-color: rgb(255, 240, 218);
 }
 
@@ -519,4 +515,5 @@ mark {
     background-image: url('./img/projectImages/pr01/mockUps/mdpi/heroMock02.jpg');
     background-size: cover;
     background-color: rgb(255, 240, 218);
+    background-origin: border-box;
 }

@@ -81,6 +81,35 @@ const homeLeave = (data) => {
     })
 }
 
+const homeEnter = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .4,
+                opacity: 0,
+                ease: "power1.out"
+            }
+        });
+
+        tl.from('#rightInfo', {
+                x: 100,
+                duration: .6
+            })
+            .from('#shouldScroll', {
+                x: -100,
+            }, '<')
+            .from('#homeContain', {
+                opacity: 1,
+                backgroundColor: 'rgb(255,255,255)'
+            }, '<')
+            .from('#projectsContainer', {
+                left: -300,
+                duration: .6,
+                onComplete: resolve
+            }, '<.2');
+    })
+}
+
 const projectEnter = (data) => {
     return new Promise(resolve => {
         let tl = gsap.timeline({
@@ -114,8 +143,8 @@ const projectLeave = (data) => {
             }
         });
 
-        tl.to('.projectContainer', {
-            y: 100,
+        tl.to('.projectContain', {
+            y: 50,
             onComplete: resolve
         })
     })
@@ -169,7 +198,7 @@ barba.init({
         },
         enter: ({
             data
-        }) => projectEnter()
+        }) => homeEnter()
     }],
     views: [{
         namespace: 'home',
