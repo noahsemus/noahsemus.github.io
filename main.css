@@ -829,7 +829,7 @@ mark {
     }
 
     .extraProjectCard:hover {
-        height: 28vh;
+        height: 29.5vh;
     }
 
     footer {
@@ -845,6 +845,10 @@ mark {
     .projectVideoControls {
         height: auto;
         width: 100%;
+    }
+
+    iframe {
+        display: none;
     }
 }
 
