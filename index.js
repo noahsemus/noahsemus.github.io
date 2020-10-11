@@ -46,6 +46,12 @@ const homescreenFunction = () => {
         })
 }
 
+const pageReset = (data) => {
+    data.current.container.remove();
+    ScrollTrigger.getAll().forEach(t => t.kill());
+    window.scrollTo(0, 0);
+}
+
 const homeLeave = (data) => {
     return new Promise(resolve => {
         let tl = gsap.timeline({
@@ -150,6 +156,56 @@ const projectLeave = (data) => {
     })
 }
 
+const aboutEnter = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .4,
+                opacity: 0,
+                ease: "power1.out"
+            }
+        });
+
+        tl.from('#rightInfo', {
+                x: 100,
+                duration: .6
+            })
+            .from('#aboutVideo', {
+                scaleX: 1.1,
+                scaleY: 1.1,
+            }, '<')
+            .from('#leftInfo', {
+                x: -100,
+                onComplete: resolve
+            }, '<.2');
+    })
+}
+
+const aboutLeave = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .4,
+                opacity: 0,
+                ease: "power1.in"
+            }
+        });
+
+        tl.to('#rightInfo', {
+                x: 100,
+                duration: .6
+            })
+            .to('#aboutVideo', {
+                scaleX: 1.1,
+                scaleY: 1.1,
+            }, '<')
+            .to('#leftInfo', {
+                x: -100,
+                onComplete: resolve
+            }, '<.2');
+    })
+}
+
 barba.init({
     transitions: [{
         name: 'home-to-project',
@@ -168,9 +224,7 @@ barba.init({
             })
         },
         beforeEnter(data) {
-            data.current.container.remove();
-            ScrollTrigger.getAll().forEach(t => t.kill());
-            window.scrollTo(0, 0);
+            pageReset(data)
         },
         enter: ({
             data
@@ -192,13 +246,99 @@ barba.init({
             })
         },
         beforeEnter(data) {
-            data.current.container.remove();
-            ScrollTrigger.getAll().forEach(t => t.kill());
-            window.scrollTo(0, 0);
+            pageReset(data)
         },
         enter: ({
             data
         }) => homeEnter()
+    }, {
+        name: 'home-to-about',
+        from: {
+            namespace: 'home'
+        },
+        to: {
+            namespace: 'about'
+        },
+        leave: ({
+            data
+        }) => homeLeave(data),
+        afterLeave(data) {
+            return gsap.to('#navLinksContainer', {
+                backgroundColor: 'rgb(255,255,255)'
+            })
+        },
+        beforeEnter(data) {
+            pageReset(data)
+        },
+        enter: ({
+            data
+        }) => aboutEnter()
+    }, {
+        name: 'about-to-home',
+        from: {
+            namespace: 'about'
+        },
+        to: {
+            namespace: 'home'
+        },
+        leave: ({
+            data
+        }) => aboutLeave(data),
+        afterLeave(data) {
+            return gsap.to('#navLinksContainer', {
+                backgroundColor: 'rgb(255,255,255)'
+            })
+        },
+        beforeEnter(data) {
+            pageReset(data)
+        },
+        enter: ({
+            data
+        }) => homeEnter()
+    }, {
+        name: 'project-to-about',
+        from: {
+            namespace: 'project'
+        },
+        to: {
+            namespace: 'about'
+        },
+        leave: ({
+            data
+        }) => projectLeave(data),
+        afterLeave(data) {
+            return gsap.to('#navLinksContainer', {
+                backgroundColor: 'rgb(255,255,255)'
+            })
+        },
+        beforeEnter(data) {
+            pageReset(data)
+        },
+        enter: ({
+            data
+        }) => aboutEnter()
+    }, {
+        name: 'project-to-project',
+        from: {
+            namespace: 'project'
+        },
+        to: {
+            namespace: 'project'
+        },
+        leave: ({
+            data
+        }) => projectLeave(data),
+        afterLeave(data) {
+            return gsap.to('#navLinksContainer', {
+                backgroundColor: 'rgb(255,255,255)'
+            })
+        },
+        beforeEnter(data) {
+            pageReset(data)
+        },
+        enter: ({
+            data
+        }) => projectEnter()
     }],
     views: [{
         namespace: 'home',

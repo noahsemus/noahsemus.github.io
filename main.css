@@ -213,7 +213,7 @@ h1 {
     color: white;
     text-align: center;
     background-color: rgba(0, 0, 0, 0.233);
-    font-size: 5vw;
+    font-size: 500%;
     opacity: 0;
     transition: opacity .4s;
 }
