@@ -46,14 +46,93 @@ const homescreenFunction = () => {
         })
 }
 
+const homeLeave = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .4,
+                opacity: 0,
+                ease: "power1.in"
+            }
+        });
+
+        tl.to('#coolButton', {
+                x: 100,
+            })
+            .to('#shouldScroll', {
+                x: -100,
+            }, '<')
+            .to('#githubButton', {
+                x: 100,
+            }, '<.2')
+            .to('#heroText', {
+                x: 200,
+                duration: .6,
+            }, '<.2')
+            .to('#homeContain', {
+                opacity: 1,
+                backgroundColor: 'rgb(255,255,255)'
+            }, '<')
+            .to('#projectsContainer', {
+                left: -300,
+                duration: .6,
+                onComplete: resolve
+            }, '<.2');
+    })
+}
+
+const projectEnter = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .4,
+                opacity: 0,
+                ease: "power1.out"
+            }
+        });
+
+        tl.from('.heroProjectTitleContainer', {
+                x: 100
+            })
+            .from('.listText', {
+                x: -100
+            }, '<.2')
+            .from('.heroProjectImage', {
+                y: 100,
+                onComplete: resolve
+            }, '<.2')
+    })
+}
+
+const projectLeave = (data) => {
+    return new Promise(resolve => {
+        let tl = gsap.timeline({
+            defaults: {
+                duration: .6,
+                opacity: 0,
+                ease: "power1.in"
+            }
+        });
+
+        tl.to('.projectContainer', {
+            y: 100,
+            onComplete: resolve
+        })
+    })
+}
+
 barba.init({
     transitions: [{
-        name: 'opacity-transition',
-        leave(data) {
-            return gsap.to(data.current.container, {
-                opacity: 0
-            });
+        name: 'home-to-project',
+        from: {
+            namespace: 'home'
         },
+        to: {
+            namespace: 'project'
+        },
+        leave: ({
+            data
+        }) => homeLeave(),
         afterLeave(data) {
             return gsap.to('#navLinksContainer', {
                 backgroundColor: 'rgb(255,255,255)'
@@ -63,10 +142,34 @@ barba.init({
             data.current.container.remove();
             ScrollTrigger.getAll().forEach(t => t.kill());
             window.scrollTo(0, 0);
-            gsap.from(data.next.container, {
-                opacity: 0
-            });
         },
+        enter: ({
+            data
+        }) => projectEnter()
+    }, {
+        name: 'project-to-home',
+        from: {
+            namespace: 'project'
+        },
+        to: {
+            namespace: 'home'
+        },
+        leave: ({
+            data
+        }) => projectLeave(data),
+        afterLeave(data) {
+            return gsap.to('#navLinksContainer', {
+                backgroundColor: 'rgb(255,255,255)'
+            })
+        },
+        beforeEnter(data) {
+            data.current.container.remove();
+            ScrollTrigger.getAll().forEach(t => t.kill());
+            window.scrollTo(0, 0);
+        },
+        enter: ({
+            data
+        }) => projectEnter()
     }],
     views: [{
         namespace: 'home',

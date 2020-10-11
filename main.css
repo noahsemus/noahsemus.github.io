@@ -229,6 +229,15 @@ video {
     transform: translateX(-50%) translateY(-50%);
 }
 
+footer {
+    width: 100vw;
+    height: 250px;
+    padding-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
 /* About Page */
 
 #aboutContain {
@@ -291,7 +300,6 @@ video {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding-bottom: 10vh;
 }
 
 .heroSection {
@@ -335,6 +343,7 @@ video {
     background-image: url(./img/projectImages/pr01/frontImg.jpg);
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
 }
 
 .sectionTitleContainer {
