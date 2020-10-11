@@ -1,336 +1,94 @@
-<!doctype html>
-<html class="no-js" lang="">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <title>Noah? Is that you?</title>
-  <meta name="description" content="">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <link rel="manifest" href="site.webmanifest">
-  <link rel="apple-touch-icon" href="icon.png">
-  <!-- Place favicon.ico in the root directory -->
-
-  <link rel="stylesheet" href="css/normalize.css">
-  <link rel="stylesheet" href="css/main.css">
-  <link rel="stylesheet" href="https://use.typekit.net/bbb6qdl.css">
-
-  <meta name="theme-color" content="#000000">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="main.css">
+    <title>Noah (!!!)</title>
 </head>
 
 <body data-barba="wrapper">
-    
-    <div id="cover"></div>
-    
-  <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-
-  <!-- Add your site or application content here -->
     <nav>
-        <a href='/index.html' class="navLink">things</a>
-        <a href='/about.html' class="navLink">about</a>
-        <a href='https://medium.com/@noahsemus' target="_blank" class="navLink">writing</a>
-        <a href='https://vimeo.com/noahsemus' target="_blank" class="navLink">film</a>
+        <div id="navLinksContainer">
+            <a href="../index.html" class="navLink">things</a>
+            <a href="../about.html" class="navLink">about</a>
+            <a href="somewhere" class="navLink">writing</a>
+            <a href="somewhere" class="navLink">film</a>
+        </div>
     </nav>
-    
-    <div id="bgContain">
-        <div class="globalContainer" id="leftBG">
-            <div class="title">
-                <h1 class="thingTitle">Things</h1>
-                <img id="face04" class="face" src="/img/face/face04.png">
-            </div>
-        </div>
-    </div>
-    
-    
-    
-    
-    
+
     <main data-barba="container" data-barba-namespace="home">
-        
-        
-        <div id="pageContain">
-            
-            <div class='globalContainer' id="leftPage">
-                <div id="projectContainer">
-                    <a class="project" id="projectEmpty"></a>
-                    <a href="/projects/gmessage_cool.html" class="project" id="pr01"></a>
-                    <a href="/projects/acit_cool.html" class="project" id="pr10"></a>
-                    <a href="/projects/efe_cool.html" class="project" id="pr02"></a>
-                    <a href="/projects/prattler_cool.html" class="project" id="pr03"></a>
-                    <a href="/projects/funStuff.html" class="project" id="pr04"></a>
-                    <a href="/projects/print.html" class="project" id="pr05"></a>
-                    
-                    <!--
-                    <a href="/projects/columbia.html" class="project" id="pr06"></a>
-                    <a href="/projects/omniscience.html" class="project" id="pr07"></a>
-                    <a href="/projects/posters.html" class="project" id="pr08"></a>
-                    <a href="/projects/crane.html" class="project" id="pr09"></a>
-                    -->
+        <div id="scrollingDiv"></div>
+        <div id="homeContain">
+            <p id="shouldScroll">Psst. You should scroll to see stuff 👈</p>
+            <div id="projectsContainer">
+                <a href="somewhere" class="project" id="p-01">
+                    <div class="projectTitleContainer">
+                        Print Design (Cool!)
+                    </div>
+                    <video autoplay muted loop>
+                        <source src="./img/projectImages/pr05/Replay_03.mp4">
+                    </video>
+                </a>
+                <a href="somewhere" class="project" id="p-02">
+                    <div class="projectTitleContainer">
+                        Fun Side
+                        <br>Projects (!!!)
+                    </div>
+                    <video autoplay muted loop>
+                        <source src="./img/projectImages/pr04/zorpImScreenRecording.mp4">
+                    </video>
+                </a>
+                <a href="somewhere" class="project" id="p-03">
+                    <div class="projectTitleContainer">
+                        Escape From Earth!
+                    </div>
+                    <video autoplay muted loop>
+                        <source src="./img/projectImages/pr02/NewMachine04.mp4">
+                    </video>
+                </a>
+                <a href="somewhere" class="project" id="p-04">
+                    <div class="projectTitleContainer">
+                        Ambient Computationally Intelligent Technology?
+                    </div>
+                    <video autoplay muted loop>
+                        <source src="./img/projectImages/pr10/interface/fullComp.mp4">
+                    </video>
+                </a>
+                <a href="./projectPages/gmessage.html" class="project" id="p-05">
+                    <div class="projectTitleContainer">
+                        GMessage!
+                    </div>
+                    <video autoplay muted loop>
+                        <source src="./img/projectImages/pr01/videos/vidMock02.mp4">
+                    </video>
+                </a>
+            </div>
+            <div id="rightInfo">
+                <a href="https://linkedin.com/in/noahsemus" target="_blank" id="heroLink">
+                    <h1 id="heroText">
+                        Noah Semus<br>is a Designer<br>who Designs<br>Things
+                        <img class="face" src="./img/face/face02.png">
+                    </h1>
+                </a>
+                <div id="homeButtonContainer">
+                    <div id="homeButtonContainerHacky">
+                        <button class="homeButton" type="button"
+                            onclick=" window.open('http://github.com/noahsemus','_blank')"">I code!
+                            Checkout my Github :)</button>
+                        <div class=" spacer sixteen"></div>
+                    <button class="homeButton">I'll put something cool here eventually</button>
                 </div>
             </div>
-
-            <div class='globalContainer' id="rightPage">
-                <img id="face69" class="face desktopDisable" src="/img/face/face03.png">
-                <div class="title" id="bigName">
-                    <h1 id="bigNameSwitch">Noah <br>Semus<br> is a <br>designer<br> who <br> designs<br> things</h1>
-                    <img id="face02" class="face" src="/img/face/face02.png">
-                </div>
-
-                <a class='button02' id="github" href="https://github.com/noahsemus" target="_blank">
-                    I code! Check out my Github
-                </a>
-                <a class='button' id="fontSuck">
-                    This font sucks.
-                </a>
-            </div>
-            
         </div>
-        
+        </div>
     </main>
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
 
-
-
-  <script src="https://unpkg.com/@barba/core"></script> 
-  <script src="https://unpkg.com/@barba/router"></script> 
-
-  <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.js"></script>
-  <script nomodule src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js"></script>
-
-  <script src="js/vendor/modernizr-3.7.1.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
-  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
-  <script src="js/jquery.mousewheel.min.js"></script>
-  <script src="js/smooth-scrollbar.js"></script>
-  <script src="js/plugins.js"></script>
-  <script src="js/main.js"></script>
-    
-    
-  <script>
-        $(document).ready(function() {
-            
-            $("#fontSuck").click(function(){
-                
-                 if($('body').css('font-family') == "acumin-pro")
-                 {
-                    $('body').css('font-family','Comic Sans MS');
-                    $(this).html('Is this what you wanted?');
-                 }
-                 else
-                 {
-                    $('body').css('font-family','acumin-pro');
-                    $(this).html('This font sucks.');
-                 }
-            });
-            
-	        $( "#pr01" ).hover(function() {
-                $( ".thingTitle" ).html('GMessage');
-                $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> youtuber<br> without<br> a youtube<br> channel.');
-                $('body').css('background', 'aquamarine')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr10" ).hover(function() {
-                $( ".thingTitle" ).html('ACIT');
-                $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br>pretty<br> okay<br> guy<br> I guess?');
-                $('body').css('background', '#FF2D68')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr02" ).hover(function() {
-                $( ".thingTitle" ).html('EFE');
-                $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br>big<br> pretentious<br> poopy<br> head!');
-                $('body').css('background', 'orange')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr03" ).hover(function() {
-                $( ".thingTitle" ).html('Prattler');
-                $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> sort of<br> huge<br> film<br> snob.');
-                $('body').css('background', 'dodgerblue')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr04" ).hover(function() {
-                $( ".thingTitle" ).html('Fun Stuff :>)');
-                $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br>human<br> man<br> without<br> knees!');
-                $('body').css('background', 'springgreen')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr05" ).hover(function() {
-                $( ".thingTitle" ).html('Print');
-                $( "#face02" ).hide();
-                $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> vessel<br> for the <br> story<br>????');
-                $('body').css('background', 'fuchsia')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr06" ).hover(function() {
-                $( ".thingTitle" ).html('Columbia');
-                $('body').css('background', 'red')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr07" ).hover(function() {
-                $( ".thingTitle" ).html('Omniscience');
-                $('body').css('background', 'mediumslateblue')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr08" ).hover(function() {
-                $( ".thingTitle" ).html('Poster Series');
-                $('body').css('background', 'cyan')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( "#pr09" ).hover(function() {
-                $( ".thingTitle" ).html('Crane Selects');
-                $('body').css('background', 'sandybrown')}, function(){
-                    $( ".thingTitle" ).html('Things');
-                    $('body').css('background', 'none');
-                    $( "#face02" ).show();
-                    $( "#bigNameSwitch" ).html('Noah<br> Semus<br> is a<br> designer<br> who<br> designs<br> things');
-                }
-            );
-            
-            $( ".thingTitle" ).html('Things');
-            
-            // First we get the viewport height and we multiple it by 1% to get a value for a vh unit
-            let vh = window.innerHeight * 0.01;
-            // Then we set the value in the --vh custom property to the root of the document
-            document.documentElement.style.setProperty('--vh', `${vh}px`);
-            
-            // We listen to the resize event
-            window.addEventListener('resize', () => {
-              // We execute the same script as before
-              let vh = window.innerHeight * 0.01;
-              document.documentElement.style.setProperty('--vh', `${vh}px`);
-            });
-            
-            
-            
-            class HorizontalScrollPlugin extends Scrollbar.ScrollbarPlugin {
-              
-
-              transformDelta(delta, fromEvent) {
-                if (!/wheel/.test(fromEvent.type)) {
-                  return delta;
-                }
-
-                // @see: https://github.com/idiotWu/smooth-scrollbar/issues/181
-
-                const { x, y } = delta; 
-
-                return {
-                  y: 0,
-                  x: Math.abs(x) > Math.abs(y) ? x : y,
-                  // x: Math.sign(x || y) * Math.sqrt(x*x + y*y),
-                };
-              }
-            }
-            
-            HorizontalScrollPlugin.pluginName = 'horizontalScroll';
-            
-            
-
-            Scrollbar.use(HorizontalScrollPlugin);
-
-            // the following is forked from https://codepen.io/supah/pen/vvNmOr
-
-            /*--------------------
-            Wheel Option
-            -------------------*/
-            
-            
-            let option = {
-              x: 0,
-              speed: 1.5,
-              limit: 2,
-              time: 0.3,
-            };
-
-            Scrollbar.init(document.querySelector('#leftPage'), {
-              plugins: {
-                horizontalScroll: true,
-              },
-            });
-            
-            $('#cover').hide();
-            
-            
-            
-        }); 
-      
-    </script>
-
-  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
-  <script>
-    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
-    ga('create', 'UA-XXXXX-Y', 'auto'); ga('set','transport','beacon'); ga('send', 'pageview')
-  </script>
-  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="./index.js"></script>
 </body>
 
 </html>
