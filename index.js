@@ -11,15 +11,21 @@ const playVideos = () => {
 const homescreenFunction = () => {
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|BB|PlayBook|IEMobile|Windows Phone|Kindle|Silk|Opera Mini/i.test(navigator.userAgent)) {
         let vw = body.clientWidth;
+        const el = document.querySelector('#projectsContainer');
 
-        Draggable.create("#projectsContainer", {
-            type: "x",
-            throwProps: true,
-            bounds: {
-                minX: vw * -4,
-                maxX: 0
-            }
+        const sb = new ScrollBooster({
+            viewport: document.querySelector('#homeContain'),
+            content: el,
+            direction: 'horizontal',
+            scrollMode: 'transform',
+            textSelection: true,
+            friction: 0.03,
+            bounceForce: 0.05,
         });
+
+        sb.setPosition({
+            x: el.offsetWidth - vw
+        })
     }
 
     let tl = gsap.timeline({

@@ -650,13 +650,15 @@ mark {
 
     #projectsContainer {
         transform: translateX(-400vw);
-        width: 100vw;
+        width: auto;
         padding-bottom: 20px;
     }
 
     .project {
+        display: block;
         height: 75vh;
         min-width: 88vw;
+        pointer-events: auto;
     }
 
     .project:hover {
@@ -664,6 +666,8 @@ mark {
     }
 
     .projectTitleContainer {
+        width: 100%;
+        height: 100%;
         font-size: 200%;
     }
 
@@ -688,6 +692,10 @@ mark {
         position: relative;
         width: 100%;
         height: auto;
+    }
+
+    #heroLink {
+        width: 100%;
     }
 
     #aboutText {
@@ -715,6 +723,7 @@ mark {
         text-align: left;
         font-size: 5.5vh;
         line-height: 7vh;
+        width: 100%;
     }
 
     .heroSection {
