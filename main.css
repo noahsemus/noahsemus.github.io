@@ -360,6 +360,8 @@ footer {
 }
 
 .heroProjectImage {
+    position: relative;
+    overflow: hidden;
     width: 100vw;
     height: 100vh;
     background-image: url(./img/projectImages/pr01/frontImg.jpg);
@@ -617,6 +619,69 @@ mark {
 #acitIMG-13 {
     background-image: url('./img/projectImages/pr10/personification/3DInterface04.gif');
     background-color: #d6cdff;
+}
+
+/* EFE Images */
+
+#efeIMG-01 {
+    background-image: url('./img/projectImages/pr02/coolImg.jpg');
+}
+
+#efeIMG-02 {
+    background-image: url('./img/projectImages/pr02/plasticBad.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#efeIMG-03 {
+    background-image: url('./img/projectImages/pr02/dolphin.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#efeIMG-04 {
+    background-image: url('./img/projectImages/pr02/theGame.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#efeIMG-05 {
+    background-image: url('./img/projectImages/pr02/iniMock02.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#efeIMG-06 {
+    background-image: url('./img/projectImages/pr02/EFE_Logo-01.png');
+    background-color: rgb(255, 220, 197);
+}
+
+#efeIMG-07 {
+    background-image: url('./img/projectImages/pr02/NewMachine03.jpg');
+    background-color: rgb(255, 220, 197);
+}
+
+#efeIMG-08 {
+    background-image: url('./img/projectImages/pr02/end01.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#efeIMG-09 {
+    background-image: url('./img/projectImages/pr02/end02.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#efeIMG-10 {
+    background-image: url('./img/projectImages/pr02/NYTMockbbig.png');
+    background-color: rgb(255, 220, 197);
+}
+
+#efeIMG-11 {
+    background-image: url('./img/projectImages/pr02/TimesSquare.jpg');
+    background-size: cover;
+    background-origin: border-box;
 }
 
 /* Mobile */
