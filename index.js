@@ -83,9 +83,13 @@ const homeLeave = (data) => {
             }
         });
 
-        tl.to('#coolButton', {
-                x: 100,
+        tl.to('#projectsContainer', {
+                left: -300,
+                duration: .6,
             })
+            .to('#coolButton', {
+                x: 100,
+            }, '<.2')
             .to('#shouldScroll', {
                 x: -100,
             }, '<')
@@ -98,13 +102,9 @@ const homeLeave = (data) => {
             }, '<.2')
             .to('#homeContain', {
                 opacity: 1,
-                backgroundColor: 'rgb(255,255,255)'
-            }, '<')
-            .to('#projectsContainer', {
-                left: -300,
-                duration: .6,
+                backgroundColor: 'rgb(255,255,255)',
                 onComplete: resolve
-            }, '<.2');
+            }, '<');
     })
 }
 
