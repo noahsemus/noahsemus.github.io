@@ -684,6 +684,68 @@ mark {
     background-origin: border-box;
 }
 
+/* Fun Stuff Images */
+
+#fsIMG-01 {
+    background-image: url('./img/projectImages/pr04/zorp.png');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#fsIMG-02 {
+    background-color: rgb(212, 255, 212);
+}
+
+#fsIMG-03 {
+    background-image: url('./img/projectImages/pr07/omPh03.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#fsIMG-04 {
+    background-image: url('./img/projectImages/pr07/omPh07.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#fsIMG-05 {
+    background-image: url('./img/projectImages/pr07/omPh06.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#fsIMG-06 {
+    background-image: url('./img/projectImages/pr07/omPh05.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#fsIMG-07 {
+    background-color: rgb(211, 255, 248);
+}
+
+#fsIMG-08 {
+    background-color: rgb(254, 255, 211);
+}
+
+#fsIMG-09 {
+    background-color: rgb(255, 232, 232);
+}
+
+#fsIMG-10 {
+    background-color: rgb(255, 224, 208);
+}
+
+#fsIMG-11 {
+    background-color: rgb(226, 208, 255);
+}
+
+#fsIMG-12 {
+    background-image: url('./img/projectImages/pr04/bing.jpg');
+    background-color: rgb(210, 255, 255);
+}
+
+
 /* Mobile */
 
 @media(max-width: 920px) {
