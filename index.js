@@ -263,6 +263,7 @@ $(document).ready(() => {
     barba.use(barbaPrefetch);
 
     barba.init({
+        preventRunning: true,
         transitions: [{
             name: 'home-to-project',
             from: {
