@@ -396,12 +396,11 @@ $(document).ready(() => {
         }, {
             name: 'homeLoad',
             beforeOnce(data) {
-                data.current.container.style.display = 'none';
+                gsap.set(data.current.container, {
+                    opacity: 0
+                })
             },
-            once(data) {
-                data.current.container.style.display = 'block';
-            },
-            afterOnce: ({
+            once: ({
                 data
             }) => homeLoad(data)
         }],
