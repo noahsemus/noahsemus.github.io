@@ -260,6 +260,8 @@ const aboutLeave = (data) => {
 }
 
 $(document).ready(() => {
+    barba.use(barbaPrefetch);
+
     barba.init({
         transitions: [{
             name: 'home-to-project',
