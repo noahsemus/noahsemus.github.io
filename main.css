@@ -86,6 +86,7 @@ nav {
     top: 0;
     left: 0;
     background-color: white;
+    opacity: 0;
 }
 
 #scrollingDiv {
@@ -371,7 +372,7 @@ footer {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    background-image: url(./img/projectImages/pr01/frontImg.jpg);
+    background-image: url(./img/projectImages/pr01/frontImg.webp);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -505,7 +506,7 @@ mark {
 /* GMessage Images */
 
 #gMImg-01 {
-    background-image: url('./img/projectImages/pr01/mdpi/chromeCond.png');
+    background-image: url('./img/projectImages/pr01/mdpi/chromeCond.webp');
     background-color: rgb(218, 228, 255);
 }
 
@@ -514,12 +515,12 @@ mark {
 }
 
 #gMImg-03 {
-    background-image: url('./img/projectImages/pr01/mdpi/mobile/home02/04.png');
+    background-image: url('./img/projectImages/pr01/mdpi/mobile/home02/04.webp');
     background-color: rgb(218, 255, 252);
 }
 
 #gMImg-03a {
-    background-image: url('./img/projectImages/pr01/mockUps/mdpi/mocks02.jpg');
+    background-image: url('./img/projectImages/pr01/mockUps/mdpi/mocks02.webp');
     background-color: rgba(218, 228, 255, 0);
     background-size: contain;
     margin-top: 0vh;
@@ -527,33 +528,33 @@ mark {
 }
 
 #gMImg-04 {
-    background-image: url('./img/projectImages/pr01/mdpi/pinning.jpg');
+    background-image: url('./img/projectImages/pr01/mdpi/pinning.webp');
     background-color: rgb(255, 218, 253);
 }
 
 #gMImg-05 {
-    background-image: url('./img/projectImages/pr01/dark/chromeCond.png');
+    background-image: url('./img/projectImages/pr01/dark/chromeCond.webp');
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-06 {
-    background-image: url('./img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.jpg');
+    background-image: url('./img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.webp');
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-07 {
-    background-image: url('./img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.jpg');
+    background-image: url('./img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.webp');
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-08 {
-    background-image: url('./img/projectImages/pr01/mdpi/onboardingAll.png');
+    background-image: url('./img/projectImages/pr01/mdpi/onboardingAll.webp');
     background-color: rgb(255, 240, 218);
 }
 
 #gMImg-09 {
     height: 90vh;
-    background-image: url('./img/projectImages/pr01/mockUps/mdpi/heroMock02.jpg');
+    background-image: url('./img/projectImages/pr01/mockUps/mdpi/heroMock02.webp');
     background-size: cover;
     background-color: rgb(255, 240, 218);
     background-origin: border-box;
@@ -562,76 +563,76 @@ mark {
 /* ACIT Images */
 
 #acitHeroImage {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsMan01.png');
+    background-image: url('./img/projectImages/pr10/earphones/earpodsMan01.webp');
 }
 
 #acitIMG-01 {
-    background-image: url('./img/projectImages/pr10/interface/roomRender02.png');
+    background-image: url('./img/projectImages/pr10/interface/roomRender02.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-02 {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging02.png');
+    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging02.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-03 {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging04.png');
+    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging04.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-04 {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging03.png');
+    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging03.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-05 {
-    background-image: url('./img/projectImages/pr10/newspaper/Photos/IMG_20191118_151402.jpg');
+    background-image: url('./img/projectImages/pr10/newspaper/Photos/IMG_20191118_151402.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-06 {
-    background-image: url('./img/projectImages/pr10/interface/roomRender02.png');
+    background-image: url('./img/projectImages/pr10/interface/roomRender02.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-07 {
-    background-image: url('./img/projectImages/pr10/interface/remoteRender04.png');
+    background-image: url('./img/projectImages/pr10/interface/remoteRender04.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #acitIMG-08 {
-    background-image: url('./img/projectImages/pr10/personification/currentFlow.jpg');
+    background-image: url('./img/projectImages/pr10/personification/currentFlow.webp');
 }
 
 #acitIMG-09 {
-    background-image: url('./img/projectImages/pr10/personification/newFlow.jpg');
+    background-image: url('./img/projectImages/pr10/personification/newFlow.webp');
 }
 
 #acitIMG-10 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface01.gif');
+    background-image: url('./img/projectImages/pr10/personification/3DInterface01.webp');
     background-color: #d6cdff;
 }
 
 #acitIMG-11 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface02.gif');
+    background-image: url('./img/projectImages/pr10/personification/3DInterface02.webp');
     background-color: #d6cdff;
 }
 
 #acitIMG-12 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface03.gif');
+    background-image: url('./img/projectImages/pr10/personification/3DInterface03.webp');
     background-color: #d6cdff;
 }
 
 #acitIMG-13 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface04.gif');
+    background-image: url('./img/projectImages/pr10/personification/3DInterface04.webp');
     background-color: #d6cdff;
 }
 
@@ -642,58 +643,58 @@ mark {
 }
 
 #efeIMG-02 {
-    background-image: url('./img/projectImages/pr02/plasticBad.jpg');
+    background-image: url('./img/projectImages/pr02/plasticBad.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #efeIMG-03 {
-    background-image: url('./img/projectImages/pr02/dolphin.jpg');
+    background-image: url('./img/projectImages/pr02/dolphin.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #efeIMG-04 {
-    background-image: url('./img/projectImages/pr02/theGame.png');
+    background-image: url('./img/projectImages/pr02/theGame.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #efeIMG-05 {
-    background-image: url('./img/projectImages/pr02/iniMock02.png');
+    background-image: url('./img/projectImages/pr02/iniMock02.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #efeIMG-06 {
-    background-image: url('./img/projectImages/pr02/EFE_Logo-01.png');
+    background-image: url('./img/projectImages/pr02/EFE_Logo-01.webp');
     background-color: rgb(255, 220, 197);
 }
 
 #efeIMG-07 {
-    background-image: url('./img/projectImages/pr02/NewMachine03.jpg');
+    background-image: url('./img/projectImages/pr02/NewMachine03.webp');
     background-color: rgb(255, 220, 197);
 }
 
 #efeIMG-08 {
-    background-image: url('./img/projectImages/pr02/end01.png');
+    background-image: url('./img/projectImages/pr02/end01.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #efeIMG-09 {
-    background-image: url('./img/projectImages/pr02/end02.png');
+    background-image: url('./img/projectImages/pr02/end02.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #efeIMG-10 {
-    background-image: url('./img/projectImages/pr02/NYTMockbbig.png');
+    background-image: url('./img/projectImages/pr02/NYTMockbbig.webp');
     background-color: rgb(255, 220, 197);
 }
 
 #efeIMG-11 {
-    background-image: url('./img/projectImages/pr02/TimesSquare.jpg');
+    background-image: url('./img/projectImages/pr02/TimesSquare.webp');
     background-size: cover;
     background-origin: border-box;
 }
@@ -701,7 +702,7 @@ mark {
 /* Fun Stuff Images */
 
 #fsIMG-01 {
-    background-image: url('./img/projectImages/pr04/zorp.png');
+    background-image: url('./img/projectImages/pr04/zorp.webp');
     background-size: cover;
     background-origin: border-box;
 }
@@ -711,25 +712,25 @@ mark {
 }
 
 #fsIMG-03 {
-    background-image: url('./img/projectImages/pr07/omPh03.jpg');
+    background-image: url('./img/projectImages/pr07/omPh03.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #fsIMG-04 {
-    background-image: url('./img/projectImages/pr07/omPh07.jpg');
+    background-image: url('./img/projectImages/pr07/omPh07.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #fsIMG-05 {
-    background-image: url('./img/projectImages/pr07/omPh06.jpg');
+    background-image: url('./img/projectImages/pr07/omPh06.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #fsIMG-06 {
-    background-image: url('./img/projectImages/pr07/omPh05.jpg');
+    background-image: url('./img/projectImages/pr07/omPh05.webp');
     background-size: cover;
     background-origin: border-box;
 }
@@ -755,7 +756,7 @@ mark {
 }
 
 #fsIMG-12 {
-    background-image: url('./img/projectImages/pr04/bing.jpg');
+    background-image: url('./img/projectImages/pr04/bing.webp');
     background-color: rgb(210, 255, 255);
 }
 
@@ -770,65 +771,65 @@ mark {
 }
 
 #prIMG-02 {
-    background-image: url('./img/projectImages/pr05/newBook/book10.png');
+    background-image: url('./img/projectImages/pr05/newBook/book10.webp');
 }
 
 #prIMG-03 {
-    background-image: url('./img/projectImages/pr05/newBook/book12.png');
+    background-image: url('./img/projectImages/pr05/newBook/book12.webp');
 }
 
 #prIMG-04 {
-    background-image: url('./img/projectImages/pr05/newBook/book13.png');
+    background-image: url('./img/projectImages/pr05/newBook/book13.webp');
 }
 
 #prIMG-05 {
-    background-image: url('./img/projectImages/pr05/newBook/book14.png');
+    background-image: url('./img/projectImages/pr05/newBook/book14.webp');
 }
 
 #prIMG-06 {
-    background-image: url('./img/projectImages/pr05/newBook/book09.png');
+    background-image: url('./img/projectImages/pr05/newBook/book09.webp');
 }
 
 #prIMG-07 {
-    background-image: url('./img/projectImages/pr05/newBook/book11.png');
+    background-image: url('./img/projectImages/pr05/newBook/book11.webp');
 }
 
 #prIMG-08 {
-    background-image: url('./img/projectImages/pr05/newBook/book01.png');
+    background-image: url('./img/projectImages/pr05/newBook/book01.webp');
 }
 
 #prIMG-09 {
-    background-image: url('./img/projectImages/pr05/newBook/book06.png');
+    background-image: url('./img/projectImages/pr05/newBook/book06.webp');
 }
 
 #prIMG-10 {
-    background-image: url('./img/projectImages/pr05/newBook/book02.png');
+    background-image: url('./img/projectImages/pr05/newBook/book02.webp');
 }
 
 #prIMG-11 {
-    background-image: url('./img/projectImages/pr05/newBook/book07.png');
+    background-image: url('./img/projectImages/pr05/newBook/book07.webp');
 }
 
 #prIMG-12 {
-    background-image: url('./img/projectImages/pr05/img01.jpg');
+    background-image: url('./img/projectImages/pr05/img01.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #prIMG-13 {
-    background-image: url('./img/projectImages/pr05/img02.jpg');
+    background-image: url('./img/projectImages/pr05/img02.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #prIMG-14 {
-    background-image: url('./img/projectImages/pr05/img03.jpg');
+    background-image: url('./img/projectImages/pr05/img03.webp');
     background-size: cover;
     background-origin: border-box;
 }
 
 #prIMG-15 {
-    background-image: url('./img/projectImages/pr05/img04.jpg');
+    background-image: url('./img/projectImages/pr05/img04.webp');
     background-size: cover;
     background-origin: border-box;
 }

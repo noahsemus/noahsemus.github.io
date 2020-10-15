@@ -109,6 +109,34 @@ const homeLeave = (data) => {
 }
 
 const homeEnter = (data) => {
+    if (body.offsetWidth <= 920) {
+        return new Promise(resolve => {
+            let tl = gsap.timeline({
+                defaults: {
+                    duration: .4,
+                    opacity: 0,
+                    ease: "power1.out"
+                }
+            });
+
+            tl.from('#rightInfo', {
+                    x: 100,
+                    duration: .6
+                })
+                .from('#shouldScroll', {
+                    x: -100,
+                }, '<')
+                .to('#homeContain', {
+                    opacity: 1,
+                    backgroundColor: 'rgb(255,255,255)'
+                }, '<')
+                .from('#projectsContainer', {
+                    left: -300,
+                    duration: .6,
+                    onComplete: resolve
+                }, '<1');
+        })
+    }
     return new Promise(resolve => {
         let tl = gsap.timeline({
             defaults: {
@@ -125,7 +153,7 @@ const homeEnter = (data) => {
             .from('#shouldScroll', {
                 x: -100,
             }, '<')
-            .from('#homeContain', {
+            .to('#homeContain', {
                 opacity: 1,
                 backgroundColor: 'rgb(255,255,255)'
             }, '<')
@@ -138,6 +166,34 @@ const homeEnter = (data) => {
 }
 
 const homeLoad = (data) => {
+    if (body.offsetWidth <= 920) {
+        return new Promise(resolve => {
+            let tl = gsap.timeline({
+                defaults: {
+                    duration: .4,
+                    opacity: 0,
+                    ease: "power1.out"
+                }
+            });
+
+            tl.from('#rightInfo', {
+                    x: 100,
+                    duration: .6
+                })
+                .from('#shouldScroll', {
+                    x: -100,
+                }, '<')
+                .to('#homeContain', {
+                    opacity: 1,
+                    backgroundColor: 'rgb(255,255,255)'
+                }, '<')
+                .from('#projectsContainer', {
+                    left: -300,
+                    duration: .6,
+                    onComplete: resolve
+                }, '<1.5');
+        })
+    }
     return new Promise(resolve => {
         let tl = gsap.timeline({
             defaults: {
@@ -157,7 +213,7 @@ const homeLoad = (data) => {
             .from('nav', {
                 opacity: 0,
             }, '<')
-            .from('#homeContain', {
+            .to('#homeContain', {
                 opacity: 1,
                 backgroundColor: 'rgb(255,255,255)'
             }, '<')
