@@ -243,6 +243,13 @@ h1 {
     opacity: 1;
 }
 
+#p-01 {
+    background-image: url('./img/projectImages/pr05/newBook/book15.gif');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
 video {
     max-height: 110%;
     position: absolute;
@@ -387,8 +394,9 @@ footer {
     width: 60vw;
     text-decoration: none;
     font-size: 4vw;
+    line-height: 4.5vw;
     letter-spacing: -.125vw;
-    margin-top: -2vw;
+    margin-top: -1vw;
     margin-left: 10vw;
 }
 
@@ -482,6 +490,12 @@ mark {
     box-shadow: 0px 15px 40px -16px rgba(0, 0, 0, 0);
     height: 95%;
     font-variation-settings: 'wght'900;
+}
+
+.extraProjectVideo {
+    max-height: 160%;
+    min-width: 120%;
+    min-height: 100%;
 }
 
 .projectVideoControls {
@@ -743,6 +757,86 @@ mark {
 #fsIMG-12 {
     background-image: url('./img/projectImages/pr04/bing.jpg');
     background-color: rgb(210, 255, 255);
+}
+
+#fsIMG-13 {
+    background-color: rgb(255, 224, 241);
+}
+
+/* Print Images */
+
+#prIMG-01 {
+    background-image: url('./img/projectImages/pr05/newBook/book01.gif');
+}
+
+#prIMG-02 {
+    background-image: url('./img/projectImages/pr05/newBook/book10.png');
+}
+
+#prIMG-03 {
+    background-image: url('./img/projectImages/pr05/newBook/book12.png');
+}
+
+#prIMG-04 {
+    background-image: url('./img/projectImages/pr05/newBook/book13.png');
+}
+
+#prIMG-05 {
+    background-image: url('./img/projectImages/pr05/newBook/book14.png');
+}
+
+#prIMG-06 {
+    background-image: url('./img/projectImages/pr05/newBook/book09.png');
+}
+
+#prIMG-07 {
+    background-image: url('./img/projectImages/pr05/newBook/book11.png');
+}
+
+#prIMG-08 {
+    background-image: url('./img/projectImages/pr05/newBook/book01.png');
+}
+
+#prIMG-09 {
+    background-image: url('./img/projectImages/pr05/newBook/book06.png');
+}
+
+#prIMG-10 {
+    background-image: url('./img/projectImages/pr05/newBook/book02.png');
+}
+
+#prIMG-11 {
+    background-image: url('./img/projectImages/pr05/newBook/book07.png');
+}
+
+#prIMG-12 {
+    background-image: url('./img/projectImages/pr05/img01.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#prIMG-13 {
+    background-image: url('./img/projectImages/pr05/img02.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#prIMG-14 {
+    background-image: url('./img/projectImages/pr05/img03.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#prIMG-15 {
+    background-image: url('./img/projectImages/pr05/img04.jpg');
+    background-size: cover;
+    background-origin: border-box;
+}
+
+#prIMG-16 {
+    background-image: url('./img/projectImages/pr05/img05.jpg');
+    background-size: cover;
+    background-origin: border-box;
 }
 
 

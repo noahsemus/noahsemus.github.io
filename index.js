@@ -259,160 +259,162 @@ const aboutLeave = (data) => {
     })
 }
 
-barba.init({
-    transitions: [{
-        name: 'home-to-project',
-        from: {
-            namespace: 'home'
-        },
-        to: {
-            namespace: 'project'
-        },
-        leave: ({
-            data
-        }) => homeLeave(),
-        afterLeave(data) {
-            return gsap.to('#navLinksContainer', {
-                backgroundColor: 'rgb(255,255,255)'
-            })
-        },
-        beforeEnter(data) {
-            pageReset(data)
-        },
-        enter: ({
-            data
-        }) => projectEnter()
-    }, {
-        name: 'project-to-home',
-        from: {
-            namespace: 'project'
-        },
-        to: {
-            namespace: 'home'
-        },
-        leave: ({
-            data
-        }) => projectLeave(data),
-        afterLeave(data) {
-            return gsap.to('#navLinksContainer', {
-                backgroundColor: 'rgb(255,255,255)'
-            })
-        },
-        beforeEnter(data) {
-            pageReset(data)
-        },
-        enter: ({
-            data
-        }) => homeEnter()
-    }, {
-        name: 'home-to-about',
-        from: {
-            namespace: 'home'
-        },
-        to: {
-            namespace: 'about'
-        },
-        leave: ({
-            data
-        }) => homeLeave(data),
-        afterLeave(data) {
-            return gsap.to('#navLinksContainer', {
-                backgroundColor: 'rgb(255,255,255)'
-            })
-        },
-        beforeEnter(data) {
-            pageReset(data)
-        },
-        enter: ({
-            data
-        }) => aboutEnter()
-    }, {
-        name: 'about-to-home',
-        from: {
-            namespace: 'about'
-        },
-        to: {
-            namespace: 'home'
-        },
-        leave: ({
-            data
-        }) => aboutLeave(data),
-        afterLeave(data) {
-            return gsap.to('#navLinksContainer', {
-                backgroundColor: 'rgb(255,255,255)'
-            })
-        },
-        beforeEnter(data) {
-            pageReset(data)
-        },
-        enter: ({
-            data
-        }) => homeEnter()
-    }, {
-        name: 'project-to-about',
-        from: {
-            namespace: 'project'
-        },
-        to: {
-            namespace: 'about'
-        },
-        leave: ({
-            data
-        }) => projectLeave(data),
-        afterLeave(data) {
-            return gsap.to('#navLinksContainer', {
-                backgroundColor: 'rgb(255,255,255)'
-            })
-        },
-        beforeEnter(data) {
-            pageReset(data)
-        },
-        enter: ({
-            data
-        }) => aboutEnter()
-    }, {
-        name: 'project-to-project',
-        from: {
-            namespace: 'project'
-        },
-        to: {
-            namespace: 'project'
-        },
-        leave: ({
-            data
-        }) => projectLeave(data),
-        afterLeave(data) {
-            return gsap.to('#navLinksContainer', {
-                backgroundColor: 'rgb(255,255,255)'
-            })
-        },
-        beforeEnter(data) {
-            pageReset(data)
-        },
-        enter: ({
-            data
-        }) => projectEnter()
-    }, {
-        name: 'homeLoad',
-        once: ({
-            data
-        }) => homeLoad(data)
-    }],
-    views: [{
-        namespace: 'home',
-        afterEnter() {
-            playVideos();
-            homescreenFunction();
-        }
-    }, {
-        namespace: 'project',
-        afterEnter() {
-            playVideos();
-        }
-    }, {
-        namespace: 'about',
-        afterEnter() {
-            playVideos();
-        }
-    }]
-});
+$(document).ready(() => {
+    barba.init({
+        transitions: [{
+            name: 'home-to-project',
+            from: {
+                namespace: 'home'
+            },
+            to: {
+                namespace: 'project'
+            },
+            leave: ({
+                data
+            }) => homeLeave(),
+            afterLeave(data) {
+                return gsap.to('#navLinksContainer', {
+                    backgroundColor: 'rgb(255,255,255)'
+                })
+            },
+            beforeEnter(data) {
+                pageReset(data)
+            },
+            enter: ({
+                data
+            }) => projectEnter()
+        }, {
+            name: 'project-to-home',
+            from: {
+                namespace: 'project'
+            },
+            to: {
+                namespace: 'home'
+            },
+            leave: ({
+                data
+            }) => projectLeave(data),
+            afterLeave(data) {
+                return gsap.to('#navLinksContainer', {
+                    backgroundColor: 'rgb(255,255,255)'
+                })
+            },
+            beforeEnter(data) {
+                pageReset(data)
+            },
+            enter: ({
+                data
+            }) => homeEnter()
+        }, {
+            name: 'home-to-about',
+            from: {
+                namespace: 'home'
+            },
+            to: {
+                namespace: 'about'
+            },
+            leave: ({
+                data
+            }) => homeLeave(data),
+            afterLeave(data) {
+                return gsap.to('#navLinksContainer', {
+                    backgroundColor: 'rgb(255,255,255)'
+                })
+            },
+            beforeEnter(data) {
+                pageReset(data)
+            },
+            enter: ({
+                data
+            }) => aboutEnter()
+        }, {
+            name: 'about-to-home',
+            from: {
+                namespace: 'about'
+            },
+            to: {
+                namespace: 'home'
+            },
+            leave: ({
+                data
+            }) => aboutLeave(data),
+            afterLeave(data) {
+                return gsap.to('#navLinksContainer', {
+                    backgroundColor: 'rgb(255,255,255)'
+                })
+            },
+            beforeEnter(data) {
+                pageReset(data)
+            },
+            enter: ({
+                data
+            }) => homeEnter()
+        }, {
+            name: 'project-to-about',
+            from: {
+                namespace: 'project'
+            },
+            to: {
+                namespace: 'about'
+            },
+            leave: ({
+                data
+            }) => projectLeave(data),
+            afterLeave(data) {
+                return gsap.to('#navLinksContainer', {
+                    backgroundColor: 'rgb(255,255,255)'
+                })
+            },
+            beforeEnter(data) {
+                pageReset(data)
+            },
+            enter: ({
+                data
+            }) => aboutEnter()
+        }, {
+            name: 'project-to-project',
+            from: {
+                namespace: 'project'
+            },
+            to: {
+                namespace: 'project'
+            },
+            leave: ({
+                data
+            }) => projectLeave(data),
+            afterLeave(data) {
+                return gsap.to('#navLinksContainer', {
+                    backgroundColor: 'rgb(255,255,255)'
+                })
+            },
+            beforeEnter(data) {
+                pageReset(data)
+            },
+            enter: ({
+                data
+            }) => projectEnter()
+        }, {
+            name: 'homeLoad',
+            once: ({
+                data
+            }) => homeLoad(data)
+        }],
+        views: [{
+            namespace: 'home',
+            afterEnter() {
+                playVideos();
+                homescreenFunction();
+            }
+        }, {
+            namespace: 'project',
+            afterEnter() {
+                playVideos();
+            }
+        }, {
+            namespace: 'about',
+            afterEnter() {
+                playVideos();
+            }
+        }]
+    });
+})
