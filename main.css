@@ -299,8 +299,8 @@ footer {
 #aboutVideo {
     position: fixed;
     z-index: -5;
-    min-width: 100vw;
-    max-height: none;
+    height: auto;
+    width: 110%;
 }
 
 .aboutButton {
