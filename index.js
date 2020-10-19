@@ -64,7 +64,34 @@ const homescreenFunction = () => {
         })
         .to('#homeContain, #navLinksContainer', {
             backgroundColor: 'rgb(210, 237, 213)'
-        })
+        });
+
+    const randomButton = document.getElementById('githubButton');
+    const unknownButton = document.getElementById('coolButton');
+
+    const pages = [
+        '../projectPages/acit.html',
+        '../projectPages/escapefromearth.html',
+        '../projectPages/funstuff.html',
+        '../projectPages/gmessage.html',
+        '../projectPages/print.html',
+    ];
+
+    let page = pages[Math.floor(Math.random() * pages.length)];
+
+    randomButton.addEventListener('click', () => {
+        randomButton.href = page;
+    })
+
+    unknownButton.addEventListener('click', (event) => {
+        if ((body.style.fontFamily == 'publicSans')) {
+            body.style.fontFamily = 'grandstander';
+            unknownButton.innerText = 'Oh jeez, take me back 😱'
+        } else {
+            body.style.fontFamily = 'publicSans';
+            unknownButton.innerText = 'What does this button do 🤷‍♂️'
+        }
+    })
 }
 
 const pageReset = (data) => {
@@ -457,7 +484,8 @@ $(document).ready(() => {
             beforeOnce(data) {
                 gsap.set(data.current.container, {
                     opacity: 0
-                })
+                });
+                body.style.fontFamily = 'publicSans';
             },
             once: ({
                 data
