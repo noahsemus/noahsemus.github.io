@@ -146,16 +146,16 @@ const homeEnter = (data) => {
                 }
             });
 
-            tl.from('#rightInfo', {
-                    x: 100,
-                    duration: .6
-                })
-                .from('#shouldScroll', {
-                    x: -100,
-                }, '<')
-                .to('#homeContain', {
+            tl.to('#homeContain', {
                     opacity: 1,
                     backgroundColor: 'rgb(255,255,255)'
+                })
+                .from('#rightInfo', {
+                    x: 100,
+                    duration: .6
+                }, '>')
+                .from('#shouldScroll', {
+                    x: -100,
                 }, '<')
                 .from('#projectsContainer', {
                     left: -300,
@@ -173,16 +173,17 @@ const homeEnter = (data) => {
             }
         });
 
-        tl.from('#rightInfo', {
+        tl.to('#homeContain', {
+                opacity: 1,
+                duration: .2,
+                backgroundColor: 'rgb(255,255,255)'
+            })
+            .from('#rightInfo', {
                 x: 100,
                 duration: .6
-            })
+            }, '>')
             .from('#shouldScroll', {
                 x: -100,
-            }, '<')
-            .to('#homeContain', {
-                opacity: 1,
-                backgroundColor: 'rgb(255,255,255)'
             }, '<')
             .from('#projectsContainer', {
                 left: -300,
