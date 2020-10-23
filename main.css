@@ -531,6 +531,7 @@ mark {
     height: 100%;
     position: relative;
     overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
     border-radius: .5vw;
     border: 1px solid black;
     font-variation-settings: 'wght'500;
@@ -659,17 +660,18 @@ mark {
     }
 
     #aboutVideo {
-        position: fixed;
-        z-index: -5;
+        position: absolute;
+        z-index: 0;
         height: 110%;
         width: auto;
-        left: 80%;
+        left: 0;
     }
 
     #leftInfo {
         position: relative;
         width: 100%;
         height: auto;
+        z-index: 1;
     }
 
     #heroLink {
@@ -695,6 +697,7 @@ mark {
         margin-bottom: 10px;
         padding-right: 40px;
         padding-left: 40px;
+        z-index: 1;
     }
 
     .aboutHeroText {
@@ -723,6 +726,11 @@ mark {
         text-align: left;
         line-height: 6.5vh;
         width: 100%;
+    }
+
+    .projectVideo {
+        height: auto;
+        width: 90%;
     }
 
     #projectDescriptionSmall {
@@ -759,7 +767,8 @@ mark {
 
     .mosaicImg {
         width: auto;
-        height: 30vh;
+        min-height: 30vh;
+        max-height: 30vh;
         margin-bottom: 16px;
     }
 
@@ -826,7 +835,7 @@ mark {
     }
 
     .face {
-        max-width: 80px;
+        max-width: 40px;
     }
 
     .projectVideoControls {
@@ -834,7 +843,7 @@ mark {
         width: 100%;
     }
 
-    iframe {
+    #machineIFrame {
         display: none;
     }
 }
