@@ -617,8 +617,9 @@ mark {
     #projectsContainer {
         transform: translateX(-400vw);
         width: auto;
-        padding-bottom: 100px;
         padding-top: 80px;
+        top: auto;
+        bottom: 0;
     }
 
     .project {
@@ -641,8 +642,8 @@ mark {
     #shouldScroll {
         font-size: 14px;
         width: 100vw;
-        top: 45px;
-        bottom: auto;
+        top: auto;
+        bottom: 93vh;
         left: 0;
         text-align: center;
     }
