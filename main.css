@@ -45,6 +45,18 @@ iframe {
     outline: none;
 }
 
+picture {
+    width: 100%;
+    height: 100%;
+}
+
+img {
+    object-position: 50% 50%;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
 .mobileShow {
     display: none;
 }
@@ -172,7 +184,8 @@ h1 {
 
 .face {
     margin-left: -1.5vw;
-    max-width: 4vw;
+    max-width: 2vw;
+    height: auto;
 }
 
 .face.inline {
@@ -270,7 +283,6 @@ h1 {
 }
 
 #p-01 {
-    background-image: url('./img/projectImages/pr05/newBook/book15.gif');
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -282,6 +294,7 @@ video {
     top: 50%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%);
+    outline: none;
 }
 
 footer {
@@ -398,10 +411,9 @@ footer {
     overflow: hidden;
     width: 100vw;
     height: 100vh;
-    background-image: url(./img/projectImages/pr01/frontImg.webp);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .projectVideo {
@@ -460,21 +472,28 @@ mark {
     position: relative;
     overflow: hidden;
     background: rgb(207, 207, 207);
-    background-size: contain;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-origin: content-box;
-    padding: 3%;
-    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    flex: 1;
 }
 
 .mosaicImg.static {
-    width: 60vw;
-    flex-grow: 0;
+    flex: 2;
 }
 
 .mosaicImg.stack {
     margin-top: 16px;
+}
+
+.imageContain {
+    width: 90%;
+    height: 90%;
+}
+
+.objectContain {
+    object-fit: contain;
 }
 
 .imagesColumn {
@@ -484,7 +503,7 @@ mark {
 }
 
 .mosaicText {
-    flex-grow: 1;
+    flex: 1;
     margin-right: 16px;
 }
 
@@ -534,343 +553,33 @@ mark {
     height: 100%;
 }
 
-/* GMessage Images */
-
-#gMImg-01 {
-    background-image: url('./img/projectImages/pr01/mdpi/chromeCond.webp');
-    background-color: rgb(218, 228, 255);
+.backgroundColorPurple {
+    background-color: rgb(232, 218, 255)
 }
 
-#gMImg-02 {
-    background-color: rgb(218, 228, 255);
-}
-
-#gMImg-03 {
-    background-image: url('./img/projectImages/pr01/mdpi/mobile/home02/04.webp');
-    background-color: rgb(218, 255, 252);
-}
-
-#gMImg-03a {
-    background-image: url('./img/projectImages/pr01/mockUps/mdpi/mocks02.webp');
-    background-color: rgba(218, 228, 255, 0);
-    background-size: contain;
-    margin-top: 0vh;
-    margin-bottom: -40vh;
-}
-
-#gMImg-04 {
-    background-image: url('./img/projectImages/pr01/mdpi/pinning.webp');
-    background-color: rgb(255, 218, 253);
-}
-
-#gMImg-05 {
-    background-image: url('./img/projectImages/pr01/dark/chromeCond.webp');
-    background-color: rgb(255, 240, 218);
-}
-
-#gMImg-06 {
-    background-image: url('./img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.webp');
-    background-color: rgb(255, 240, 218);
-}
-
-#gMImg-07 {
-    background-image: url('./img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.webp');
-    background-color: rgb(255, 240, 218);
-}
-
-#gMImg-08 {
-    background-image: url('./img/projectImages/pr01/mdpi/onboardingAll.webp');
-    background-color: rgb(255, 240, 218);
-}
-
-#gMImg-09 {
-    height: 90vh;
-    background-image: url('./img/projectImages/pr01/mockUps/mdpi/heroMock02.webp');
-    background-size: cover;
-    background-color: rgb(255, 240, 218);
-    background-origin: border-box;
-}
-
-/* ACIT Images */
-
-#acitHeroImage {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsMan01.webp');
-}
-
-#acitIMG-01 {
-    background-image: url('./img/projectImages/pr10/interface/roomRender02.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-02 {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging02.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-03 {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging04.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-04 {
-    background-image: url('./img/projectImages/pr10/earphones/earpodsPackaging03.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-05 {
-    background-image: url('./img/projectImages/pr10/newspaper/Photos/IMG_20191118_151402.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-06 {
-    background-image: url('./img/projectImages/pr10/interface/roomRender02.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-07 {
-    background-image: url('./img/projectImages/pr10/interface/remoteRender04.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#acitIMG-08 {
-    background-image: url('./img/projectImages/pr10/personification/currentFlow.webp');
-}
-
-#acitIMG-09 {
-    background-image: url('./img/projectImages/pr10/personification/newFlow.webp');
-}
-
-#acitIMG-10 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface01.webp');
-    background-color: #d6cdff;
-}
-
-#acitIMG-11 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface02.webp');
-    background-color: #d6cdff;
-}
-
-#acitIMG-12 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface03.webp');
-    background-color: #d6cdff;
-}
-
-#acitIMG-13 {
-    background-image: url('./img/projectImages/pr10/personification/3DInterface04.webp');
-    background-color: #d6cdff;
-}
-
-/* EFE Images */
-
-#efeIMG-01 {
-    background-image: url('./img/projectImages/pr02/coolImg.jpg');
-}
-
-#efeIMG-02 {
-    background-image: url('./img/projectImages/pr02/plasticBad.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#efeIMG-03 {
-    background-image: url('./img/projectImages/pr02/dolphin.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#efeIMG-04 {
-    background-image: url('./img/projectImages/pr02/theGame.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#efeIMG-05 {
-    background-image: url('./img/projectImages/pr02/iniMock02.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#efeIMG-06 {
-    background-image: url('./img/projectImages/pr02/EFE_Logo-01.webp');
+.backgroundColorOrange {
     background-color: rgb(255, 220, 197);
 }
 
-#efeIMG-07 {
-    background-image: url('./img/projectImages/pr02/NewMachine03.webp');
-    background-color: rgb(255, 220, 197);
-}
-
-#efeIMG-08 {
-    background-image: url('./img/projectImages/pr02/end01.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#efeIMG-09 {
-    background-image: url('./img/projectImages/pr02/end02.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#efeIMG-10 {
-    background-image: url('./img/projectImages/pr02/NYTMockbbig.webp');
-    background-color: rgb(255, 220, 197);
-}
-
-#efeIMG-11 {
-    background-image: url('./img/projectImages/pr02/TimesSquare.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-/* Fun Stuff Images */
-
-#fsIMG-01 {
-    background-image: url('./img/projectImages/pr04/zorp.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#fsIMG-02 {
+.backgroundColorGreen {
     background-color: rgb(212, 255, 212);
 }
 
-#fsIMG-03 {
-    background-image: url('./img/projectImages/pr07/omPh03.webp');
-    background-size: cover;
-    background-origin: border-box;
+.backgroundColorBlue {
+    background-color: rgb(218, 228, 255);
 }
 
-#fsIMG-04 {
-    background-image: url('./img/projectImages/pr07/omPh07.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#fsIMG-05 {
-    background-image: url('./img/projectImages/pr07/omPh06.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#fsIMG-06 {
-    background-image: url('./img/projectImages/pr07/omPh05.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#fsIMG-07 {
+.backgroundColorTeal {
     background-color: rgb(211, 255, 248);
 }
 
-#fsIMG-08 {
-    background-color: rgb(254, 255, 211);
-}
-
-#fsIMG-09 {
-    background-color: rgb(255, 232, 232);
-}
-
-#fsIMG-10 {
-    background-color: rgb(255, 224, 208);
-}
-
-#fsIMG-11 {
-    background-color: rgb(226, 208, 255);
-}
-
-#fsIMG-12 {
-    background-image: url('./img/projectImages/pr04/bing.webp');
-    background-color: rgb(210, 255, 255);
-}
-
-#fsIMG-13 {
+.backgroundColorPink {
     background-color: rgb(255, 224, 241);
 }
 
-/* Print Images */
-
-#prIMG-01 {
-    background-image: url('./img/projectImages/pr05/newBook/book01.gif');
+.backgroundColorYellow {
+    background-color: rgb(254, 255, 211);
 }
-
-#prIMG-02 {
-    background-image: url('./img/projectImages/pr05/newBook/book10.webp');
-}
-
-#prIMG-03 {
-    background-image: url('./img/projectImages/pr05/newBook/book12.webp');
-}
-
-#prIMG-04 {
-    background-image: url('./img/projectImages/pr05/newBook/book13.webp');
-}
-
-#prIMG-05 {
-    background-image: url('./img/projectImages/pr05/newBook/book14.webp');
-}
-
-#prIMG-06 {
-    background-image: url('./img/projectImages/pr05/newBook/book09.webp');
-}
-
-#prIMG-07 {
-    background-image: url('./img/projectImages/pr05/newBook/book11.webp');
-}
-
-#prIMG-08 {
-    background-image: url('./img/projectImages/pr05/newBook/book01.webp');
-}
-
-#prIMG-09 {
-    background-image: url('./img/projectImages/pr05/newBook/book06.webp');
-}
-
-#prIMG-10 {
-    background-image: url('./img/projectImages/pr05/newBook/book02.webp');
-}
-
-#prIMG-11 {
-    background-image: url('./img/projectImages/pr05/newBook/book07.webp');
-}
-
-#prIMG-12 {
-    background-image: url('./img/projectImages/pr05/img01.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#prIMG-13 {
-    background-image: url('./img/projectImages/pr05/img02.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#prIMG-14 {
-    background-image: url('./img/projectImages/pr05/img03.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#prIMG-15 {
-    background-image: url('./img/projectImages/pr05/img04.webp');
-    background-size: cover;
-    background-origin: border-box;
-}
-
-#prIMG-16 {
-    background-image: url('./img/projectImages/pr05/img05.jpg');
-    background-size: cover;
-    background-origin: border-box;
-}
-
 
 /* Mobile */
 

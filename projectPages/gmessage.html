@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="shortcut icon" href="./favicon.ico?" type="image/x-icon">
     <link rel="icon" href="./favicon.ico?" type="image/x-icon">
+    <link rel="preload" href="../index.js" as="script">
+    <link rel="preload" href="../main.css" as="style">
     <link rel="stylesheet" href="../main.css">
     <title>GMessage</title>
 </head>
@@ -40,7 +42,13 @@
                         won’t.</p>
                 </div>
             </div>
-            <div class="heroProjectImage"></div>
+            <div class="heroProjectImage">
+                <picture>
+                    <source srcset="../img/projectImages/pr01/mockUps/mdpi/colourMock.webp" type="image/webp">
+                    <source srcset="../img/projectImages/pr01/mockUps/mdpi/colourMock.jpg" type="image/jpg">
+                    <img src="../img/projectImages/pr01/mockUps/mdpi/colourMock.jpg">
+                </picture>
+            </div>
             <div class="sectionTitleContainer">
                 <div class="sectionTitleContainerHack">
                     <p class="bodyText">
@@ -49,9 +57,7 @@
                         survived, let alone be successful. <mark>Ultimately, none of </mark><mark>them could live up to
                             iMessage.</mark> But
                         Google has had an
-                        ace up their sleeve the whole time... Chrome. Find out more about this <a
-                            href='https://uxdesign.cc/gmessage-how-to-fix-googles-messaging-madness-a-ux-exploration-97e9d9ce939f'
-                            target="_blank">in
+                        ace up their sleeve the whole time... Chrome. Find out more about this <a href='https://uxdesign.cc/gmessage-how-to-fix-googles-messaging-madness-a-ux-exploration-97e9d9ce939f' target="_blank">in
                             my medium article I
                             wrote.</a>
                     </p>
@@ -61,30 +67,47 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg static" id="gMImg-01"></div>
+                <div class="mosaicImg static backgroundColorBlue">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/mdpi/chromeCond.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/mdpi/chromeCond.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr01/mdpi/chromeCond.jpg">
+                    </picture>
+                </div>
                 <div class="spacer sixteen"></div>
-                <div class="mosaicImg" id="gMImg-02">
+                <div class="mosaicImg backgroundColorBlue">
                     <video autoplay muted loop style="height: 80%;">
-                        <source src="../img/projectImages/pr01/videos/gMessagePrince01.webm">
+                        <source src="../img/projectImages/pr01/videos/gMessagePrince01.webm" type="video/webm">
+                        <source src="../img/projectImages/pr01/videos/gMessagePrince01.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
             <div class="mosaicContainer">
                 <div class="mosaicText">
                     <p class="bodyText">
-                        After doing all that research and thinking (seriously, you should read the <a
-                            href="https://uxdesign.cc/gmessage-how-to-fix-googles-messaging-madness-a-ux-exploration-97e9d9ce939f"
-                            target="_blank">article</a>), there came the problem of actually designing the app. What can
+                        After doing all that research and thinking (seriously, you should read the <a href="https://uxdesign.cc/gmessage-how-to-fix-googles-messaging-madness-a-ux-exploration-97e9d9ce939f" target="_blank">article</a>), there came the problem of actually designing the app. What can
                         we do to make messaging more enjoyable, and enhance an already polished platform?
                     </p>
                 </div>
                 <div class="spacer sixteen"></div>
                 <div class="imagesColumn">
-                    <div class="mosaicImg" id="gMImg-03"></div>
+                    <div class="mosaicImg backgroundColorTeal">
+                        <picture class="imageContain">
+                            <source srcset="../img/projectImages/pr01/mdpi/mobile/home02/04.webp" type="image/webp">
+                            <source srcset="../img/projectImages/pr01/mdpi/mobile/home02/04.jpg" type="image/jpeg">
+                            <img class="objectContain" src="../img/projectImages/pr01/mdpi/mobile/home02/04.jpg">
+                        </picture>
+                    </div>
                 </div>
             </div>
-            <div class="heroProjectImage" id="gMImg-03a"></div>
-            <div class="mosaicContainer">
+            <div class="heroProjectImage">
+                <picture class="imageContain">
+                    <source srcset="../img/projectImages/pr01/mockUps/mdpi/mocks02.webp" type="image/webp">
+                    <source srcset="../img/projectImages/pr01/mockUps/mdpi/mocks02.jpg" type="image/jpeg">
+                    <img class="objectContain" src="../img/projectImages/pr01/mockUps/mdpi/mocks02.jpg">
+                </picture>
+            </div>
+            <div class="mosaicContainer first">
                 <div class="mosaicText">
                     <p class="bodyText">
                         The obvious answer was to utilize Google's ML platform. <mark>This way, the most
@@ -94,7 +117,13 @@
                     </p>
                 </div>
                 <div class="spacer sixteen"></div>
-                <div class="mosaicImg static" id="gMImg-04"></div>
+                <div class="mosaicImg static backgroundColorPink">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/mdpi/pinning.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/mdpi/pinning.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr01/mdpi/pinning.jpg">
+                    </picture>
+                </div>
             </div>
             <div class="sectionTitleContainer">
                 <div class="sectionTitleContainerHack">
@@ -109,17 +138,47 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg static" id="gMImg-05"></div>
+                <div class="mosaicImg static backgroundColorOrange">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/dark/chromeCond.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/dark/chromeCond.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr01/dark/chromeCond.jpg">
+                    </picture>
+                </div>
                 <div class="spacer sixteen"></div>
-                <div class="mosaicImg" id="gMImg-06"></div>
+                <div class="mosaicImg backgroundColorOrange">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr01/dark/mobile/messaging01/groupChat/01.jpg">
+                    </picture>
+                </div>
             </div>
             <div class="mosaicContainer second">
-                <div class="mosaicImg" id="gMImg-07"></div>
+                <div class="mosaicImg backgroundColorOrange">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr01/mdpi/mobile/messaging01/groupChat/02.jpg">
+                    </picture>
+                </div>
                 <div class="spacer sixteen"></div>
-                <div class="mosaicImg static" id="gMImg-08"></div>
+                <div class="mosaicImg static backgroundColorOrange">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/mdpi/onboardingAll.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/mdpi/onboardingAll.png" type="image/png">
+                        <img class="objectContain" src="../img/projectImages/pr01/mdpi/onboardingAll.png">
+                    </picture>
+                </div>
             </div>
             <div class="mosaicContainer second">
-                <div class="mosaicImg" id="gMImg-09"></div>
+                <div class="mosaicImg backgroundColorOrange">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr01/mockUps/mdpi/heroMock02.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr01/mockUps/mdpi/heroMock02.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr01/mockUps/mdpi/heroMock02.jpg">
+                    </picture>
+                </div>
             </div>
 
             <div class="moreSection">
@@ -130,19 +189,24 @@
                 </div>
             </div>
             <div class="extraProjects">
-                <a href="./acit.html" class="extraProjectCard" id="p-01">
+                <a href="./acit.html" class="extraProjectCard">
                     <div class="projectTitleContainer">
                         Ambient Computationally Intelligent Technology?
                     </div>
-                    <video autoplay muted loop>
-                        <source src="../img/projectImages/pr10/interface/fullComp_Trim.webm">
+                    <video autoplay muted loop class="extraProjectVideo">
+                        <source src="../img/projectImages/pr10/interface/fullComp_Trim.webm" type="video/webm">
+                        <source src="../img/projectImages/pr10/interface/fullComp_Trim.mp4" type="video/mp4">
                     </video>
                 </a>
                 <div class="spacer sixteen"></div>
-                <a href="./print.html" class="extraProjectCard" id="p-01">
+                <a href="./print.html" class="extraProjectCard">
                     <div class="projectTitleContainer">
                         Print Design (Cool!)
                     </div>
+                    <video autoplay muted loop class="extraProjectVideo">
+                        <source src="../img/projectImages/pr05/newBook/book15.webm" type="video/webm">
+                        <source src="../img/projectImages/pr05/newBook/book15.mp4" type="video/mp4">
+                    </video>
                 </a>
             </div>
             <footer>
@@ -156,8 +220,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/prefetch@2.1.10/dist/barba-prefetch.umd.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="../index.js"></script>
 </body>
 

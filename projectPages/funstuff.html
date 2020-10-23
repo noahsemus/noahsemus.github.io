@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1">
     <link rel="shortcut icon" href="./favicon.ico?" type="image/x-icon">
     <link rel="icon" href="./favicon.ico?" type="image/x-icon">
+    <link rel="preload" href="../index.js" as="script">
+    <link rel="preload" href="../main.css" as="style">
     <link rel="stylesheet" href="../main.css">
     <title>Fun Side Projects</title>
 </head>
@@ -41,7 +43,13 @@
                         case study.</p>
                 </div>
             </div>
-            <div class="heroProjectImage" id="fsIMG-01"></div>
+            <div class="heroProjectImage">
+                <picture>
+                    <source srcset="../img/projectImages/pr04/zorp.webp" type="image/webp">
+                    <source srcset="../img/projectImages/pr04/zorp.png" type="image/png">
+                    <img src="../img/projectImages/pr04/zorp.png">
+                </picture>
+            </div>
             <div class="sectionTitleContainer">
                 <div class="sectionTitleContainerHack">
                     <p class="bodyText">
@@ -58,9 +66,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-02">
+                <div class="mosaicImg backgroundColorGreen">
                     <video autoplay muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/zorpImScreenRecording02.webm">
+                        <source src="../img/projectImages/pr04/zorpImScreenRecording02.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/zorpImScreenRecording02.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -78,14 +87,38 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg static" id="fsIMG-03"></div>
+                <div class="mosaicImg static">
+                    <picture>
+                        <source srcset="../img/projectImages/pr07/omPh03.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr07/omPh03.jpg" type="image/jpeg">
+                        <img src="../img/projectImages/pr07/omPh03.jpg">
+                    </picture>
+                </div>
                 <div class="spacer sixteen"></div>
-                <div class="mosaicImg" id="fsIMG-04"></div>
+                <div class="mosaicImg">
+                    <picture>
+                        <source srcset="../img/projectImages/pr07/omPh07.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr07/omPh07.jpg" type="image/jpeg">
+                        <img src="../img/projectImages/pr07/omPh07.jpg">
+                    </picture>
+                </div>
             </div>
             <div class="mosaicContainer second">
-                <div class="mosaicImg" id="fsIMG-05"></div>
+                <div class="mosaicImg">
+                    <picture>
+                        <source srcset="../img/projectImages/pr07/omPh06.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr07/omPh06.jpg" type="image/jpeg">
+                        <img src="../img/projectImages/pr07/omPh06.jpg">
+                    </picture>
+                </div>
                 <div class="spacer sixteen"></div>
-                <div class="mosaicImg" id="fsIMG-06"></div>
+                <div class="mosaicImg">
+                    <picture>
+                        <source srcset="../img/projectImages/pr07/omPh05.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr07/omPh05.jpg" type="image/jpeg">
+                        <img src="../img/projectImages/pr07/omPh05.jpg">
+                    </picture>
+                </div>
             </div>
 
             <div class="sectionTitleContainer">
@@ -102,9 +135,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="gMImg-02">
+                <div class="mosaicImg backgroundColorBlue">
                     <video autoplay muted loop controls class="projectVideo">
-                        <source src="../img/projectImages/pr04/zeroReel.webm">
+                        <source src="../img/projectImages/pr04/zeroReel.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/zeroReel.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -124,9 +158,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-07">
+                <div class="mosaicImg backgroundColorTeal">
                     <video autoplay muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/New Forms Posenet.webm">
+                        <source src="../img/projectImages/pr04/New Forms Posenet.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/New Forms Posenet.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -146,9 +181,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-13">
+                <div class="mosaicImg backgroundColorPink">
                     <video autoplay muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/publikation.webm">
+                        <source src="../img/projectImages/pr04/publikation.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/publikation.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -167,9 +203,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-08">
+                <div class="mosaicImg backgroundColorYellow">
                     <video autoplay muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/georgia01.webm">
+                        <source src="../img/projectImages/pr04/georgia01.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/georgia01.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -188,9 +225,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-09">
+                <div class="mosaicImg backgroundColorPink">
                     <video autoplay muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/zeroTurnsTwo.webm">
+                        <source src="../img/projectImages/pr04/zeroTurnsTwo.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/zeroTurnsTwo.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -210,16 +248,18 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-10">
+                <div class="mosaicImg backgroundColorOrange">
                     <video autoplay controls muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/gameVid01.webm">
+                        <source src="../img/projectImages/pr04/gameVid01.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/gameVid01.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-10">
+                <div class="mosaicImg backgroundColorOrange">
                     <video autoplay muted controls loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/hlwe.webm">
+                        <source src="../img/projectImages/pr04/hlwe.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/hlwe.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -236,9 +276,10 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-11">
+                <div class="mosaicImg backgroundColorPurple">
                     <video autoplay controls muted loop class="projectVideo">
-                        <source src="../img/projectImages/pr04/levitateLoop.webm">
+                        <source src="../img/projectImages/pr04/levitateLoop.webm" type="video/webm">
+                        <source src="../img/projectImages/pr04/levitateLoop.mp4" type="video/mp4">
                     </video>
                 </div>
             </div>
@@ -257,7 +298,13 @@
                 </div>
             </div>
             <div class="mosaicContainer first">
-                <div class="mosaicImg" id="fsIMG-12"></div>
+                <div class="mosaicImg backgroundColorTeal">
+                    <picture class="imageContain">
+                        <source srcset="../img/projectImages/pr04/bing.webp" type="image/webp">
+                        <source srcset="../img/projectImages/pr04/bing.jpg" type="image/jpeg">
+                        <img class="objectContain" src="../img/projectImages/pr04/bing.jpg">
+                    </picture>
+                </div>
             </div>
 
 
@@ -269,10 +316,14 @@
                 </div>
             </div>
             <div class="extraProjects">
-                <a href="./print.html" class="extraProjectCard" id="p-01">
+                <a href="./print.html" class="extraProjectCard">
                     <div class="projectTitleContainer">
                         Print Design (Cool!)
                     </div>
+                    <video autoplay muted loop class="extraProjectVideo">
+                        <source src="../img/projectImages/pr05/newBook/book15.webm" type="video/webm">
+                        <source src="../img/projectImages/pr05/newBook/book15.mp4" type="video/mp4">
+                    </video>
                 </a>
                 <div class="spacer sixteen"></div>
                 <a href="./acit.html" class="extraProjectCard">
@@ -280,7 +331,8 @@
                         Escape from Earth!
                     </div>
                     <video autoplay muted loop class="extraProjectVideo">
-                        <source src="../img/projectImages/pr02/NewMachine04.webm">
+                        <source src="../img/projectImages/pr02/NewMachine04.webm" type="video/webm">
+                        <source src="../img/projectImages/pr02/NewMachine04.mp4" type="video/mp4">
                     </video>
                 </a>
             </div>
@@ -295,8 +347,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.5.1/ScrollTrigger.min.js"></script>
     <script src="https://unpkg.com/@barba/core"></script>
     <script src="https://cdn.jsdelivr.net/npm/@barba/prefetch@2.1.10/dist/barba-prefetch.umd.min.js"></script>
-    <script src="https://code.jquery.com/jquery-3.5.1.min.js"
-        integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
     <script src="../index.js"></script>
 </body>
 
