@@ -315,6 +315,7 @@ footer {
     top: 0;
     left: 0;
     color: white;
+    background-color: black;
 }
 
 #leftInfo {
@@ -335,8 +336,8 @@ footer {
 }
 
 #aboutVideo {
-    position: fixed;
-    z-index: -5;
+    position: absolute;
+    z-index: -1;
     min-height: 100%;
     height: auto;
     min-width: 110%;

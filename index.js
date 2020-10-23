@@ -303,7 +303,11 @@ const aboutEnter = (data) => {
             }
         });
 
-        tl.from('#aboutInfo', {
+        tl.from('#aboutContain', {
+                opacity: 0,
+                duration: .6
+            })
+            .from('#aboutInfo', {
                 x: 100,
                 duration: .6
             })
@@ -337,9 +341,13 @@ const aboutLeave = (data) => {
                 scaleY: 1.1,
             }, '<')
             .to('#leftInfo', {
-                x: -100,
+                x: -100
+            }, '<.2')
+            .to('#aboutContain', {
+                opacity: 0,
+                duration: .5,
                 onComplete: resolve
-            }, '<.2');
+            });
     })
 }
 
