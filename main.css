@@ -253,6 +253,7 @@ h1 {
     font-variation-settings: 'wght'500;
     transition: all .4s;
     transition-property: box-shadow, height, font-variation-settings;
+    -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .project:hover {
