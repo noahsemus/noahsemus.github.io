@@ -66,6 +66,17 @@ const homescreenFunction = () => {
             backgroundColor: 'rgb(210, 237, 213)'
         });
 
+    gsap.to('#rightInfo', {
+        opacity: 0,
+        x: '10vw',
+        scrollTrigger: {
+            trigger: '#scrollingDiv',
+            start: '3% top',
+            end: '12% top',
+            scrub: 1
+        }
+    })
+
     const randomButton = document.getElementById('githubButton');
     const unknownButton = document.getElementById('coolButton');
 

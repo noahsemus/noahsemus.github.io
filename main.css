@@ -123,9 +123,10 @@ nav {
 #shouldScroll {
     position: fixed;
     z-index: -1;
-    top: 50vh;
-    left: 24vw;
+    bottom: 5vh;
+    left: 5vw;
     font-size: 1vw;
+    display: none;
 }
 
 #shouldScrollFace {
@@ -147,6 +148,7 @@ nav {
     align-items: flex-start;
     justify-content: center;
     padding-top: 36px;
+    padding-left: 1.5vw;
 }
 
 #aboutInfo {
@@ -174,6 +176,10 @@ h1 {
     font-variation-settings: 'wght'500;
     transition: all .4s;
     transition-property: font-variation-settings, color;
+}
+
+#heroText {
+    letter-spacing: -0.1vw;
 }
 
 #heroText:hover {
@@ -236,16 +242,16 @@ h1 {
     display: flex;
     align-items: center;
     justify-content: flex-start;
-    transform: translateX(-240vw);
+    transform: translateX(-158vw);
     z-index: 99;
 }
 
 .project {
     height: 100%;
-    width: 50vw;
+    width: 40vw;
     min-height: 400px;
     background-color: white;
-    margin-left: 1vw;
+    margin-left: .75vw;
     border: 1px solid black;
     border-radius: 1vw;
     overflow: hidden;
