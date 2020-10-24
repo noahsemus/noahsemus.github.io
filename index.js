@@ -227,7 +227,7 @@ const homeLoad = (data) => {
                     backgroundColor: 'rgb(255,255,255)'
                 }, '<')
                 .from('#projectsContainer', {
-                    left: -300,
+                    left: -200,
                     duration: .6,
                     onComplete: resolve
                 }, '<1.5');
