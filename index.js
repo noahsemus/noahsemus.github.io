@@ -77,22 +77,7 @@ const homescreenFunction = () => {
         }
     })
 
-    const randomButton = document.getElementById('githubButton');
     const unknownButton = document.getElementById('coolButton');
-
-    const pages = [
-        '../projectPages/acit.html',
-        '../projectPages/escapefromearth.html',
-        '../projectPages/funstuff.html',
-        '../projectPages/gmessage.html',
-        '../projectPages/print.html',
-    ];
-
-    let page = pages[Math.floor(Math.random() * pages.length)];
-
-    randomButton.addEventListener('click', () => {
-        randomButton.href = page;
-    })
 
     unknownButton.addEventListener('click', (event) => {
         if ((body.style.fontFamily == 'publicSans')) {
@@ -100,7 +85,7 @@ const homescreenFunction = () => {
             unknownButton.innerText = 'Oh jeez, take me back 😱'
         } else {
             body.style.fontFamily = 'publicSans';
-            unknownButton.innerText = 'What does this button do 🤷‍♂️'
+            unknownButton.innerText = 'What does this do 🤷‍♂️'
         }
     })
 }

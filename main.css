@@ -79,16 +79,16 @@ nav {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
-    border: 1px solid black;
     outline: none;
     background-color: white;
     border-radius: 6px;
     font-size: 14px;
-    transition: box-shadow .4s;
+    transition: box-shadow .2s;
+    box-shadow: 0px 15px 40px -8px rgba(0, 0, 0, 0.05);
 }
 
 #navLinksContainer:hover {
-    box-shadow: 0px 15px 40px -8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.05);
 }
 
 .navLink {
@@ -96,11 +96,13 @@ nav {
     text-decoration: none;
     margin-bottom: 4px;
     font-variation-settings: 'wght'500;
-    transition: font-variation-settings .4s;
+    transition: all .4s;
+    opacity: .5;
 }
 
 .navLink:hover {
     font-variation-settings: 'wght'900;
+    opacity: 1;
 }
 
 /* Homepage */
@@ -140,15 +142,26 @@ nav {
 #rightInfo {
     width: 50vw;
     height: 100vh;
-    position: absolute;
+    position: fixed;
     top: 0;
     right: 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    padding-top: 36px;
-    padding-left: 1.5vw;
+    padding-top: 170px;
+    padding-bottom: 125px;
+}
+
+.homeInfoContainer {
+    height: calc(100vh - 295px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#homeFace {
+    margin-left: -3vh;
 }
 
 #aboutInfo {
@@ -166,13 +179,14 @@ nav {
 #heroLink {
     color: black;
     cursor: pointer;
+    text-decoration: none;
+    width: 50vw;
 }
 
 h1 {
-    font-size: 7vw;
-    line-height: 7vw;
+    font-size: max(min(13vh, 8vw), 70px);
+    line-height: max(min(13vh, 8vw), 70px);
     cursor: default;
-    text-decoration: underline;
     font-variation-settings: 'wght'500;
     transition: all .4s;
     transition-property: font-variation-settings, color;
@@ -180,6 +194,8 @@ h1 {
 
 #heroText {
     letter-spacing: -0.1vw;
+    text-decoration: none;
+    width: 100%;
 }
 
 #heroText:hover {
@@ -202,7 +218,6 @@ h1 {
     padding: 20px;
     font-size: 16px;
     background: none;
-    border: 1px solid black;
     outline: none;
     border-radius: 6px;
     font-variation-settings: 'wght'500;
@@ -211,22 +226,19 @@ h1 {
     color: black;
     text-align: center;
     text-decoration: none;
+    box-shadow: 0px 15px 40px -8px rgba(0, 0, 0, 0.1);
 }
 
 .homeButton:hover {
     font-variation-settings: 'wght'900;
-    box-shadow: 0px 15px 40px -8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 2px 8px -2px rgba(0, 0, 0, 0.05);
 }
 
 #homeButtonContainer {
     margin-top: 5vh;
     width: 83%;
     display: flex;
-    justify-content: space-evenly;
-}
-
-#homeButtonContainerHacky {
-    display: flex;
+    justify-content: flex-start;
 }
 
 /* Home Projects */
@@ -240,32 +252,41 @@ h1 {
     padding-bottom: 125px;
     min-width: 50vw;
     display: flex;
-    align-items: center;
-    justify-content: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-between;
     transform: translateX(-158vw);
     z-index: 99;
+}
+
+.projectsContainerInner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    height: calc(100vh - 295px);
 }
 
 .project {
     height: 100%;
     width: 40vw;
+    max-width: 900px;
     min-height: 400px;
     background-color: white;
     margin-left: .75vw;
-    border: 1px solid black;
-    border-radius: 1vw;
+    border-radius: .5vw;
     overflow: hidden;
     position: relative;
     font-variation-settings: 'wght'500;
+    transform-origin: center;
     transition: all .4s;
-    transition-property: box-shadow, height, font-variation-settings;
+    transition-property: box-shadow, font-variation-settings, transform;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
 }
 
 .project:hover {
     box-shadow: 0px 15px 40px -8px rgba(0, 0, 0, .3);
-    height: 102%;
     font-variation-settings: 'wght'900;
+    transform: scale(1.01);
 }
 
 .projectTitleContainer {
@@ -382,10 +403,10 @@ footer {
 .heroSection {
     width: 100%;
     height: 80vh;
-    padding-top: 80px;
+    padding-top: 180px;
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-start;
 }
 
 .bodyText {
@@ -538,15 +559,14 @@ mark {
     position: relative;
     overflow: hidden;
     -webkit-mask-image: -webkit-radial-gradient(white, black);
+    box-shadow: 0px 15px 40px -16px rgba(0, 0, 0, .3);
     border-radius: .5vw;
-    border: 1px solid black;
     font-variation-settings: 'wght'500;
     transition: all .4s;
-    transition-property: box-shadow, height, font-variation-settings;
+    transition-property: height, font-variation-settings;
 }
 
 .extraProjectCard:hover {
-    box-shadow: 0px 15px 40px -16px rgba(0, 0, 0, .3);
     height: 102%;
     font-variation-settings: 'wght'900;
 }
@@ -618,6 +638,10 @@ mark {
         font-size: 8vh;
         line-height: 9vh;
         text-align: right;
+    }
+
+    #homeFace {
+        margin-left: -1.5vh;
     }
 
     #projectsContainer {
