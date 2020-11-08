@@ -22,6 +22,8 @@
 
 body {
     font-family: publicSans;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 ::-webkit-scrollbar {
@@ -184,8 +186,8 @@ nav {
 }
 
 h1 {
-    font-size: max(min(13vh, 8vw), 70px);
-    line-height: max(min(13vh, 8vw), 70px);
+    font-size: max(min(6.25vw, 11vh), 76px);
+    line-height: max(min(6.25vw, 11vh), 76px);
     cursor: default;
     font-variation-settings: 'wght'500;
     transition: all .4s;
@@ -635,8 +637,9 @@ mark {
     }
 
     h1 {
-        font-size: 8vh;
-        line-height: 9vh;
+        margin-top: 5vh;
+        font-size: 6.75vh;
+        line-height: 7vh;
         text-align: right;
     }
 
