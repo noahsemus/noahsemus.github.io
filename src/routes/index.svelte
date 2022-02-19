@@ -7,11 +7,18 @@
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!' },
 		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!' }
 	];
+
+	const projects = [
+		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
+		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
+		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
+		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
+		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' }
+	];
 </script>
 
 <main>
 	<div class="leftPanel">
-		<h1>Noah Semus is a designer<br /> who designs things</h1>
 		<p class="description">
 			Noah currently works at the <strong>Google Creative Lab</strong> in NYC. He enjoys it!
 		</p>
@@ -31,15 +38,76 @@
 		</div>
 		<nav>
 			<a href="mailto:noahsemus@gmail.com" target="_blank">email</a>
-			<a href="github.com/noahsemus" target="_blank">github</a>
-			<a href="medium.com/@noahsemus" target="_blank">medium</a>
+			<a href="https://www.github.com/noahsemus" target="_blank">github</a>
+			<a href="https://www.medium.com/@noahsemus" target="_blank">medium</a>
 			<a href="https://www.youtube.com/c/NoahSemus/videos" target="_blank">youtube</a>
 		</nav>
+	</div>
+	<div class="rightPanel">
+		<h1>Things →</h1>
+		<div class="projectsContainer">
+			{#each projects as project}
+				<a class="project" href={project.route}>
+					<p class="projectTitle">
+						{project.name}
+					</p>
+					<img src="./img/projectImages/{project.img}" alt="{project.name} example work" />
+				</a>
+			{/each}
+		</div>
 	</div>
 </main>
 
 <style>
 	.description {
 		max-width: 400px;
+	}
+
+	.rightPanel {
+		overflow-y: auto;
+		padding-bottom: 60px;
+	}
+
+	.projectsContainer {
+		width: calc(100% - 250px);
+		margin-left: 250px;
+		display: flex;
+		flex-direction: column;
+		gap: 8px;
+	}
+
+	.project {
+		width: 100%;
+		position: relative;
+	}
+
+	img {
+		width: 100%;
+	}
+
+	.projectTitle {
+		position: absolute;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		text-align: center;
+		font-size: 40px;
+		font-variation-settings: 'wght' 400;
+		transition: all 0.4s ease-in-out;
+		opacity: 0;
+		background: rgba(0, 0, 0, 0.5);
+		color: white;
+	}
+
+	.project:hover .projectTitle {
+		opacity: 1;
+		font-variation-settings: 'wght' 800;
+	}
+
+	.rightPanel h1 {
+		width: 250px;
+		position: absolute;
 	}
 </style>
