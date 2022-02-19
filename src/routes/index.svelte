@@ -9,11 +9,42 @@
 	];
 
 	const projects = [
-		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
-		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
-		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
-		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' },
-		{ name: 'GMessage!', route: '/gmessage', img: 'pr01/frontImg.jpg' }
+		{
+			name: 'GMessage!',
+			route: '/gmessage',
+			src01: 'pr01/videos/vidMock02.webm',
+			src02: 'pr01/videos/vidMock02.mp4'
+		},
+		{
+			name: 'GMessage!',
+			route: '/gmessage',
+			src01: 'pr01/videos/vidMock02.webm',
+			src02: 'pr01/videos/vidMock02.mp4'
+		},
+		{
+			name: 'GMessage!',
+			route: '/gmessage',
+			src01: 'pr01/videos/vidMock02.webm',
+			src02: 'pr01/videos/vidMock02.mp4'
+		},
+		{
+			name: 'GMessage!',
+			route: '/gmessage',
+			src01: 'pr01/videos/vidMock02.webm',
+			src02: 'pr01/videos/vidMock02.mp4'
+		},
+		{
+			name: 'GMessage!',
+			route: '/gmessage',
+			src01: 'pr01/videos/vidMock02.webm',
+			src02: 'pr01/videos/vidMock02.mp4'
+		},
+		{
+			name: 'GMessage!',
+			route: '/gmessage',
+			src01: 'pr01/videos/vidMock02.webm',
+			src02: 'pr01/videos/vidMock02.mp4'
+		}
 	];
 </script>
 
@@ -51,7 +82,10 @@
 					<p class="projectTitle">
 						{project.name}
 					</p>
-					<img src="./img/projectImages/{project.img}" alt="{project.name} example work" />
+					<video autoplay muted loop>
+						<source src="../img/projectImages/{project.src01}" type="video/webm" />
+						<source src="../img/projectImages/{project.src02}" type="video/mp4" />
+					</video>
 				</a>
 			{/each}
 		</div>
@@ -81,7 +115,7 @@
 		position: relative;
 	}
 
-	img {
+	video {
 		width: 100%;
 	}
 
@@ -93,7 +127,7 @@
 		align-items: center;
 		justify-content: center;
 		text-align: center;
-		font-size: 40px;
+		font-size: 3vw;
 		font-variation-settings: 'wght' 400;
 		transition: all 0.4s ease-in-out;
 		opacity: 0;
@@ -103,7 +137,7 @@
 
 	.project:hover .projectTitle {
 		opacity: 1;
-		font-variation-settings: 'wght' 800;
+		font-variation-settings: 'wght' 700;
 	}
 
 	.rightPanel h1 {
