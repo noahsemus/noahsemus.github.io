@@ -1,4 +1,6 @@
 <script>
+	import projects from '../routes/projects.json';
+
 	const workplace = [
 		{ name: 'WarnerMedia', hover: 'It was a lot of fun' },
 		{ name: 'Sony Music Entertainment', hover: 'It was an unpaid internship.' },
@@ -7,51 +9,12 @@
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!' },
 		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!' }
 	];
-
-	const projects = [
-		{
-			name: 'GMessage!',
-			route: '/gmessage',
-			src01: 'pr01/videos/vidMock02.webm',
-			src02: 'pr01/videos/vidMock02.mp4'
-		},
-		{
-			name: 'GMessage!',
-			route: '/gmessage',
-			src01: 'pr01/videos/vidMock02.webm',
-			src02: 'pr01/videos/vidMock02.mp4'
-		},
-		{
-			name: 'GMessage!',
-			route: '/gmessage',
-			src01: 'pr01/videos/vidMock02.webm',
-			src02: 'pr01/videos/vidMock02.mp4'
-		},
-		{
-			name: 'GMessage!',
-			route: '/gmessage',
-			src01: 'pr01/videos/vidMock02.webm',
-			src02: 'pr01/videos/vidMock02.mp4'
-		},
-		{
-			name: 'GMessage!',
-			route: '/gmessage',
-			src01: 'pr01/videos/vidMock02.webm',
-			src02: 'pr01/videos/vidMock02.mp4'
-		},
-		{
-			name: 'GMessage!',
-			route: '/gmessage',
-			src01: 'pr01/videos/vidMock02.webm',
-			src02: 'pr01/videos/vidMock02.mp4'
-		}
-	];
 </script>
 
 <main>
 	<div class="leftPanel">
 		<p class="description">
-			Noah currently works at the <strong>Google Creative Lab</strong> in NYC. He enjoys it!
+			Noah currently works at the <strong>Google Creative Lab</strong> in New York City. He enjoys it!
 		</p>
 		<div class="section">
 			<p class="sectionTitle">Previously worked for ↓</p>

@@ -1,0 +1,38 @@
+[
+	{
+		"name": "GMessage!",
+		"route": "/gmessage",
+		"src01": "pr01/videos/vidMock02.webm",
+		"src02": "pr01/videos/vidMock02.mp4"
+	},
+	{
+		"name": "GMessage!",
+		"route": "/gmessage",
+		"src01": "pr01/videos/vidMock02.webm",
+		"src02": "pr01/videos/vidMock02.mp4"
+	},
+	{
+		"name": "GMessage!",
+		"route": "/gmessage",
+		"src01": "pr01/videos/vidMock02.webm",
+		"src02": "pr01/videos/vidMock02.mp4"
+	},
+	{
+		"name": "GMessage!",
+		"route": "/gmessage",
+		"src01": "pr01/videos/vidMock02.webm",
+		"src02": "pr01/videos/vidMock02.mp4"
+	},
+	{
+		"name": "GMessage!",
+		"route": "/gmessage",
+		"src01": "pr01/videos/vidMock02.webm",
+		"src02": "pr01/videos/vidMock02.mp4"
+	},
+	{
+		"name": "GMessage!",
+		"route": "/gmessage",
+		"src01": "pr01/videos/vidMock02.webm",
+		"src02": "pr01/videos/vidMock02.mp4"
+	}
+]
