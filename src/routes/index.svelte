@@ -17,7 +17,7 @@
 
 	const workplace = [
 		{ name: 'WarnerMedia', hover: 'Hi Miguel!', color: 'blue' },
-		{ name: 'Sony Music Entertainment', hover: 'It was an unpaid internship.', color: 'green' },
+		{ name: 'Sony Music Entertainment', hover: 'It was an unpaid internship ☣', color: 'green' },
 		{ name: 'Baron & Baron', hover: 'Working on [NDA] was really fun!', color: 'deeppink' },
 		{ name: 'Zero Studios', hover: 'My first interaction design job <3', color: 'purple' },
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!', color: 'orange' },
@@ -30,27 +30,57 @@
 		m.x = event.clientX;
 		m.y = event.clientY;
 	}
+
+	let itemHover = false;
 </script>
 
 <main on:mousemove={handleMousemove}>
 	{#if ready && outroValue}
 		<div class="leftPanel">
-			<p class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
-				Noah currently works at the <strong>Google Creative Lab</strong> in New York City. He enjoys
-				it!
-			</p>
+			<div class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
+				Noah currently works at the <div
+					class="listItem"
+					on:mouseenter={() => {
+						itemHover = true;
+					}}
+					on:mouseleave={() => {
+						itemHover = false;
+					}}
+				>
+					Google Creative Lab
+					{#key itemHover}
+						<div
+							class="listItemHover"
+							style="top: {m.y - 20}px; left: {m.x + 20}px; background: blueviolet;"
+						>
+							It's a dream come true!
+						</div>
+					{/key}
+				</div>
+				<br />in New York City. He enjoys it!
+			</div>
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 400 }}>
 				<p class="sectionTitle">Previously worked for ↓</p>
 				<ul>
 					{#each workplace as item}
-						<div class="listItem">
+						<div
+							class="listItem"
+							on:mouseenter={() => {
+								itemHover = true;
+							}}
+							on:mouseleave={() => {
+								itemHover = false;
+							}}
+						>
 							{item.name}
-							<div
-								class="listItemHover"
-								style="top: {m.y - 20}px; left: {m.x + 20}px; background: {item.color}"
-							>
-								{item.hover}
-							</div>
+							{#key itemHover}
+								<div
+									class="listItemHover"
+									style="top: {m.y - 20}px; left: {m.x + 20}px; background: {item.color}"
+								>
+									{item.hover}
+								</div>
+							{/key}
 						</div>
 					{/each}
 				</ul>
@@ -58,14 +88,24 @@
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 600 }}>
 				<p class="sectionTitle">Previously attended ↓</p>
 				<ul>
-					<div class="listItem">
+					<div
+						class="listItem"
+						on:mouseenter={() => {
+							itemHover = true;
+						}}
+						on:mouseleave={() => {
+							itemHover = false;
+						}}
+					>
 						Pratt Institute (it was okay)
-						<div
-							class="listItemHover"
-							style="top: {m.y - 20}px; left: {m.x + 20}px; background: moccasin; color: black"
-						>
-							It really was just okay.
-						</div>
+						{#key itemHover}
+							<div
+								class="listItemHover"
+								style="top: {m.y - 20}px; left: {m.x + 20}px; background: moccasin; color: black"
+							>
+								It really was just okay.
+							</div>
+						{/key}
 					</div>
 				</ul>
 			</div>
@@ -106,7 +146,18 @@
 
 <style>
 	.description {
-		max-width: 400px;
+		font-style: normal;
+		font-variation-settings: 'wght' 200;
+		font-size: 18px;
+		line-height: 26px;
+	}
+
+	.description .listItem {
+		font-variation-settings: 'wght' 600;
+	}
+
+	.description .listItemHover {
+		font-variation-settings: 'wght' 200;
 	}
 
 	.rightPanel {
@@ -150,6 +201,14 @@
 	.project:hover .projectTitle {
 		opacity: 1;
 		font-variation-settings: 'wght' 700;
+	}
+
+	.project {
+		transition: all 0.25s ease-in-out;
+	}
+
+	.project:hover {
+		transform: translateX(-20px);
 	}
 
 	.rightPanel h1 {
