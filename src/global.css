@@ -93,3 +93,7 @@ nav {
 	margin-top: auto;
 	gap: 16px;
 }
+
+nav a {
+	cursor: url('../img/face/face02.png'), pointer;
+}

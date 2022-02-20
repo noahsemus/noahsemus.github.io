@@ -3,6 +3,7 @@
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
 	import { outroEnded, indexOutroEnded, firstLoad } from '../stores.js';
+	import ListItemHover from '../components/listItemHover.svelte';
 
 	let outroValue;
 	outroEnded.subscribe((value) => {
@@ -23,90 +24,36 @@
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!', color: 'orange' },
 		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!', color: 'red' }
 	];
-
-	let m = { x: 0, y: 0 };
-
-	function handleMousemove(event) {
-		m.x = event.clientX;
-		m.y = event.clientY;
-	}
-
-	let itemHover = false;
 </script>
 
-<main on:mousemove={handleMousemove}>
+<main>
 	{#if ready && outroValue}
 		<div class="leftPanel">
 			<div class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
-				Noah currently works at the <div
-					class="listItem"
-					on:mouseenter={() => {
-						itemHover = true;
-					}}
-					on:mouseleave={() => {
-						itemHover = false;
-					}}
-				>
-					Google Creative Lab
-					{#key itemHover}
-						<div
-							class="listItemHover"
-							style="top: {m.y - 20}px; left: {m.x + 20}px; background: blueviolet;"
-						>
-							It's a dream come true!
-						</div>
-					{/key}
-				</div>
+				Noah currently works at the
+				<ListItemHover
+					mainText="Google Creative Lab"
+					hoverText="It's a dream come true ☘"
+					backgroundColor="blueviolet"
+				/>
 				<br />in New York City. He enjoys it!
 			</div>
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 400 }}>
 				<p class="sectionTitle">Previously worked for ↓</p>
 				<ul>
 					{#each workplace as item}
-						<div
-							class="listItem"
-							on:mouseenter={() => {
-								itemHover = true;
-							}}
-							on:mouseleave={() => {
-								itemHover = false;
-							}}
-						>
-							{item.name}
-							{#key itemHover}
-								<div
-									class="listItemHover"
-									style="top: {m.y - 20}px; left: {m.x + 20}px; background: {item.color}"
-								>
-									{item.hover}
-								</div>
-							{/key}
-						</div>
+						<ListItemHover
+							hoverText={item.hover}
+							mainText={item.name}
+							backgroundColor={item.color}
+						/>
 					{/each}
 				</ul>
 			</div>
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 600 }}>
 				<p class="sectionTitle">Previously attended ↓</p>
 				<ul>
-					<div
-						class="listItem"
-						on:mouseenter={() => {
-							itemHover = true;
-						}}
-						on:mouseleave={() => {
-							itemHover = false;
-						}}
-					>
-						Pratt Institute (it was okay)
-						{#key itemHover}
-							<div
-								class="listItemHover"
-								style="top: {m.y - 20}px; left: {m.x + 20}px; background: moccasin; color: black"
-							>
-								It really was just okay.
-							</div>
-						{/key}
-					</div>
+					<ListItemHover backgroundColor="moccasin" color="black" />
 				</ul>
 			</div>
 			<nav
@@ -150,14 +97,6 @@
 		font-variation-settings: 'wght' 200;
 		font-size: 18px;
 		line-height: 26px;
-	}
-
-	.description .listItem {
-		font-variation-settings: 'wght' 600;
-	}
-
-	.description .listItemHover {
-		font-variation-settings: 'wght' 200;
 	}
 
 	.rightPanel {
@@ -205,6 +144,7 @@
 
 	.project {
 		transition: all 0.25s ease-in-out;
+		cursor: url('../img/face/face01.png'), pointer;
 	}
 
 	.project:hover {
@@ -219,84 +159,5 @@
 	ul {
 		display: flex;
 		flex-direction: column;
-	}
-
-	.listItem {
-		cursor: pointer;
-		display: inline;
-		width: fit-content;
-	}
-
-	.listItemHover {
-		position: fixed;
-		z-index: 99;
-		display: none;
-		background: black;
-		padding: 0 8px;
-		-webkit-animation: wobble-ver-left 2s infinite both;
-		animation: wobble-ver-left 2s infinite both;
-	}
-
-	.listItem:hover .listItemHover {
-		display: block;
-	}
-
-	@-webkit-keyframes wobble-ver-left {
-		0%,
-		100% {
-			-webkit-transform: translateY(0) rotate(0);
-			transform: translateY(0) rotate(0);
-			-webkit-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
-		}
-		15% {
-			-webkit-transform: translateY(-30px) rotate(-6deg);
-			transform: translateY(-30px) rotate(-6deg);
-		}
-		30% {
-			-webkit-transform: translateY(15px) rotate(6deg);
-			transform: translateY(15px) rotate(6deg);
-		}
-		45% {
-			-webkit-transform: translateY(-15px) rotate(-3.6deg);
-			transform: translateY(-15px) rotate(-3.6deg);
-		}
-		60% {
-			-webkit-transform: translateY(9px) rotate(2.4deg);
-			transform: translateY(9px) rotate(2.4deg);
-		}
-		75% {
-			-webkit-transform: translateY(-6px) rotate(-1.2deg);
-			transform: translateY(-6px) rotate(-1.2deg);
-		}
-	}
-	@keyframes wobble-ver-left {
-		0%,
-		100% {
-			-webkit-transform: translateY(0) rotate(0);
-			transform: translateY(0) rotate(0);
-			-webkit-transform-origin: 50% 50%;
-			transform-origin: 50% 50%;
-		}
-		15% {
-			-webkit-transform: translateY(-30px) rotate(-6deg);
-			transform: translateY(-30px) rotate(-6deg);
-		}
-		30% {
-			-webkit-transform: translateY(15px) rotate(6deg);
-			transform: translateY(15px) rotate(6deg);
-		}
-		45% {
-			-webkit-transform: translateY(-15px) rotate(-3.6deg);
-			transform: translateY(-15px) rotate(-3.6deg);
-		}
-		60% {
-			-webkit-transform: translateY(9px) rotate(2.4deg);
-			transform: translateY(9px) rotate(2.4deg);
-		}
-		75% {
-			-webkit-transform: translateY(-6px) rotate(-1.2deg);
-			transform: translateY(-6px) rotate(-1.2deg);
-		}
 	}
 </style>
