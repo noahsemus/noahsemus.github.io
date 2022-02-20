@@ -130,6 +130,7 @@
 		justify-content: center;
 		text-align: center;
 		font-size: 3vw;
+		line-height: 3.2vw;
 		font-variation-settings: 'wght' 400;
 		transition: all 0.25s ease-in-out;
 		opacity: 0;

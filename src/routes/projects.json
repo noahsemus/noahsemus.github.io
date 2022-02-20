@@ -1,18 +1,19 @@
 [
 	{
-		"name": "GMessage!",
-		"slug": "gmessage",
-		"poster": "gmessage/videos/01",
-		"images": ["01", "02", "03", "04", "05"],
-		"videos": ["01", "02"],
+		"name": "Ambient Computationally Intelligent Technology",
+		"slug": "acit",
+		"poster": "acit/videos/01",
+		"images": ["01.gif", "02.gif", "03.gif", "04.gif"],
+		"videos": ["01", "02", "03", "04", "05"],
 		"things": [
 			"User Experience Design",
 			"User Experience Research",
-			"User Testing",
 			"Visual Design",
-			"Prototyping"
+			"Prototyping",
+			"3D Modeling",
+			"Video Editing"
 		],
-		"desc": "Google has made a plethora of different messaging services over the past decade, and yet none of them have survived, let alone be successful. Ultimately, none of them could live up to iMessage, but Google has had an ace up their sleeve the whole time... Chrome. I created this speculative app to explore the possibility of a unified Google Messaging Platform."
+		"desc": "Ambient Compuationally Intelligent Technology was my senior thesis within the Communications Design Program at Pratt. This idea takes a speculative look at the future and how technology integrates into our lives. When does it become so closely a part of us as a species that it reconnects into the human experience/ethos?"
 	},
 	{
 		"name": "GMessage!",
