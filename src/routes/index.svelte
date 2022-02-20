@@ -1,5 +1,11 @@
 <script>
 	import projects from '../routes/projects.json';
+	import { fly } from 'svelte/transition';
+	import { onMount } from 'svelte';
+	import { outroEnded, indexOutroEnded } from '../stores.js';
+
+	let ready = false;
+	onMount(() => (ready = true));
 
 	const workplace = [
 		{ name: 'WarnerMedia', hover: 'It was a lot of fun' },
@@ -9,50 +15,74 @@
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!' },
 		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!' }
 	];
+
+	let outroValue;
+
+	outroEnded.subscribe((value) => {
+		outroValue = value;
+	});
+
+	let indexOutroValue;
+
+	indexOutroEnded.subscribe((value) => {
+		indexOutroValue = value;
+	});
 </script>
 
 <main>
-	<div class="leftPanel">
-		<p class="description">
-			Noah currently works at the <strong>Google Creative Lab</strong> in New York City. He enjoys it!
-		</p>
-		<div class="section">
-			<p class="sectionTitle">Previously worked for ↓</p>
-			<ul>
-				{#each workplace as item}
-					<li>{item.name}</li>
+	{#if outroValue}
+		<div class="leftPanel">
+			<p class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
+				Noah currently works at the <strong>Google Creative Lab</strong> in New York City. He enjoys
+				it!
+			</p>
+			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 400 }}>
+				<p class="sectionTitle">Previously worked for ↓</p>
+				<ul>
+					{#each workplace as item}
+						<li>{item.name}</li>
+					{/each}
+				</ul>
+			</div>
+			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 600 }}>
+				<p class="sectionTitle">Previously attended ↓</p>
+				<ul>
+					<li>Pratt Institute (it was okay)</li>
+				</ul>
+			</div>
+			<nav
+				transition:fly={{ y: 20, duration: 1000, delay: 800 }}
+				on:outroend={() => {
+					indexOutroEnded.set(true);
+				}}
+			>
+				<a href="mailto:noahsemus@gmail.com" target="_blank">email</a>
+				<a href="https://www.github.com/noahsemus" target="_blank">github</a>
+				<a href="https://www.medium.com/@noahsemus" target="_blank">medium</a>
+				<a href="https://www.youtube.com/c/NoahSemus/videos" target="_blank">youtube</a>
+			</nav>
+		</div>
+		<div class="rightPanel">
+			<h1 transition:fly={{ x: -20, duration: 1000, delay: 200 }}>Things →</h1>
+			<div class="projectsContainer">
+				{#each projects as project, i}
+					<a
+						class="project"
+						href="/{project.slug}"
+						transition:fly={{ x: 200, duration: 1000, delay: i * 200 }}
+					>
+						<p class="projectTitle">
+							{project.name}
+						</p>
+						<video autoplay muted loop>
+							<source src="../img/projectImages/{project.poster}.webm" type="video/webm" />
+							<source src="../img/projectImages/{project.poster}.mp4" type="video/mp4" />
+						</video>
+					</a>
 				{/each}
-			</ul>
+			</div>
 		</div>
-		<div class="section">
-			<p class="sectionTitle">Previously attended ↓</p>
-			<ul>
-				<li>Pratt Institute (it was okay)</li>
-			</ul>
-		</div>
-		<nav>
-			<a href="mailto:noahsemus@gmail.com" target="_blank">email</a>
-			<a href="https://www.github.com/noahsemus" target="_blank">github</a>
-			<a href="https://www.medium.com/@noahsemus" target="_blank">medium</a>
-			<a href="https://www.youtube.com/c/NoahSemus/videos" target="_blank">youtube</a>
-		</nav>
-	</div>
-	<div class="rightPanel">
-		<h1>Things →</h1>
-		<div class="projectsContainer">
-			{#each projects as project}
-				<a class="project" href={project.route}>
-					<p class="projectTitle">
-						{project.name}
-					</p>
-					<video autoplay muted loop>
-						<source src="../img/projectImages/{project.src01}" type="video/webm" />
-						<source src="../img/projectImages/{project.src02}" type="video/mp4" />
-					</video>
-				</a>
-			{/each}
-		</div>
-	</div>
+	{/if}
 </main>
 
 <style>
