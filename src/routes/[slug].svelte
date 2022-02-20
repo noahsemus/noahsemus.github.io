@@ -12,7 +12,13 @@
 	import { fly, fade } from 'svelte/transition';
 	import projects from '../routes/projects.json';
 	export let slug;
-	import { indexOutroEnded, outroEnded } from '../stores.js';
+	import { indexOutroEnded, outroEnded, firstLoad } from '../stores.js';
+	import { onMount } from 'svelte';
+
+	let ready = false;
+	onMount(() => {
+		ready = true;
+	});
 
 	let currentProject = projects.filter((project) => {
 		return project.slug === slug;
@@ -22,15 +28,19 @@
 	let projectVideos = currentProject[0]['videos'];
 	let projectThings = currentProject[0]['things'];
 
-	let indexOutroValue;
+	let firstLoadValue;
+	firstLoad.subscribe((value) => {
+		firstLoadValue = value;
+	});
 
+	let indexOutroValue;
 	indexOutroEnded.subscribe((value) => {
 		indexOutroValue = value;
 	});
 </script>
 
 <main>
-	{#if indexOutroValue}
+	{#if (ready && firstLoadValue) || indexOutroValue}
 		<div class="leftPanel">
 			<h1
 				transition:fly={{ y: 20, duration: 1000 }}
@@ -99,12 +109,12 @@
 		width: 100%;
 		display: flex;
 		flex-direction: column;
-		gap: 24px;
+		gap: 80px;
 	}
 	img,
 	video {
 		width: 100%;
-		max-height: 70vh;
+		height: 60vh;
 		object-fit: contain;
 	}
 
@@ -119,5 +129,16 @@
 	h1 {
 		color: var(--blurple);
 		font-style: italic;
+	}
+
+	.loader {
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 </style>

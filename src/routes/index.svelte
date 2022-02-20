@@ -2,10 +2,18 @@
 	import projects from '../routes/projects.json';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { outroEnded, indexOutroEnded } from '../stores.js';
+	import { outroEnded, indexOutroEnded, firstLoad } from '../stores.js';
+
+	let outroValue;
+	outroEnded.subscribe((value) => {
+		outroValue = value;
+	});
 
 	let ready = false;
-	onMount(() => (ready = true));
+	onMount(() => {
+		ready = true;
+		firstLoad.set(false);
+	});
 
 	const workplace = [
 		{ name: 'WarnerMedia', hover: 'It was a lot of fun' },
@@ -15,22 +23,10 @@
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!' },
 		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!' }
 	];
-
-	let outroValue;
-
-	outroEnded.subscribe((value) => {
-		outroValue = value;
-	});
-
-	let indexOutroValue;
-
-	indexOutroEnded.subscribe((value) => {
-		indexOutroValue = value;
-	});
 </script>
 
 <main>
-	{#if outroValue}
+	{#if ready && outroValue}
 		<div class="leftPanel">
 			<p class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
 				Noah currently works at the <strong>Google Creative Lab</strong> in New York City. He enjoys
