@@ -16,16 +16,23 @@
 	});
 
 	const workplace = [
-		{ name: 'WarnerMedia', hover: 'It was a lot of fun' },
-		{ name: 'Sony Music Entertainment', hover: 'It was an unpaid internship.' },
-		{ name: 'Baron & Baron', hover: 'The people are amazing!' },
-		{ name: 'Zero Studios', hover: "I'm grateful for everything they gave me" },
-		{ name: 'Crane AI', hover: 'They catered on Tuesdays!' },
-		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!' }
+		{ name: 'WarnerMedia', hover: 'Hi Miguel!', color: 'blue' },
+		{ name: 'Sony Music Entertainment', hover: 'It was an unpaid internship.', color: 'green' },
+		{ name: 'Baron & Baron', hover: 'Working on [NDA] was really fun!', color: 'deeppink' },
+		{ name: 'Zero Studios', hover: 'My first interaction design job <3', color: 'purple' },
+		{ name: 'Crane AI', hover: 'They catered on Tuesdays!', color: 'orange' },
+		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!', color: 'red' }
 	];
+
+	let m = { x: 0, y: 0 };
+
+	function handleMousemove(event) {
+		m.x = event.clientX;
+		m.y = event.clientY;
+	}
 </script>
 
-<main>
+<main on:mousemove={handleMousemove}>
 	{#if ready && outroValue}
 		<div class="leftPanel">
 			<p class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
@@ -36,14 +43,30 @@
 				<p class="sectionTitle">Previously worked for ↓</p>
 				<ul>
 					{#each workplace as item}
-						<li>{item.name}</li>
+						<div class="listItem">
+							{item.name}
+							<div
+								class="listItemHover"
+								style="top: {m.y - 20}px; left: {m.x + 20}px; background: {item.color}"
+							>
+								{item.hover}
+							</div>
+						</div>
 					{/each}
 				</ul>
 			</div>
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 600 }}>
 				<p class="sectionTitle">Previously attended ↓</p>
 				<ul>
-					<li>Pratt Institute (it was okay)</li>
+					<div class="listItem">
+						Pratt Institute (it was okay)
+						<div
+							class="listItemHover"
+							style="top: {m.y - 20}px; left: {m.x + 20}px; background: moccasin; color: black"
+						>
+							It really was just okay.
+						</div>
+					</div>
 				</ul>
 			</div>
 			<nav
@@ -118,7 +141,7 @@
 		text-align: center;
 		font-size: 3vw;
 		font-variation-settings: 'wght' 400;
-		transition: all 0.4s ease-in-out;
+		transition: all 0.25s ease-in-out;
 		opacity: 0;
 		background: rgba(0, 0, 0, 0.5);
 		color: white;
@@ -132,5 +155,89 @@
 	.rightPanel h1 {
 		width: 250px;
 		position: absolute;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: column;
+	}
+
+	.listItem {
+		cursor: pointer;
+		display: inline;
+		width: fit-content;
+	}
+
+	.listItemHover {
+		position: fixed;
+		z-index: 99;
+		display: none;
+		background: black;
+		padding: 0 8px;
+		-webkit-animation: wobble-ver-left 2s infinite both;
+		animation: wobble-ver-left 2s infinite both;
+	}
+
+	.listItem:hover .listItemHover {
+		display: block;
+	}
+
+	@-webkit-keyframes wobble-ver-left {
+		0%,
+		100% {
+			-webkit-transform: translateY(0) rotate(0);
+			transform: translateY(0) rotate(0);
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+		15% {
+			-webkit-transform: translateY(-30px) rotate(-6deg);
+			transform: translateY(-30px) rotate(-6deg);
+		}
+		30% {
+			-webkit-transform: translateY(15px) rotate(6deg);
+			transform: translateY(15px) rotate(6deg);
+		}
+		45% {
+			-webkit-transform: translateY(-15px) rotate(-3.6deg);
+			transform: translateY(-15px) rotate(-3.6deg);
+		}
+		60% {
+			-webkit-transform: translateY(9px) rotate(2.4deg);
+			transform: translateY(9px) rotate(2.4deg);
+		}
+		75% {
+			-webkit-transform: translateY(-6px) rotate(-1.2deg);
+			transform: translateY(-6px) rotate(-1.2deg);
+		}
+	}
+	@keyframes wobble-ver-left {
+		0%,
+		100% {
+			-webkit-transform: translateY(0) rotate(0);
+			transform: translateY(0) rotate(0);
+			-webkit-transform-origin: 50% 50%;
+			transform-origin: 50% 50%;
+		}
+		15% {
+			-webkit-transform: translateY(-30px) rotate(-6deg);
+			transform: translateY(-30px) rotate(-6deg);
+		}
+		30% {
+			-webkit-transform: translateY(15px) rotate(6deg);
+			transform: translateY(15px) rotate(6deg);
+		}
+		45% {
+			-webkit-transform: translateY(-15px) rotate(-3.6deg);
+			transform: translateY(-15px) rotate(-3.6deg);
+		}
+		60% {
+			-webkit-transform: translateY(9px) rotate(2.4deg);
+			transform: translateY(9px) rotate(2.4deg);
+		}
+		75% {
+			-webkit-transform: translateY(-6px) rotate(-1.2deg);
+			transform: translateY(-6px) rotate(-1.2deg);
+		}
 	}
 </style>

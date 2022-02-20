@@ -87,12 +87,14 @@
 						</video>
 					</div>
 				{/each}
-				{#each projectImages as item}
-					<picture>
-						<source srcset="../img/projectImages/{slug}/{item}.webp" type="image/webp" />
-						<source srcset="../img/projectImages/{slug}/{item}.jpg" type="image/jpg" />
-						<img src="../img/projectImages/{slug}/{item}" alt="lorem" />
-					</picture>
+				{#each projectImages as item, i}
+					<div transition:fade={{ duration: 400, delay: i * 50 }}>
+						<picture>
+							<source srcset="../img/projectImages/{slug}/{item}.webp" type="image/webp" />
+							<source srcset="../img/projectImages/{slug}/{item}.jpg" type="image/jpg" />
+							<img src="../img/projectImages/{slug}/{item}" alt="lorem" />
+						</picture>
+					</div>
 				{/each}
 			</div>
 		</div>
