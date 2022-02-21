@@ -1,6 +1,6 @@
 <marquee
-	>Noah's currently listening to peepeepoopoo off the album poopydoopee from the artist blahblah</marquee
->
+	>Noah's currently listening to peepeepoopoo off the album poopydoopee from the artist blahblah
+</marquee>
 <h1>
 	Noah Semus is a designer<br /> who designs things<img
 		src="../img/face/face03.png"
