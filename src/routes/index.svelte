@@ -26,6 +26,10 @@
 	];
 </script>
 
+<svelte:head>
+	<title>Noah is really cool (!!!)</title>
+</svelte:head>
+
 <main>
 	{#if ready && outroValue}
 		<div class="leftPanel">

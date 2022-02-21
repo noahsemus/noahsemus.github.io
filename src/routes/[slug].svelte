@@ -39,6 +39,10 @@
 	});
 </script>
 
+<svelte:head>
+	<title>{currentProject[0]['title']}</title>
+</svelte:head>
+
 <main>
 	{#if (ready && firstLoadValue) || indexOutroValue}
 		<div class="leftPanel">

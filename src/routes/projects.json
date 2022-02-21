@@ -1,6 +1,7 @@
 [
 	{
 		"name": "Ambient Computationally Intelligent Technology",
+		"title": "Ambient tech? What the heck?",
 		"slug": "acit",
 		"poster": "acit/videos/01",
 		"images": ["01.gif", "02.gif", "03.gif", "04.gif"],
@@ -17,6 +18,7 @@
 	},
 	{
 		"name": "GMessage!",
+		"title": "Google making a messaging service? Yeah right.",
 		"slug": "gmessage",
 		"poster": "gmessage/videos/01",
 		"images": ["01", "02", "03", "04", "05"],
