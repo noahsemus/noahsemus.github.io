@@ -61,7 +61,7 @@
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 400 }}>
 				<p class="sectionTitle">What the heck is this about ↓</p>
 				<p>
-					{currentProject[0]['desc']}
+					{@html currentProject[0]['desc']}
 				</p>
 			</div>
 			<nav
