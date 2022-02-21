@@ -146,4 +146,10 @@
 		color: var(--blurple);
 		font-style: italic;
 	}
+
+	@media (max-width: 1000px) {
+		.projectsContainer {
+			gap: 8px;
+		}
+	}
 </style>

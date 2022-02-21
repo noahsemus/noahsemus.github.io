@@ -32,11 +32,11 @@
 			<div class="description" transition:fly={{ y: 20, duration: 1000, delay: 200 }}>
 				Noah currently works at the
 				<ListItemHover
-					mainText="Google Creative Lab"
+					mainText="<strong>Google Creative Lab</strong>"
 					hoverText="It's a dream come true ☘"
 					backgroundColor="blueviolet"
 				/>
-				<br />in New York City. He enjoys it!
+				<br class="mobileHide" />in New York City. He enjoys it!
 			</div>
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 400 }}>
 				<p class="sectionTitle">Previously worked for ↓</p>
@@ -69,7 +69,8 @@
 			</nav>
 		</div>
 		<div class="rightPanel">
-			<h1 transition:fly={{ x: -20, duration: 1000, delay: 200 }}>Things →</h1>
+			<h1 transition:fly={{ x: -20, duration: 1000, delay: 200 }} class="mobileHide">Things →</h1>
+			<h1 transition:fly={{ x: 20, duration: 1000, delay: 200 }} class="mobileShow">Things ↓</h1>
 			<div class="projectsContainer">
 				{#each projects as project, i}
 					<a
@@ -77,7 +78,7 @@
 						href="/{project.slug}"
 						transition:fly={{ x: 200, duration: 1000, delay: i * 200 }}
 					>
-						<p class="projectTitle">
+						<p class="projectTitle mobileHide">
 							{project.name}
 						</p>
 						<video autoplay muted loop>
@@ -160,5 +161,59 @@
 	ul {
 		display: flex;
 		flex-direction: column;
+	}
+
+	@media (max-width: 1350px) {
+		.rightPanel h1.mobileHide {
+			display: none;
+		}
+
+		.rightPanel h1.mobileShow {
+			display: block;
+			position: relative;
+		}
+
+		.rightPanel {
+			padding-left: 60px;
+		}
+
+		.projectsContainer {
+			width: 100%;
+			margin: 0;
+			margin-top: 24px;
+		}
+
+		main {
+			gap: 0px;
+		}
+	}
+
+	@media (max-width: 1000px) {
+		.rightPanel {
+			padding-left: 30px;
+		}
+
+		.rightPanel h1 {
+			display: block;
+			position: relative;
+		}
+
+		.description {
+			font-style: normal;
+			font-variation-settings: 'wght' 200;
+			font-size: 16px;
+			line-height: 26px;
+		}
+
+		.projectsContainer {
+			width: 100%;
+			margin: 0;
+			margin-top: 24px;
+			padding-left: 0px;
+		}
+
+		.project:hover {
+			transform: scale(0.98);
+		}
 	}
 </style>

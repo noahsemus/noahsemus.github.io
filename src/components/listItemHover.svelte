@@ -23,7 +23,7 @@
 	}}
 	on:mousemove={handleMousemove}
 >
-	{mainText}
+	{@html mainText}
 </div>
 {#if itemHover}
 	<div

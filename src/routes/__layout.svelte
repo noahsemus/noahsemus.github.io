@@ -22,4 +22,11 @@
 		margin-left: 8px;
 		height: 28px;
 	}
+
+	@media (max-width: 1000px) {
+		h1 {
+			position: relative;
+			padding: 30px;
+		}
+	}
 </style>

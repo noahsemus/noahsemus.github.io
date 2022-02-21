@@ -29,20 +29,5 @@
 			"Prototyping"
 		],
 		"desc": "Google has made a plethora of different messaging services over the past decade, and yet none of them have survived, let alone be successful. Ultimately, none of them could live up to iMessage, but Google has had an ace up their sleeve the whole time... Chrome. I created this speculative app to explore the possibility of a unified Google Messaging Platform."
-	},
-	{
-		"name": "GMessage!",
-		"slug": "gmessage",
-		"poster": "gmessage/videos/01",
-		"images": ["01", "02", "03", "04", "05"],
-		"videos": ["01", "02"],
-		"things": [
-			"User Experience Design",
-			"User Experience Research",
-			"User Testing",
-			"Visual Design",
-			"Prototyping"
-		],
-		"desc": "Google has made a plethora of different messaging services over the past decade, and yet none of them have survived, let alone be successful. Ultimately, none of them could live up to iMessage, but Google has had an ace up their sleeve the whole time... Chrome. I created this speculative app to explore the possibility of a unified Google Messaging Platform."
 	}
 ]
