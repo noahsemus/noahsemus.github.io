@@ -169,7 +169,7 @@
 
 	.project {
 		transition: all 0.25s ease-in-out;
-		cursor: url('../img/face/face01.png'), pointer;
+		cursor: url('/img/face/face01.png'), pointer;
 	}
 
 	.project:hover {

@@ -36,7 +36,7 @@
 
 <style>
 	.listItem {
-		cursor: url('../img/face/face04.png'), pointer;
+		cursor: url('/img/face/face04.png'), pointer;
 		display: inline;
 		width: fit-content;
 	}

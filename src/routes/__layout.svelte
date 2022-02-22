@@ -16,11 +16,11 @@
 
 	onMount(() => {
 		if ($darkMode) {
-			document.documentElement.style.setProperty('--background', 'rgb(240, 240, 240)');
-			document.documentElement.style.setProperty('--textColor', 'black');
-		} else {
 			document.documentElement.style.setProperty('--background', 'rgb(14, 14, 14)');
 			document.documentElement.style.setProperty('--textColor', 'white');
+		} else {
+			document.documentElement.style.setProperty('--background', 'rgb(240, 240, 240)');
+			document.documentElement.style.setProperty('--textColor', 'black');
 		}
 	});
 </script>
