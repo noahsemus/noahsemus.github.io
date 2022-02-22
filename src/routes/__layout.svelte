@@ -44,7 +44,6 @@
 	}
 
 	marquee span {
-		/* font-variation-settings: 'wght' 800; */
 		font-style: italic;
 		font-size: 16px;
 		margin: 0 8px;

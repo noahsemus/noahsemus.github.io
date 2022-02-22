@@ -1,10 +1,20 @@
 [
 	{
+		"name": "Creative Lab Projects",
+		"title": "I thought this was super NDA???",
+		"slug": "crab",
+		"poster": "crab/videos/01",
+		"images": ["01", "02", "03", "04"],
+		"videos": ["01", "02", "03", "04", "05"],
+		"things": ["????????"],
+		"desc": "Currently my projects at the Google Creative Lab are still under NDA. Video is from Google IO 2021."
+	},
+	{
 		"name": "Ambient Computationally Intelligent Technology",
 		"title": "Ambient tech? What the heck?",
 		"slug": "acit",
 		"poster": "acit/videos/01",
-		"images": ["01.gif", "02.gif", "03.gif", "04.gif"],
+		"images": ["01", "02", "03", "04"],
 		"videos": ["01", "02", "03", "04", "05"],
 		"things": [
 			"User Experience Design",
@@ -31,5 +41,25 @@
 			"Prototyping"
 		],
 		"desc": "Google has made a plethora of different messaging services over the past decade, and yet none of them have survived, let alone be successful. Ultimately, none of them could live up to iMessage, but Google has had an ace up their sleeve the whole time... Chrome. I created this speculative app to explore the possibility of a unified Google Messaging Platform. Check out <a href='https://uxdesign.cc/gmessage-how-to-fix-googles-messaging-madness-a-ux-exploration-97e9d9ce939f' target='_blank'>the Medium article</a> which goes into more depth and research."
+	},
+	{
+		"name": "Fun Side Projects :)",
+		"title": "There's a whole lotta stuff in here!",
+		"slug": "fun",
+		"poster": "fun/videos/01",
+		"images": ["01", "02", "03", "04", "05"],
+		"videos": ["01", "02", "03", "04", "05", "06", "07"],
+		"things": ["A whole lotta stuff"],
+		"desc": "This is a page of stuff that doesn't really require a full case study. There are things like <a href='http://zorpim.great-site.net/' target='_blank'>Zorp Instant Message</a>, which is a messaging service to a deity. There are <strong>AR cards</strong> that show their number only in AR. There's a reel I created for <strong>Zero Studios</strong>. There is <a href='https://publikation.github.io' target='_blank'>Publikation</a>, an online zine I did with friends. There's even <a href='https://noahsemus.com/canyoubingit/' target='_blank'>Can You Bing It</a>, a site exploring if Bing can search as much as Google. And there's a whole lotta other stuff too!"
+	},
+	{
+		"name": "Print Projects",
+		"title": "CNTRL P",
+		"slug": "print",
+		"poster": "print/videos/01",
+		"images": ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12", "13", "14"],
+		"videos": ["01"],
+		"things": ["Graphic Design", "Typesetting", "Layout Design", "Book Binding"],
+		"desc": "While I am mainly a digital centric designer, I still love books and tactile print. The video is a companion piece to the book Re-View. Along with that book, there are various zines I've done along with <strong>Design, Design!, Designed?</strong> → A book I created that showcases multiple essays from various different designers. Books are available to look at upon request!"
 	}
 ]

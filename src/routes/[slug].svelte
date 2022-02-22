@@ -64,7 +64,7 @@
 			</div>
 			<div class="section" transition:fly={{ y: 20, duration: 1000, delay: 400 }}>
 				<p class="sectionTitle">What the heck is this about ↓</p>
-				<p>
+				<p class="description">
 					{@html currentProject[0]['desc']}
 				</p>
 			</div>
@@ -93,25 +93,13 @@
 				{/each}
 				{#each projectImages as item, i}
 					<div transition:fade={{ duration: 400, delay: i * 50 }}>
-						{#if item.includes('.gif')}
-							<picture>
-								<source
-									srcset="../img/projectImages/{slug}/{item.replace('.gif', '')}.webp"
-									type="image/webp"
-								/>
-								<source
-									srcset="../img/projectImages/{slug}/{item.replace('.gif', '')}.gif"
-									type="image/jpg"
-								/>
-								<img src="../img/projectImages/{slug}/{item}" alt=" " />
-							</picture>
-						{:else}
-							<picture>
-								<source srcset="../img/projectImages/{slug}/{item}.webp" type="image/webp" />
-								<source srcset="../img/projectImages/{slug}/{item}.jpg" type="image/jpg" />
-								<img src="../img/projectImages/{slug}/{item}" alt=" " />
-							</picture>
-						{/if}
+						<picture>
+							<source srcset="../img/projectImages/{slug}/{item}.webp" type="image/webp" />
+							<source srcset="../img/projectImages/{slug}/{item}.jpg" type="image/jpg" />
+							<source srcset="../img/projectImages/{slug}/{item}.png" type="image/png" />
+							<source srcset="../img/projectImages/{slug}/{item}.gif" type="image/gif" />
+							<img src="../img/projectImages/{slug}/{item}.png" alt=" " />
+						</picture>
 					</div>
 				{/each}
 			</div>
