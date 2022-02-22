@@ -10,11 +10,11 @@
 </script>
 
 <script>
-	import { onMount } from 'svelte';
+	import { afterUpdate } from 'svelte';
 	import { darkMode } from '../stores';
 	export let result;
 
-	onMount(() => {
+	afterUpdate(() => {
 		if ($darkMode) {
 			document.documentElement.style.setProperty('--background', 'rgb(14, 14, 14)');
 			document.documentElement.style.setProperty('--textColor', 'white');
