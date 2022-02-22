@@ -1,6 +1,6 @@
 @font-face {
 	font-family: 'publicSans';
-	src: url('../fonts/PublicSans-VariableFont_wght.ttf');
+	src: url('/fonts/PublicSans-VariableFont_wght.ttf');
 	font-weight: 500;
 	font-style: normal;
 }
@@ -102,7 +102,7 @@ nav {
 
 nav a,
 .colorChanger {
-	cursor: url('../img/face/face02.png'), pointer;
+	cursor: url('/img/face/face02.png'), pointer;
 	color: var(--blurple);
 }
 
