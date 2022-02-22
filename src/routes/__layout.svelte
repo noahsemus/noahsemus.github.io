@@ -1,6 +1,24 @@
-<marquee
-	>Noah's currently listening to peepeepoopoo off the album poopydoopee from the artist blahblah
+<script context="module">
+	export async function load({ fetch }) {
+		const response = await fetch('/api');
+		const result = await response.json();
+		console.log(result);
+		return {
+			props: { result }
+		};
+	}
+</script>
+
+<script>
+	export let result;
+</script>
+
+<marquee>
+	Noah is currently listening to <span>{result.name}</span> off the album
+	<span>{result.album.name}</span>
+	from the artist <span>{result.artists[0].name}</span>
 </marquee>
+
 <h1>
 	Noah Semus is a designer<br /> who designs things<img
 		src="../img/face/face03.png"
@@ -21,6 +39,15 @@
 		background: var(--blurple);
 		color: black;
 		z-index: 999999;
+		font-size: 12px;
+		padding: 4px;
+	}
+
+	marquee span {
+		/* font-variation-settings: 'wght' 800; */
+		font-style: italic;
+		font-size: 16px;
+		margin: 0 8px;
 	}
 
 	h1 {
