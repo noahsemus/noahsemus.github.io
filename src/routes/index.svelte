@@ -2,7 +2,7 @@
 	import projects from '../routes/projects.json';
 	import { fly } from 'svelte/transition';
 	import { onMount } from 'svelte';
-	import { outroEnded, indexOutroEnded, firstLoad } from '../stores.js';
+	import { outroEnded, indexOutroEnded, firstLoad, darkMode } from '../stores.js';
 	import ListItemHover from '../components/listItemHover.svelte';
 
 	let outroValue;
@@ -24,6 +24,18 @@
 		{ name: 'Crane AI', hover: 'They catered on Tuesdays!', color: 'orange' },
 		{ name: "Noah's Mom (she's awesome)", hover: 'I love her a lot!', color: 'red' }
 	];
+
+	const toLightMode = () => {
+		$darkMode = false;
+		document.documentElement.style.setProperty('--background', 'rgb(240, 240, 240)');
+		document.documentElement.style.setProperty('--textColor', 'black');
+	};
+
+	const toDarkMode = () => {
+		$darkMode = true;
+		document.documentElement.style.setProperty('--background', 'rgb(14, 14, 14)');
+		document.documentElement.style.setProperty('--textColor', 'white');
+	};
 </script>
 
 <svelte:head>
@@ -70,6 +82,11 @@
 				<a href="https://www.github.com/noahsemus" target="_blank">github</a>
 				<a href="https://www.medium.com/@noahsemus" target="_blank">medium</a>
 				<a href="https://www.youtube.com/c/NoahSemus/videos" target="_blank">youtube</a>
+				{#if $darkMode}
+					<div class="colorChanger" on:click={toLightMode}>light mode</div>
+				{:else}
+					<div class="colorChanger" on:click={toDarkMode}>dark mode</div>
+				{/if}
 			</nav>
 		</div>
 		<div class="rightPanel">
@@ -124,6 +141,8 @@
 
 	video {
 		width: 100%;
+		height: 60vh;
+		object-fit: cover;
 	}
 
 	.projectTitle {
@@ -165,6 +184,10 @@
 	ul {
 		display: flex;
 		flex-direction: column;
+	}
+
+	.colorChanger {
+		text-decoration: underline;
 	}
 
 	@media (max-width: 1350px) {
@@ -218,6 +241,10 @@
 
 		.project:hover {
 			transform: scale(0.98);
+		}
+
+		video {
+			height: auto;
 		}
 	}
 </style>

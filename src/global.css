@@ -8,6 +8,8 @@
 :root {
 	--gray: #8c8c8c;
 	--blurple: #6d59ec;
+	--background: rgb(14, 14, 14);
+	--textColor: white;
 }
 
 * {
@@ -24,8 +26,8 @@ body {
 	font-family: publicSans;
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
-	background: black;
-	color: white;
+	background: var(--background);
+	color: var(--textColor);
 }
 
 h1 {
@@ -39,7 +41,7 @@ h1 {
 p,
 ul {
 	font-style: normal;
-	font-variation-settings: 'wght' 200;
+	font-variation-settings: 'wght' 300;
 	font-size: 18px;
 	line-height: 26px;
 }
@@ -98,8 +100,10 @@ nav {
 	gap: 16px;
 }
 
-nav a {
+nav a,
+.colorChanger {
 	cursor: url('../img/face/face02.png'), pointer;
+	color: var(--blurple);
 }
 
 .mobileShow {
@@ -153,7 +157,7 @@ nav a {
 		width: 100vw;
 		height: 40px;
 		padding-bottom: 4px;
-		background: black;
+		background: var(--background);
 		z-index: 99999;
 		display: flex;
 		align-items: center;

@@ -10,7 +10,21 @@
 </script>
 
 <script>
+	import { onMount } from 'svelte';
+	import { darkMode } from '../stores';
 	export let result;
+
+	onMount(() => {
+		if ($darkMode) {
+			$darkMode = false;
+			document.documentElement.style.setProperty('--background', 'rgb(240, 240, 240)');
+			document.documentElement.style.setProperty('--textColor', 'black');
+		} else {
+			$darkMode = true;
+			document.documentElement.style.setProperty('--background', 'rgb(14, 14, 14)');
+			document.documentElement.style.setProperty('--textColor', 'white');
+		}
+	});
 </script>
 
 <marquee>
@@ -54,7 +68,7 @@
 		top: 0px;
 		left: 0px;
 		padding: 60px;
-		background: linear-gradient(180deg, #000000 60.42%, rgba(0, 0, 0, 0) 100%);
+		background: linear-gradient(180deg, var(--background) 60.42%, rgba(0, 0, 0, 0) 100%);
 	}
 
 	img {
