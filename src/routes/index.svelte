@@ -78,10 +78,10 @@
 					indexOutroEnded.set(true);
 				}}
 			>
+				<a href="/friends">my friends</a>
 				<a href="mailto:noahsemus@gmail.com" target="_blank">email</a>
 				<a href="https://www.github.com/noahsemus" target="_blank">github</a>
 				<a href="https://www.medium.com/@noahsemus" target="_blank">medium</a>
-				<a href="https://www.youtube.com/c/NoahSemus/videos" target="_blank">youtube</a>
 				{#if $darkMode}
 					<div class="colorChanger" on:click={toLightMode}>light mode</div>
 				{:else}
