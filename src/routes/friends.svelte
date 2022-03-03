@@ -35,12 +35,18 @@
 			description:
 				"What to say about Dylan? He's super smart, a very good collaborator, and a good friend. It also helps that he's really good at coding too. He currently does DevOps at Cerner. He doesn't have much of an online prescence, so <a href='mailto:demonto123@gmail.com?subject=Noah sent me!' target='_blank'>here's his email!</a>"
 		},
-
 		{
 			name: 'Jack Trego',
 			title: 'Writer, Editor & Probably the Smartest Guy I Know',
 			description:
 				"When I think of Jack, I think of a pensive, considered, incredibly intelligent person. He's a fantastic writer and poet, and has a background in Francophone studies, international relations, and philosophy. Check out <a href='https://jacktrego.com/' target='_blank'>his website!</a>"
+		},
+		{
+			name: 'Pretzel the Dog',
+			title: 'The Bestest Boy',
+			pretzel: true,
+			description:
+				"Pretzel is my dog. He is a beautiful soul. He loves to cuddle, get pets, and lay on top of me in bed. He is quite hard to contact online, so if you'd like to talk to pretzel, just go ahead and <a href='mailto:noahsemus@gmail.com?subject=I wanna talk to Pretzel!' target='_blank'>send me an email!</a>"
 		}
 	];
 

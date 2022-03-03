@@ -3,6 +3,7 @@
 	export let name = 'Nicholas Lucaccioni';
 	export let title = 'Graphic Designer & Brand Mastermind';
 	export let description = 'lorem ipsum';
+	export let pretzel = false;
 	let showDesc = false;
 </script>
 
@@ -37,15 +38,25 @@
 		</div>
 	</div>
 	{#if showDesc}
-		<p class="description" transition:slide={{ duration: 400 }}>
-			{@html description}
-		</p>
+		<div class="description" transition:slide={{ duration: 400 }}>
+			{#if pretzel}
+				<img src="/img/pretzel.jpg" alt="Pretzel the Dog!" />
+			{/if}
+			<p>
+				{@html description}
+			</p>
+		</div>
 	{/if}
 </div>
 
 <style>
 	h1 {
 		margin-bottom: 8px;
+	}
+
+	img {
+		max-height: 40vh;
+		margin-bottom: 16px;
 	}
 
 	.container {
