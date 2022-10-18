@@ -1,7 +1,7 @@
 <script>
 	let itemHover = false;
-	export let mainText = 'Pratt Institute (it was okay)';
-	export let hoverText = 'It really was just okay.';
+	export let mainText = 'Pratt Institute';
+	export let hoverText = 'It was okay!';
 	export let backgroundColor = 'black';
 	export let color = 'white';
 
